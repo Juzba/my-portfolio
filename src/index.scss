@@ -1,0 +1,21 @@
+$background-color: #293241;
+$text-color: #dffbfc;
+
+$first-color: #ee6b4d;
+$second-color: #3d5b81;
+$third-color: #9bc0d9;
+
+.main-body{
+    padding: 10px 25px;
+}
+
+:root {
+    margin: 0;
+    padding: 0;
+
+    background-color: $background-color;
+    color: $text-color;
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
