@@ -1,20 +1,53 @@
-@use '../../../index.scss';
+@use "../../../index.scss";
 
-.navbar {
-    .link{
-        padding-right: 15px;
-        text-decoration: none;
-        font-size: 1.4rem;
-        color: index.$text-color;
+header {
+	height: 40px;
+	position: relative;
 
-        &.active{
-            color: index.$first-color;
-        }
+	.navbar {
+		button {
+			display: none;
+		}
+		
+		.link {
+			padding-right: 15px;
+			text-decoration: none;
+			font-size: 1.4rem;
+			color: index.$text-color;
+			
+			&.active {
+				color: index.$first-color;
+			}
+		}
+	}
+	
+	@media (max-width: 600px) {
+		.navbar {
+			display: flex;
+			position: fixed;
+			flex-direction: column;
+			padding: 5px;
 
-        @media (max-width: 600px) {
-            color: black;
-        }
-    }
-    
+			button {
+				width: 55px;
+				height: 55px;
+				display: block;
+				font-size: 2rem;
+				
+			}
+			&.open {
+				background-color: index.$background-color;
+			}
+
+			.link {
+				padding: 5px 0;
+				font-size: 2rem;
+				display: none;
+
+				&.open {
+					display: block;
+				}
+			}
+		}
+	}
 }
-

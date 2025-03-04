@@ -1,25 +1,30 @@
-import { NavLink } from 'react-router-dom';
-import './scss/Navbar.scss';
-import { AiTwotoneHome } from 'react-icons/ai';
-import { AiTwotoneFolder } from "react-icons/ai";
-import { AiTwotonePicture } from "react-icons/ai";
-import { IconType } from 'react-icons';
+import { NavLink } from "react-router-dom";
+import "./scss/Navbar.scss";
+import { AiTwotoneHome } from "react-icons/ai";
+import { useState } from "react";
 
 const Navbar = () => {
-  const icon :IconType = AiTwotoneHome
-    return (
-        <nav className="navbar">
-            <NavLink className={'link'} to="/" end>
-            {icon}
-            </NavLink>
-            <NavLink className={'link'} to="/projects">
-                {AiTwotoneFolder}Projects
-            </NavLink>
-            <NavLink className={'link'} to="/gallery">
-                {AiTwotonePicture}Gallery
-            </NavLink>
-        </nav>
-    );
+	const [openMenu, setOpenMenu] = useState("");
+	console.log(openMenu);
+
+	return (
+		<header>
+			<nav className={`navbar ${openMenu}`}>
+				<button onClick={() => setOpenMenu(() => (openMenu ? "" : "open"))}>
+					<AiTwotoneHome />
+				</button>
+				<NavLink className={`link ${openMenu}`} to="/" end>
+					Home
+				</NavLink>
+				<NavLink className={`link ${openMenu}`} to="/projects">
+					Projects
+				</NavLink>
+				<NavLink className={`link ${openMenu}`} to="/gallery">
+					Gallery
+				</NavLink>
+			</nav>
+		</header>
+	);
 };
 
 export default Navbar;
