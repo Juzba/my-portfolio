@@ -15,7 +15,7 @@
 		transition: all 1s ease;
 		
         &.start-pos {
-            transform: translateX(400px);
+            transform: translateX(-400px);
             opacity: 0;
             position: absolute;
         }
@@ -27,7 +27,7 @@
         }
 
         &.end-pos {
-            transform: translateX(-400px);
+            transform: translateX(400px);
             position: absolute;
             opacity: 0;
         }

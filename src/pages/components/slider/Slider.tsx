@@ -21,8 +21,8 @@ const Slider = () => {
 
     const classNameFunction = (index: number) => {
         if (index === position) return 'icon active';
-        else if (index === position + 1 || position === iconArrey.length - 1 && index === 0) return 'icon end-pos';
-        return 'icon start-pos';
+        else if (index === position + 1 || position === iconArrey.length - 1 && index === 0) return 'icon start-pos';
+        return 'icon end-pos';
     };
 
     return (
