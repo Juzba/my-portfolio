@@ -1,0 +1,27 @@
+@use "../../../index.scss";
+
+.slider {
+	height: 150px;
+	border: red 1px solid;
+	position: relative;
+	transition: all 2s ease;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.start-pos {
+		transform: translateX(400px);
+		position: absolute;
+	}
+
+	.active {
+		transform: translateX(0);
+		position: absolute;
+	}
+
+	.end-pos {
+		transform: translateX(-400px);
+		position: absolute;
+	}
+}
