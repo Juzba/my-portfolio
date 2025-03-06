@@ -1,11 +1,40 @@
 @use '../../../index.scss';
 
 .email {
+    padding: 15px;
     form {
-        width: 50vw;
         display: flex;
         flex-direction: column;
         input {
+            box-sizing: border-box;
+            margin: 10px;
+            font-size: 1.1rem;
+            max-width: 250px;
+            padding: 5px 10px;
+            outline: none;
+            border: none;
+            background-color: index.$third-color;
+            color: index.$background-color;
+        }
+        
+        textarea {
+            background-color: index.$third-color;
+            max-width: 500px;
+            height: 150px;
+            display: block;
+            margin: 10px;
+            font-size: 1.1rem;
+            border: none;
+            resize: none;
+            outline: none;
+            color: index.$text-color;
+            // background-color: black;
+        }
+
+        input[type="submit"]{
+            
+            width: 250px;
+            background-color: index.$first-color;
         }
     }
 }

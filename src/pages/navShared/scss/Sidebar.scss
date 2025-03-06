@@ -49,8 +49,7 @@ header {
             padding: 0;
             transition: all 0.5s linear;
             overflow-x: hidden;
-            background-color: #012e40f2;
-            // background-color: transparent;
+            background-color: rgba($color:index.$background-color, $alpha: 0.9);
 
             &.open {
                 min-width: $sidebar-size;
