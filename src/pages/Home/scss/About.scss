@@ -1,8 +1,17 @@
 @use "../../../index.scss";
 
+.about {
+   margin: 15px;
+   padding: 25px;
+	min-height: 100vh;
+	background-color: black;
+	display: flex;
+	div {
+      padding: 0 10px;
+      background-color: index.$background-color;
+	}
 
-
-.about{
-   min-height: 100vh;
-   background-color: black;
+	img {
+		height: 40vw;
+	}
 }
