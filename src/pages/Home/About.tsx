@@ -7,7 +7,7 @@ const About = () => {
 			<div>
 				<h1>O mně</h1>
 				<p>
-					Ahoj, jmenuji se Jiří Strnadel a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.
+					Jmenuji se Jiří Strnadel a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.
 					Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím nové
 					technologie a zdokonaluji své dovednosti.
 				</p>

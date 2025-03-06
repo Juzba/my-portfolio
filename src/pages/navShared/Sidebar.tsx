@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 const Sidebar = () => {
     const [openMenu, setOpenMenu] = useState('');
-    console.log(openMenu);
 
     return (
         <header>

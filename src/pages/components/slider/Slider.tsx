@@ -7,7 +7,7 @@ const iconArrey: string[] = ["html5", "css3", "sass", "reactjs", "js", "typescri
 const Slider = () => {
 	const [position, setPosition] = useState<number>(0);
 
-	console.log(position);
+	// console.log(position);
 
 	useEffect(() => {
 		let count: number = position;
