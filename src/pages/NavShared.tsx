@@ -1,14 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import Footer from './navShared/Footer';
-import Navbar from './navShared/Navbar';
+import Sidebar from './navShared/Sidebar';
+import "./scss/NavShared.scss"
 
 const NavShared = () => {
     return (
-        <>
-            <Navbar />
-            <Outlet />
-            <Footer />
-        </>
+        <section className='navigation-shared'>
+            <Sidebar/>
+            <div className='right-side'>
+                <Outlet />
+                <Footer />
+            </div>
+        </section>
     );
 };
 
