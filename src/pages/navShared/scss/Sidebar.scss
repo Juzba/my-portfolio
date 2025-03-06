@@ -17,6 +17,7 @@ header {
         left: 0;
         overflow-y: auto; /* Pokud je obsah menu větší než výška obrazovky, umožní skrolování v menu */
         z-index: 10;
+        border-right: index.$background-color-secondary solid 2px;
 
         position: fixed;
 

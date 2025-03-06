@@ -13,13 +13,17 @@
             padding: 5px 10px;
             outline: none;
             border: none;
-            background-color: index.$third-color;
-            color: index.$background-color;
+            box-shadow: 0 0 3px index.$first-color;
+            border: 1px solid index.$first-color;
+            background-color: index.$background-color;
+            color: index.$text-color;
+            border-radius: 5px;
         }
         
         textarea {
-            background-color: index.$third-color;
+            border-radius: 5px;
             max-width: 500px;
+            padding: 5px 10px;
             height: 150px;
             display: block;
             margin: 10px;
@@ -27,6 +31,9 @@
             border: none;
             resize: none;
             outline: none;
+            box-shadow: 0 0 3px index.$first-color;
+            border: 1px solid index.$first-color;
+            background-color: index.$background-color;
             color: index.$text-color;
             // background-color: black;
         }
