@@ -1,5 +1,6 @@
 import './scss/Cards.scss';
 import data from './Cards-data/Cards-data';
+import { Link } from 'react-router-dom';
 
 const Cards = () => {
     return (
@@ -11,9 +12,9 @@ const Cards = () => {
                         <div key={id} className="one-card">
                             <img src={image}></img>
                             <h3>{name}</h3>
-                            <p>{created}</p>
+                            <p>{created.map((item, index)=>{ return index === 0 ? item : ", " + item})}</p>
                             <p>{description}</p>
-                            <p>{`Playeble: ${playable}`}</p>
+                            {playable? <Link to={`/oneproject/${id}`}>Spustit</Link> : <></>}
                         </div>
                     );
                 })}

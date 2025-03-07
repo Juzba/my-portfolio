@@ -1,6 +1,8 @@
+import "./scss/Footer.scss"
+
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <p>&copy; Jiří Strnadel, 2025</p>
     </footer>
   )

@@ -5,6 +5,7 @@ import Gallery from './pages/Gallery';
 import NavShared from './pages/NavShared';
 import Resume from './pages/Resume';
 import GitHub from './pages/GitHub';
+import OneProject from './pages/OneProject';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="/" element={<NavShared />}>
                     <Route index element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
+                    <Route path="/oneproject/:id" element={<OneProject />} />
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/github" element={<GitHub />} />
