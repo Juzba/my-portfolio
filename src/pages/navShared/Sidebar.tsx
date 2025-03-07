@@ -13,13 +13,19 @@ const Sidebar = () => {
                     <IoMenuSharp />
                 </button>
                 <NavLink className={`link ${openMenu}`} to="/" end>
-                    Home
+                    About me
                 </NavLink>
                 <NavLink className={`link ${openMenu}`} to="/projects">
                     Projects
                 </NavLink>
                 <NavLink className={`link ${openMenu}`} to="/gallery">
                     Gallery
+                </NavLink>
+                <NavLink className={`link ${openMenu}`} to="/resume">
+                    Životopis
+                </NavLink>
+                <NavLink className={`link ${openMenu}`} to="/github">
+                    Github
                 </NavLink>
             </nav>
         </header>

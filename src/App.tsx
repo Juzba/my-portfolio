@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Gallery from './pages/Gallery';
 import NavShared from './pages/NavShared';
+import Resume from './pages/Resume';
+import GitHub from './pages/GitHub';
 
 const App = () => {
     return (
@@ -12,6 +14,8 @@ const App = () => {
                     <Route index element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="/github" element={<GitHub />} />
                 </Route>
             </Routes>
         </BrowserRouter>

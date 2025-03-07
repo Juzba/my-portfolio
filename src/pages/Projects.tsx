@@ -1,7 +1,12 @@
-const Projects = () => {
-  return (
-    <div>Projects</div>
-  )
-}
+import Cards from './Projects/Cards';
 
-export default Projects
+const Projects = () => {
+    return (
+        <div>
+            <h1>Projects</h1>
+            <Cards />
+        </div>
+    );
+};
+
+export default Projects;
