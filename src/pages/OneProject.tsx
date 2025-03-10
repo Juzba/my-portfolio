@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-// import SnakeApp from "./Projects/assets/snake/SnakeApp.css";
+import Snake from "./Projects/assets/snake/Snake";
 
 const OneProject = () => {
 	const {id} = useParams();
@@ -9,7 +9,7 @@ const OneProject = () => {
 	return (
 		<section>
 			<h1>One Project</h1>
-			{id === "0" ? <p>snake</p> : <></>}
+			{id === "0" ? <Snake/> : <></>}
 		</section>
 	);
 };
