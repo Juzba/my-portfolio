@@ -15,7 +15,7 @@ const ProjectData: type[] = [
         name: 'Snake',
         image: img1,
         created: ['React', 'Scss', 'Java Script'],
-        description: 'Classic Snake ovladaný klavesnicí wasd a start -> Enter',
+        description: 'Classic Snake. Optimized for PC',
         playable: true,
     },
     {

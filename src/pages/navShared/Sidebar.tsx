@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import rainbow from "../../images/rainbow.png"
 import './scss/Sidebar.scss';
 import { IoMenuSharp } from "react-icons/io5";
 import { useState } from 'react';
@@ -27,6 +28,7 @@ const Sidebar = () => {
                 <NavLink className={`link ${openMenu}`} to="/github">
                     Github
                 </NavLink>
+            <img className='rainbow' src={rainbow} alt="" />
             </nav>
         </header>
     );

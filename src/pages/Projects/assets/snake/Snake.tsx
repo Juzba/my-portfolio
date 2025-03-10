@@ -1,4 +1,4 @@
-import "./SnakeApp.scss";
+import "./Snake.scss";
 import SnakeFunc from "./SnakeFunc";
 import { useRef, useEffect } from "react";
 
@@ -71,7 +71,7 @@ const Snake = () => {
 				}
 			} else count = 0;
 		}, 300);
-	});
+	},[]);
 
 	const Food = () => {
 		if (SnakeFunc.Compare(foodPos, listSnake[0])) {

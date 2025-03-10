@@ -15,7 +15,8 @@ header {
         background-color: index.$background-color;
         top: 0;
         left: 0;
-        overflow-y: auto; /* Pokud je obsah menu větší než výška obrazovky, umožní skrolování v menu */
+        overflow-y: hidden; /* Pokud je obsah menu větší než výška obrazovky, umožní skrolování v menu */
+        overflow-x: hidden;
         z-index: 10;
         border-right: index.$background-color-secondary solid 2px;
 
@@ -35,6 +36,13 @@ header {
             &.active {
                 color: index.$first-color;
             }
+        }
+
+        .rainbow{
+            position: absolute;
+            width: 550px;
+           bottom: 0;
+            left: -140px;
         }
     }
     @media (max-width: 800px) {

@@ -1,0 +1,102 @@
+@use "../../index.scss";
+
+.about {
+	.about-me {
+		box-sizing: border-box;
+		padding: 25px;
+		
+		min-height: 100vh;
+		background-color: index.$background-color-secondary;
+		// background-color: index.$background-color;
+		
+		.box {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 20px;
+			.nadpis {
+				min-width: 200px;
+				margin: 10px;
+				flex: 1;
+				text-align: center;
+				h1 {
+					font-size: 3rem;
+				}
+
+				p {
+					// max-width: 100%;
+					// overflow-wrap: break-word;
+				}
+			}
+
+			img.me {
+				// flex-shrink: 0;
+				width: 38vw;
+				height: 38vw;
+
+				min-width: 300px;
+				min-height: 300px;
+			}
+
+			
+			p {
+				min-width: 200px;
+				margin: 10px;
+				flex: 1;
+				text-align: center;
+			}
+			
+			img.working {
+				transform: scaleX(1);
+				// flex-shrink: 0;
+				width: 38vw;
+				height: 38vw;
+				
+				min-width: 300px;
+				min-height: 300px;
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		.about-me {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-start;
+
+			.box1 {
+				height: 40px;
+				// width: 40vw;
+				// max-width: 100vw;
+				// margin: 20px;
+				h1 {
+					// font-size: 2rem;
+				}
+
+				p {
+				}
+			}
+		}
+	}
+
+	.technologies {
+		min-height: 100vh;
+		background-color: index.$background-color;
+	}
+
+	.now {
+		min-height: 100vh;
+		background-color: index.$background-color-secondary;
+
+		img {
+			width: 550px;
+			transform: scaleX(-1);
+
+			// mix-blend-mode: multiply;
+			// background-color: red;
+		}
+	}
+
+	.contact-me {
+		min-height: 100vh;
+		background-color: index.$background-color;
+	}
+}
