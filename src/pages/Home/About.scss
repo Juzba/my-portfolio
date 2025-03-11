@@ -1,30 +1,49 @@
 @use "../../index.scss";
 
 .about {
-	.about-me {
+	.first-block {
+		padding: 15px 15px 15px 50px;
 		box-sizing: border-box;
-		padding: 25px;
-		
-		min-height: 100vh;
-		background-color: index.$background-color-secondary;
-		// background-color: index.$background-color;
-		
+		// height: 100vh;
+
+		background: linear-gradient(135deg, black, #141414, #012E40);
+
 		.box {
 			display: flex;
 			flex-wrap: wrap;
 			margin: 20px;
+
+			align-items: center;
 			.nadpis {
 				min-width: 200px;
 				margin: 10px;
 				flex: 1;
 				text-align: center;
+				overflow: hidden;
+
+				border: index.$background-color 1px solid;
 				h1 {
 					font-size: 3rem;
+					opacity: 0;
+					animation: opacityIn 1s forwards;
 				}
 
 				p {
+					font-size: 1.5rem;
+					transform: translateX(600px);
+					opacity: 0;
+					animation: fadeIn 1s forwards ease-in-out, opacityIn 2s forwards;
+
 					// max-width: 100%;
 					// overflow-wrap: break-word;
+				}
+
+				.react-icon {
+					margin: 25px;
+
+					&.react {
+						animation: rotate 20s forwards infinite linear;
+					}
 				}
 			}
 
@@ -35,56 +54,64 @@
 
 				min-width: 300px;
 				min-height: 300px;
-			}
-
-			
-			p {
-				min-width: 200px;
-				margin: 10px;
-				flex: 1;
-				text-align: center;
-			}
-			
-			img.working {
-				transform: scaleX(1);
-				// flex-shrink: 0;
-				width: 38vw;
-				height: 38vw;
-				
-				min-width: 300px;
-				min-height: 300px;
+				margin-top: 15px;
+				z-index: 5;
 			}
 		}
+
 	}
-	@media (max-width: 800px) {
-		.about-me {
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: flex-start;
-
-			.box1 {
-				height: 40px;
-				// width: 40vw;
-				// max-width: 100vw;
-				// margin: 20px;
-				h1 {
-					// font-size: 2rem;
-				}
-
-				p {
-				}
-			}
+	
+	
+	@keyframes fadeIn {
+		to {
+			transform: translateX(0px);
 		}
 	}
 
-	.technologies {
-		min-height: 100vh;
-		background-color: index.$background-color;
+	@keyframes opacityIn {
+		to {
+			opacity: 1;
+		}
 	}
 
-	.now {
+	@keyframes rotate {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.second-block {
+
+
+
 		min-height: 100vh;
-		background-color: index.$background-color-secondary;
+		background: linear-gradient(45deg, black, #141414, #012E40);
+
+		p {
+			font-size: 1.5rem;
+			min-width: 200px;
+			margin: 10px;
+			flex: 1;
+			text-align: left;
+		}
+
+		img.working {
+			transform: scaleX(-1);
+			// flex-shrink: 0;
+			width: 25vw;
+			height: 25vw;
+
+			min-width: 300px;
+			min-height: 300px;
+		}
+	}
+
+	.third-block {
+		min-height: 100vh;
+		background: linear-gradient(135deg, black, #141414, #012E40);
 
 		img {
 			width: 550px;
@@ -93,10 +120,16 @@
 			// mix-blend-mode: multiply;
 			// background-color: red;
 		}
+
+		p{margin: 0;}
 	}
 
-	.contact-me {
+	.fourth-block {
 		min-height: 100vh;
-		background-color: index.$background-color;
+		background: linear-gradient(45deg, black, #141414, #012E40);
+
+		h1{
+			margin: 0;
+		}
 	}
 }

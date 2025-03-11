@@ -1,37 +1,47 @@
-import { NavLink } from 'react-router-dom';
-import rainbow from "../../images/rainbow.png"
-import './scss/Sidebar.scss';
+import { NavLink } from "react-router-dom";
+import rainbow from "../../images/rainbow.png";
+import "./scss/Sidebar.scss";
 import { IoMenuSharp } from "react-icons/io5";
-import { useState } from 'react';
+import { useState } from "react";
+import { FiHome } from "react-icons/fi";
+import { FiFileText } from "react-icons/fi";
+import { FiImage } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
+import { FiCoffee } from "react-icons/fi";
 
 const Sidebar = () => {
-    const [openMenu, setOpenMenu] = useState('');
+	const [openMenu, setOpenMenu] = useState("");
 
-    return (
-        <header>
-            <nav className={`sidebar ${openMenu}`}>
-                <button onClick={() => setOpenMenu(() => (openMenu ? '' : 'open'))}>
-                    <IoMenuSharp />
-                </button>
-                <NavLink className={`link ${openMenu}`} to="/" end>
-                    About me
-                </NavLink>
-                <NavLink className={`link ${openMenu}`} to="/projects">
-                    Projects
-                </NavLink>
-                <NavLink className={`link ${openMenu}`} to="/gallery">
-                    Gallery
-                </NavLink>
-                <NavLink className={`link ${openMenu}`} to="/resume">
-                    Životopis
-                </NavLink>
-                <NavLink className={`link ${openMenu}`} to="/github">
-                    Github
-                </NavLink>
-            <img className='rainbow' src={rainbow} alt="" />
-            </nav>
-        </header>
-    );
+	return (
+		<header>
+			<nav className={`sidebar ${openMenu}`}>
+				<button onClick={() => setOpenMenu(() => (openMenu ? "" : "open"))}>
+					<IoMenuSharp />
+				</button>
+				<NavLink className={`link ${openMenu}`} to="/" end>
+					<FiHome className="icon"/>
+                    <p>About me</p> 
+				</NavLink>
+				<NavLink className={`link ${openMenu}`} to="/projects">
+					<FiCoffee className="icon" /> 
+                    <p>Projects</p>
+				</NavLink>
+				<NavLink className={`link ${openMenu}`} to="/gallery">
+					<FiImage className="icon" />
+                     <p>Gallery</p>
+				</NavLink>
+				<NavLink className={`link ${openMenu}`} to="/resume">
+					<FiFileText className="icon"/> 
+                    <p>Životopis</p>
+				</NavLink>
+				<NavLink className={`link ${openMenu}`} to="/github">
+					<FiGithub className="icon"/> 
+                    <p>Github</p>
+				</NavLink>
+				<img className="rainbow" src={rainbow} alt="" />
+			</nav>
+		</header>
+	);
 };
 
 export default Sidebar;

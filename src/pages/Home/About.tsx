@@ -2,48 +2,46 @@ import "./About.scss";
 import Slider from "../components/slider/Slider";
 import imgBaldMan from "../../images/bman.png";
 import robot from "../../images/kuka.png";
-import working from "../../images/working.png";
+import circle from "../../images/circle.png";
+import comp from "../../images/comp.png";
 import Email from "../components/email/Email";
+import StackIcon from "tech-stack-icons";
 
 const About = () => {
 	return (
 		<section className="about">
-			{/* /////////////////////// 1 */}
-			<div className="about-me">
+			<div className="first-block">
+				{/* <div className="top-panel"></div> */}
+				{/* <img src={circle} className="circle-icon" alt="" /> */}
 				<div className="box">
 					<div className="nadpis">
 						<h1>O mně</h1>
-						<p>
-							Jmenuji se Jiří Strnadel a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.
-							Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím
-							nové technologie a zdokonaluji své dovednosti.
-						</p>
+						<p>Jmenuji se Jiří Strnadel</p>
+						<p>a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.</p>
+						<StackIcon className="react-icon react" name={"reactjs"} />
+						<StackIcon className="react-icon typescript" name={"typescript"} />
 					</div>
 					<img className="me" src={imgBaldMan} alt="" />
 				</div>
-
-				<div className="box">
-					<img className="working" src={working} alt="" />
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem cumque illum enim doloremque
-						incidunt laborum sunt nulla a molestiae iure maiores, culpa nesciunt ex, unde consectetur repellat et hic.
-					</p>
-				</div>
 			</div>
-
-			{/* /////////////////////////  2 */}
-			<div className="technologies">
-				<h1>Technologies</h1>
-				<Slider />
-				<p>
-					Mám zkušenosti s JavaScriptem, SCSS, HTML, CSS, Git a databázemi jako Firebase. Zároveň si rozšiřuji znalosti
-					v C#, kde se pohybuji na mírně pokročilé úrovni.
-				</p>
+			<div className="second-block">
+				<div className="box">
+					<img className="working" src={comp} alt="" />
+					<p>
+						Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím
+						nové technologie a zdokonaluji své dovednosti.
+					</p>
+					<Slider />
+				</div>
 			</div>
 
 			{/* ///////////////////// 3 */}
 
-			<div className="now">
+			<div className="third-block">
+				<p>
+					Mám zkušenosti s JavaScriptem, SCSS, HTML, CSS, Git a databázemi jako Firebase. Zároveň si rozšiřuji znalosti
+					v C#, kde se pohybuji na mírně pokročilé úrovni.
+				</p>
 				<img src={robot} alt="" />
 				<p>
 					Nyní pracuji jako elektro údržbář a programátor průmyslových robotů Kuka, Reis, Yaskawa a PLC Simatic. Tato
@@ -52,13 +50,17 @@ const About = () => {
 			</div>
 
 			{/* ////////////////////////// 4 */}
-			<div className="contact-me">
+			<div className="fourth-block">
 				<h1>Contact me</h1>
 
 				<p>
 					Hledám příležitost, kde bych mohl své dovednosti dále rozvíjet a přispět svým nadšením pro moderní frontendový
 					vývoj.
 				</p>
+
+
+
+				<img src={circle} className="circle-icon" alt="" />
 				<Email />
 			</div>
 		</section>

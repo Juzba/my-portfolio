@@ -1,83 +1,109 @@
-@use '../../../index.scss';
+@use "../../../index.scss";
 
-$sidebar-size: 180px;
+$sidebar-size: 13vw;
 
 header {
-    box-sizing: border-box;
-    min-width: $sidebar-size;
-    height: 100vh;
-    .sidebar {
-        box-sizing: border-box;
-        min-width: $sidebar-size;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background-color: index.$background-color;
-        top: 0;
-        left: 0;
-        overflow-y: hidden; /* Pokud je obsah menu větší než výška obrazovky, umožní skrolování v menu */
-        overflow-x: hidden;
-        z-index: 10;
-        border-right: index.$background-color-secondary solid 2px;
+	box-sizing: border-box;
+	min-width: $sidebar-size;
+	height: 100vh;
+	.sidebar {
+		box-sizing: border-box;
+		min-width: $sidebar-size;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background-color: index.$background-color;
+		top: 0;
+		left: 0;
+		overflow-y: hidden; /* Pokud je obsah menu větší než výška obrazovky, umožní skrolování v menu */
+		overflow-x: hidden;
+		z-index: 10;
+		border-right: index.$background-color-secondary solid 2px;
 
-        position: fixed;
+		position: fixed;
 
-        button {
-            display: none;
-        }
+		button {
+			display: none;
+		}
 
-        .link {
-            text-wrap: noWrap;
-            padding: 20px 30px 0;
-            text-decoration: none;
-            font-size: 1.4rem;
-            color: index.$text-color;
+		.link {
+			text-wrap: noWrap;
+			padding: 10px 25px;
+			margin: 20px 0 0;
+			text-decoration: none;
+			font-size: 1.4rem;
+			color: index.$text-color;
+			z-index: 5;
+			background: linear-gradient(90deg, index.$background-color, black);
+			border-radius: 5px;
 
-            &.active {
-                color: index.$first-color;
-            }
-        }
+			border: black 2px solid;
 
-        .rainbow{
-            position: absolute;
-            width: 550px;
-           bottom: 0;
-            left: -140px;
-        }
-    }
-    @media (max-width: 800px) {
-        min-width: 0;
-        width: 0;
-        margin: 0;
-        padding: 0;
+			display: flex;
+			align-items: center;
 
-        .sidebar {
-            position: fixed;
-            min-width: 0;
-            width: 0;
-            margin: 0;
-            padding: 0;
-            transition: all 0.5s linear;
-            overflow-x: hidden;
-            background-color: rgba($color:index.$background-color, $alpha: 0.9);
+			.icon {
+				padding-right: 10px;
+               min-width: 23px;
+			}
 
-            &.open {
-                min-width: $sidebar-size;
-            }
+			p {
+				margin: 0;
+			}
 
-            button {
-                background-color: transparent;
-                font-size: 45px;
-                color: index.$text-color;
-                // width: 50px;
-                // height: 50px;
-                border: none;
-                display: block;
-                position: fixed;
-                right: 15px;
-                top: 20px;
-                cursor: pointer;
-            }
-        }
-    }
+			&.active {
+				color: index.$first-color;
+				border: index.$first-color 2px solid;
+			}
+		}
+
+		.rainbow {
+			position: absolute;
+			width: 550px;
+			bottom: 0;
+			left: -140px;
+		}
+	}
+	@media (max-width: 1000px) {
+		min-width: 0;
+		width: 0;
+		margin: 0;
+		padding: 0;
+
+		.sidebar {
+			position: fixed;
+			min-width: 0;
+			width: 0;
+			margin: 0;
+			padding: 0;
+			transition: min-width 0.2s linear;
+			overflow-x: hidden;
+			background-color: rgba($color: index.$background-color, $alpha: 0.9);
+
+			// .icon{
+			//     opacity: 0;
+			//     transition: opacity 3s ease-out;
+			// }
+
+			&.open {
+				min-width: 190px;
+
+				// .icon {
+				//     opacity: 1;
+				// }
+			}
+
+			button {
+				background-color: transparent;
+				font-size: 45px;
+				color: index.$text-color;
+				border: none;
+				display: block;
+				position: fixed;
+				right: 15px;
+				top: 20px;
+				cursor: pointer;
+			}
+		}
+	}
 }
