@@ -1,0 +1,24 @@
+@use "../../index.scss";
+
+.about {
+	.third-block {
+		min-height: 100vh;
+
+		img {
+			width: 550px;
+			transform: scaleX(-1);
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.fourth-block {
+		min-height: 100vh;
+
+		h1 {
+			margin: 0;
+		}
+	}
+}

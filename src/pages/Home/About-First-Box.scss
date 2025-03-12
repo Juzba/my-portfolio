@@ -1,0 +1,104 @@
+@use "../../index.scss";
+
+.about {
+	box-sizing: border-box;
+	width: 86vw;
+	padding: 15px;
+
+	font-style: italic;
+	font-size: 1.5rem;
+
+	.first-block {
+		// padding: 15px 15px 15px 50px;
+		box-sizing: border-box;
+			
+		.box {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 20px;
+			align-items: center;
+			background-color: rgba($color: index.$background-color, $alpha: 0.8);
+			
+			.nadpis {
+				min-width: 200px;
+				margin: 20px;
+				padding: 20px;
+				flex: 1;
+				text-align: center;
+				overflow: hidden;
+				
+				border: index.$background-color-secondary 5px solid;
+				
+				h1 {
+					color: index.$second-color;
+					font-size: 3rem;
+					transform: translateX(600px);
+					// opacity: 0;
+					animation: fadeIn 0.3s forwards ease-in-out;
+				}
+				
+				.text1 {
+					font-size: 2.5rem;
+					transform: translateX(600px);
+					opacity: 0;
+					animation: fadeIn 1s forwards ease-in-out, opacityIn 2s forwards;
+				}
+				
+				.text2 {
+					transform: translateX(600px);
+					opacity: 0;
+					animation: fadeIn 1.5s forwards ease-in-out, opacityIn 2s forwards;
+				}
+				
+				.react-icon {
+					margin: 25px;
+					
+					&.react {
+						animation: rotate 20s forwards infinite linear;
+					}
+				}
+			}
+			
+			img.me {
+				width: 38vw;
+				height: 38vw;
+				
+				min-width: 300px;
+				min-height: 300px;
+				margin-top: 15px;
+				z-index: 5;
+			}
+		}
+	}
+	
+
+	@media (max-width: 1000px) {
+		width: 100vw;
+		.first-block {
+			padding: 15px;
+		}
+	}
+
+
+
+	@keyframes fadeIn {
+		to {
+			transform: translateX(0px);
+		}
+	}
+	
+	@keyframes opacityIn {
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}

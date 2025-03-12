@@ -1,4 +1,6 @@
-import "./About.scss";
+import "./About-First-Box.scss";
+import "./About-Second-Box.scss";
+import "./About-Third-Box.scss";
 import Slider from "../components/slider/Slider";
 import imgBaldMan from "../../images/bman.png";
 import robot from "../../images/kuka.png";
@@ -18,10 +20,12 @@ const About = () => {
 						<p className="text2">a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.</p>
 						<StackIcon className="react-icon react" name={"reactjs"} />
 						<StackIcon className="react-icon typescript" name={"typescript"} />
+						<StackIcon className="react-icon csharp" name={"csharp"} />
 					</div>
 					<img className="me" src={imgBaldMan} alt="" />
 				</div>
 			</div>
+
 			<div className="second-block">
 				<div className="box">
 					<img className="working" src={comp} alt="" />
@@ -29,11 +33,9 @@ const About = () => {
 						Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím
 						nové technologie a zdokonaluji své dovednosti.
 					</p>
-					<Slider />
 				</div>
+					<Slider />
 			</div>
-
-			{/* ///////////////////// 3 */}
 
 			<div className="third-block">
 				<p>
@@ -47,7 +49,6 @@ const About = () => {
 				</p>
 			</div>
 
-			{/* ////////////////////////// 4 */}
 			<div className="fourth-block">
 				<h1>Contact me</h1>
 
@@ -55,8 +56,6 @@ const About = () => {
 					Hledám příležitost, kde bych mohl své dovednosti dále rozvíjet a přispět svým nadšením pro moderní frontendový
 					vývoj.
 				</p>
-
-
 
 				<img src={circle} className="circle-icon" alt="" />
 				<Email />
