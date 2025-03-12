@@ -11,13 +11,11 @@ const About = () => {
 	return (
 		<section className="about">
 			<div className="first-block">
-				{/* <div className="top-panel"></div> */}
-				{/* <img src={circle} className="circle-icon" alt="" /> */}
 				<div className="box">
 					<div className="nadpis">
 						<h1>O mně</h1>
-						<p>Jmenuji se Jiří Strnadel</p>
-						<p>a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.</p>
+						<p className="text1">Jmenuji se Jiří Strnadel</p>
+						<p className="text2">a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.</p>
 						<StackIcon className="react-icon react" name={"reactjs"} />
 						<StackIcon className="react-icon typescript" name={"typescript"} />
 					</div>
