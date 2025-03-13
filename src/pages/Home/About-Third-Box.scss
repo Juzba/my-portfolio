@@ -1,24 +1,56 @@
 @use "../../index.scss";
-
 .about {
 	.third-block {
-		min-height: 100vh;
-
-		img {
-			width: 550px;
-			transform: scaleX(-1);
-		}
+		margin: 20px;
+		margin-bottom: 100px;
 
 		p {
+			text-align: center;
 			margin: 0;
+			padding: 20px;
 		}
 	}
 
 	.fourth-block {
-		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		margin: 20px;
+		margin-bottom: 100px;
+	}
 
-		h1 {
-			margin: 0;
+	.fifth-block {
+		margin: 20px;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 40px;
+
+		p {
+			// margin: 20px;
+			padding: 20px;
+			flex: 1;
+			text-align: justify;
+		}
+
+		.robot-div {
+			aspect-ratio: 5/3;
+			height: 400px;
+			width: auto;
+			// border: red 1px solid;
+			position: relative;
+			flex-shrink: 0;
+			background-image: url(../../images/factory.jpg);
+			background-size: cover;
+			// background-attachment:fixed;
+			.robot {
+				position: absolute;
+				top: -170px;
+				left: 0;
+				width: 550px;
+				transform: scaleX(-1);
+			}
 		}
 	}
 }
+

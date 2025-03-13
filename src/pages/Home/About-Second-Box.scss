@@ -2,21 +2,27 @@
 
 .about {
 	.second-block {
-		min-height: 100vh;
+		margin-bottom: 70px;
 
 		.box {
 			display: flex;
-         flex-wrap: wrap;
-         margin: 100px 20px 20px;
-         padding: 20px;
+			flex-wrap: wrap;
+			margin: 100px 20px 20px;
+			padding: 20px;
 			align-items: center;
-         // border: solid 1px red;
 
 			p {
-								margin: 30px;
-            padding: 80px;
+				margin: 30px;
+				padding: 80px;
 				flex: 1;
-				text-align: left;
+				text-align: justify;
+
+				transform: translateX(600px);
+				opacity: 0;
+
+				&.active {
+					animation: fadeIn 1.5s forwards ease-in-out, opacityIn 2s forwards;
+				}
 			}
 
 			img.working {

@@ -1,14 +1,13 @@
 // $background-color: #293241;
 $background-color: #002333;
 $background-color-secondary: #141414;
-$background-gradient:linear-gradient( 135deg, black, #141414, #012E40 );
+$background-gradient: linear-gradient(135deg, black, #141414, #012e40);
 
-
-
-$text-color: #F4E2DE;
+$text-color: #f4e2de;
+// $text-color: #000000;
 
 // $first-color: #ee6b4d;
-$first-color: #D94F04;
+$first-color: #d94f04;
 $second-color: #3d5b81;
 $third-color: #9bc0d9;
 
@@ -21,18 +20,17 @@ $third-color: #9bc0d9;
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
-	
-	
-	// background-color: $background-color;
+
 	background: linear-gradient(135deg, black, #141414, #012e40);
-	background-attachment:fixed;
+	// background-color: white;
+	background-attachment: fixed;
 	overflow-x: hidden;
 	color: $text-color;
-	
 
-	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-family: cursive;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	// font-family: cursive;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 14px;
 }

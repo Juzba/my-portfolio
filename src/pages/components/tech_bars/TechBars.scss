@@ -1,0 +1,104 @@
+$height: 60px;
+$width: 45vw;
+
+.bars {
+	width: $width + 10vw;
+	height: fit-content;
+	border: solid black 5px;
+	background-color: #242424;
+	.box {
+		border-radius: 15px;
+		width: $width;
+		margin: 40px;
+		height: fit-content;
+		position: relative;
+
+		.circle {
+			position: absolute;
+			border-radius: 50%;
+			background-color: #242424;
+			// background: radial-gradient();
+			height: 90px;
+			width: 90px;
+			left: -20px;
+			top: -20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0 0 8px black;
+			overflow: hidden;
+		}
+
+		.icon {
+			height: $height;
+			left: 10px;
+			top: 0;
+		}
+
+		.bar {
+			margin-left: 50px;
+			height: $height;
+			box-shadow: 5px 5px 5px #141414;
+		}
+
+		.reactjs {
+			animation: lenghtReact 4s forwards ease-out;
+			border-radius: 0 15px 15px 0;
+			background: linear-gradient(360deg, #1f9deb, #025c90);
+		}
+
+		.typescript {
+			background: linear-gradient(360deg, #086096, #062c7e);
+			animation: lenghtTS 3s forwards ease-in;
+			border-radius: 0 15px 15px 0;
+		}
+
+		.csharp {
+			background: linear-gradient(360deg, #8105e7, #48035f);
+			animation: lenghtC 4s forwards;
+			border-radius: 0 15px 15px 0;
+		}
+
+		.sass {
+			background: linear-gradient(360deg, #e705a3, #5f0317);
+			animation: lenghtSass 8s forwards;
+			border-radius: 0 15px 15px 0;
+		}
+	}
+}
+
+@keyframes lenghtReact {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.8;
+	}
+}
+
+@keyframes lenghtSass {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.9;
+	}
+}
+
+@keyframes lenghtTS {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.75;
+	}
+}
+
+@keyframes lenghtC {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.5;
+	}
+}

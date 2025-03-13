@@ -10,7 +10,7 @@
 	overflow: hidden;
 
 	.icon {
-		transition: all 3s ease-in-out ;
+		transition: all 4s linear ;
 
 		&.pos1 {
 			transform: translateX(-45vw) scale(0.5);
@@ -26,7 +26,7 @@
 
 		&.pos3 {
             // box-shadow: 0 0 15px index.$text-color;
-			transform: translateX(0vw) scale(1.1);
+			transform: translateX(0vw) scale(1.2);
 			position: absolute;
 			opacity: 1;
 		}
