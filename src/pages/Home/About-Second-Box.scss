@@ -11,6 +11,11 @@
 			padding: 20px;
 			align-items: center;
 
+			border:  rgb(14, 145, 206) solid 3px;
+			// border-radius: 15px 0 0 0;
+			border-right-color: transparent;
+			border-left-color: transparent;
+
 			p {
 				margin: 30px;
 				padding: 80px;
@@ -25,13 +30,21 @@
 				}
 			}
 
-			img.working {
-				transform: scaleX(-1);
+			.working{
+				// transform: scaleX(-1);
 				width: 25vw;
 				height: 25vw;
 
 				min-width: 300px;
 				min-height: 300px;
+
+				transition: all 2s linear;
+				opacity: 0;
+
+				&.active{
+					transform: scale(1.15);
+					opacity: 1;
+				}
 			}
 		}
 	}

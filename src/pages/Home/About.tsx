@@ -13,18 +13,26 @@ import StackIcon from "tech-stack-icons";
 import { useEffect, useState } from "react";
 
 const About = () => {
-	const [animation, setAnimation] = useState(false);
+	const [animationText1, setAnimationText1] = useState(false);
+	const [animationImg1, setAnimationImg1] = useState(false);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting) setAnimation(true);
+				console.log(entry.target.id)
+				if (entry.isIntersecting && entry.target.id === "text1") setAnimationText1(true);
+				else if (entry.isIntersecting && entry.target.id === "img1") setAnimationImg1(true);
 			});
 		});
 
 		const textP1 = document.getElementById("text1");
+		const img1 = document.getElementById("img1");
+
 		if (textP1) observer.observe(textP1);
-		else console.error("text 1 nenalezen !");
+		else console.error("text 1 nenalezen observerem!");
+
+		if (img1) observer.observe(img1);
+		else console.error("img 1 nenalezen observerem!");
 	}, []);
 
 	// if (loading) return <h1>Loading...</h1>;
@@ -48,8 +56,8 @@ const About = () => {
 
 			<div className="second-block">
 				<div className="box">
-					<img className="working" src={comp} alt="" />
-					<p className={animation ? "active" : ""} id="text1">
+					<img className={animationImg1 ? "working active" : "working"} id="img1" src={comp} alt="" />
+					<p className={animationText1 ? "active" : ""} id="text1">
 						Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím
 						nové technologie a zdokonaluji své dovednosti.
 					</p>
@@ -87,7 +95,7 @@ const About = () => {
 					vývoj.
 				</p>
 
-				<img src={circle} className="circle-icon" alt="" />
+				{/* <img src={circle} className="circle-icon" alt="" /> */}
 				<Email />
 			</div>
 		</section>
