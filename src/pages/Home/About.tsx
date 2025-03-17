@@ -4,6 +4,7 @@ import "./About-Third-Box.scss";
 import TechBars from "../components/tech_bars/TechBars";
 import Slider from "../components/slider/Slider";
 import imgBaldMan from "../../images/bman.png";
+import light from "../../images/light.png";
 import robot from "../../images/kuka.png";
 import circle from "../../images/circle.png";
 import comp from "../../images/comp.png";
@@ -26,8 +27,11 @@ const About = () => {
 		else console.error("text 1 nenalezen !");
 	}, []);
 
+	// if (loading) return <h1>Loading...</h1>;
+
 	return (
 		<section className="about">
+			{/* <img className="wave" src={light} alt="" /> */}
 			<div className="first-block">
 				<div className="box">
 					<div className="nadpis">
@@ -45,7 +49,7 @@ const About = () => {
 			<div className="second-block">
 				<div className="box">
 					<img className="working" src={comp} alt="" />
-					<p className={animation? "active" : ""} id="text1">
+					<p className={animation ? "active" : ""} id="text1">
 						Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím
 						nové technologie a zdokonaluji své dovednosti.
 					</p>
@@ -54,14 +58,15 @@ const About = () => {
 
 			<div className="third-block">
 				<Slider />
+			</div>
+
+			<div className="fourth-block">
+				<h2>Zkušenosti</h2>
 				<p>
 					Mám zkušenosti s JavaScriptem, SCSS, HTML, CSS, Git a databázemi jako Firebase. Zároveň si rozšiřuji znalosti
 					v C#, kde se pohybuji na mírně pokročilé úrovni.
 				</p>
-			</div>
-
-			<div className="fourth-block">
-				<TechBars  />
+				<TechBars />
 			</div>
 
 			<div className="fifth-block">

@@ -5,7 +5,7 @@ import StackIcon from "tech-stack-icons";
 const iconArrey: string[] = [
 	"html5",
 	"css3",
-	"github",
+	// "github",
 	"sass",
 	"reactjs",
 	"js",
@@ -23,14 +23,14 @@ const Slider = () => {
 	// console.log(position);
 
 	useEffect(() => {
-		let count: number = position;
-		const t1 = setInterval(() => {
+		let count: number = 0;
+		setPosition(++count);
+
+		setInterval(() => {
 			if (++count > iconArrey.length - 1) count = 0;
 			setPosition(count);
 		}, 4000);
-
-		return () => clearInterval(t1);
-	}, [position]);
+	}, []);
 
 	// tri ikony
 	// 	const classNameFunction = (index: number) => {

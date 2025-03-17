@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import rainbow from "../../images/rainbow.png";
+import rainbow2 from "../../images/rainbow2.png";
 import "./scss/Sidebar.scss";
 import { IoMenuSharp } from "react-icons/io5";
 import { useState } from "react";
@@ -38,7 +38,7 @@ const Sidebar = () => {
 					<FiGithub className="icon"/> 
                     <p>Github</p>
 				</NavLink>
-				<img className="rainbow" src={rainbow} alt="" />
+				<img className="rainbow" src={rainbow2} alt="" />
 			</nav>
 		</header>
 	);
