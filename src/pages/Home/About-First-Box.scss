@@ -5,23 +5,10 @@
 	box-sizing: border-box;
 	width: 86vw;
 	padding: 15px;
-
-	// font-style: italic;
 	font-size: 1.5rem;
 
-	// .wave {
-	// 	position: absolute;
-	// 	// width: 100vw;
-	// 	// background-attachment: fixed;
 
-	// 	// height: 100vh;
-	// 	background: transparent;
-	// 	top: 0px;
-	// 	right: 50px;
-	// 	z-index: -1;
-	// }
 	.first-block {
-		// padding: 15px 15px 15px 50px;
 		box-sizing: border-box;
 
 		.box {
@@ -29,7 +16,6 @@
 			flex-wrap: wrap;
 			margin: 20px;
 			align-items: center;
-			// background-color: rgba($color: index.$background-color, $alpha: 0.8);
 
 			.nadpis {
 				min-width: 200px;
@@ -41,10 +27,6 @@
 
 				h1 {
 					@include index.coloredFont;
-					// background: linear-gradient(45deg, red, index.$second-color);
-					// background-clip: text;
-					// -webkit-text-fill-color: transparent;
-
 					font-size: 3rem;
 					transform: translateX(600px);
 					animation: fadeIn 0.3s forwards ease-in-out;

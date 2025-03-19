@@ -3,24 +3,46 @@
 .email {
     padding: 15px;
     form {
-        border: red solid 1px;
+        box-sizing: border-box;
+        padding-top: 55px;
+        // border: red solid 1px;
         display: flex;
         flex-direction: column;
-        position: relative;
 
-        .message {
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            // justify-self: center;
-            align-self: center;
+        .contact-me {
+            box-sizing: border-box;
+            margin: 10px;
+            max-width: 500px;
+            border: red solid 1px;
+            box-shadow: 0 0 10px white;
+            border-radius: 5px;
+            font-size: 1.8rem;
+            background-color: index.$first-color;
+            color: index.$background-color;
+            transition: all 1s linear;
+            
+            &.active {
+                color: index.$text-color;
+                background-color: index.$background-color;
+                box-shadow: none;
+            }
+            
+            .message {
+                display: block;
+                margin: 0;
+                padding: 5px 10px;
+                justify-self: center;
+                align-self: center;
+                font-weight: 600;
+            }
         }
-
+        
         input {
             box-sizing: border-box;
             margin: 10px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             max-width: 250px;
+            height: 30px;
             padding: 5px 10px;
             outline: none;
             border: none;
@@ -29,21 +51,22 @@
             background-color: index.$background-color;
             color: index.$text-color;
             border-radius: 5px;
-
+            
             // -webkit-box-shadow: 0 0 0 30px index.$background-color; /* Změňte #xyz na požadovanou barvu pozadí */
             box-shadow: 0 0 0 30px index.$background-color inset;
             -webkit-text-fill-color: index.$text-color;
             // color: index.$text-color;
         }
-
+        
         textarea {
+            box-sizing: border-box;
             border-radius: 5px;
             max-width: 500px;
             padding: 5px 10px;
             height: 150px;
             display: block;
             margin: 10px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             border: none;
             resize: none;
             outline: none;
@@ -53,15 +76,16 @@
             color: index.$text-color;
             // background-color: black;
         }
-
+        
         input[type='submit'] {
             width: 250px;
             background-color: index.$first-color;
             transition: box-shadow 1s linear;
+            cursor: pointer;
             &:hover {
                 box-shadow: 0 0 15px white;
             }
-
+            
             &:active {
                 background-color: index.$second-color;
             }

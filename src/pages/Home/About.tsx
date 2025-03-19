@@ -19,7 +19,7 @@ const About = () => {
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				console.log(entry.target.id)
+				// console.log(entry.target.id)
 				if (entry.isIntersecting && entry.target.id === "text1") setAnimationText1(true);
 				else if (entry.isIntersecting && entry.target.id === "img1") setAnimationImg1(true);
 			});
@@ -88,14 +88,11 @@ const About = () => {
 			</div>
 
 			<div className="sixth-block">
-				<h1>Contact me</h1>
-
 				<p>
 					Hledám příležitost, kde bych mohl své dovednosti dále rozvíjet a přispět svým nadšením pro moderní frontendový
 					vývoj.
 				</p>
 
-				{/* <img src={circle} className="circle-icon" alt="" /> */}
 				<Email />
 			</div>
 		</section>

@@ -6,6 +6,7 @@ $width: 45vw;
 	height: fit-content;
 	border: solid black 5px;
 	background-color: #242424;
+	overflow: hidden;
 	.box {
 		border-radius: 15px;
 		width: $width;
