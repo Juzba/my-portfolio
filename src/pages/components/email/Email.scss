@@ -3,8 +3,19 @@
 .email {
     padding: 15px;
     form {
+        border: red solid 1px;
         display: flex;
         flex-direction: column;
+        position: relative;
+
+        .message {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            // justify-self: center;
+            align-self: center;
+        }
+
         input {
             box-sizing: border-box;
             margin: 10px;
@@ -18,8 +29,13 @@
             background-color: index.$background-color;
             color: index.$text-color;
             border-radius: 5px;
+
+            // -webkit-box-shadow: 0 0 0 30px index.$background-color; /* Změňte #xyz na požadovanou barvu pozadí */
+            box-shadow: 0 0 0 30px index.$background-color inset;
+            -webkit-text-fill-color: index.$text-color;
+            // color: index.$text-color;
         }
-        
+
         textarea {
             border-radius: 5px;
             max-width: 500px;
@@ -38,10 +54,17 @@
             // background-color: black;
         }
 
-        input[type="submit"]{
-            
+        input[type='submit'] {
             width: 250px;
             background-color: index.$first-color;
+            transition: box-shadow 1s linear;
+            &:hover {
+                box-shadow: 0 0 15px white;
+            }
+
+            &:active {
+                background-color: index.$second-color;
+            }
         }
     }
 }

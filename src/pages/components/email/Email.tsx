@@ -1,103 +1,131 @@
-import { useReducer } from "react";
-import "./Email.scss";
+import { useReducer, useState } from 'react';
+import './Email.scss';
 
 interface State {
-	name: string;
-	email: string;
-	tel: string;
-	company: string;
-	message: string;
+    name: string;
+    email: string;
+    tel: string;
+    company: string;
+    message: string;
 }
 
 const reducer = (state: State, action: { type: string; payload: string }) => {
-	switch (action.type) {
-		case "setName":
-			return { ...state, name: action.payload };
-		case "setEmail":
-			return { ...state, email: action.payload };
-		case "setTel":
-			return { ...state, tel: action.payload };
-		case "setCompany":
-			return { ...state, company: action.payload };
-		case "setMessage":
-			return { ...state, message: action.payload };
+    switch (action.type) {
+        case 'setName':
+            return { ...state, name: action.payload };
+        case 'setEmail':
+            return { ...state, email: action.payload };
+        case 'setTel':
+            return { ...state, tel: action.payload };
+        case 'setCompany':
+            return { ...state, company: action.payload };
+        case 'setMessage':
+            return { ...state, message: action.payload };
 
-		default:
-			console.error("Chyba form Email - UseReducer -> reducer nenašel hodnotu action.type");
-			return state;
-	}
+        default:
+            console.error('Chyba form Email - UseReducer -> reducer nenašel hodnotu action.type');
+            return state;
+    }
 };
 
 const defaultState: State = {
-	name: "",
-	email: "",
-	tel: "",
-	company: "",
-	message: "",
+    name: '',
+    email: '',
+    tel: '',
+    company: '',
+    message: '',
 };
 
 const Email = () => {
-	const [state, dispatch] = useReducer(reducer, defaultState);
-	const { name, email, tel, company, message } = state;
+    const [state, dispatch] = useReducer(reducer, defaultState);
+    const { name, email, tel, company, message } = state;
+    const [emailMessage, setEmailMessage] = useState('');
 
-	const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
+    const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
-		console.log(state);
-	};
+        if (name && email && message) {
+            console.log(`Sending: ${name}, ${email}, ${tel}, ${company}, ${message}`);
 
-	return (
-		<section className="email">
-			<h3>Email</h3>
-			<form onSubmit={submitForm}>
-				<input
-					value={name}
-					onChange={(e) => {
-						dispatch({ type: "setName", payload: e.target.value });
-					}}
-					type="text"
-					id="input-name"
-					placeholder="Jméno *"
-				/>
-				<input
-					value={email}
-					onChange={(e) => {
-						dispatch({ type: "setEmail", payload: e.target.value });
-					}}
-					type="email"
-					id="input-email"
-					placeholder="Email *"
-				/>
-				<input
-					value={tel}
-					onChange={(e) => {
-						dispatch({ type: "setTel", payload: e.target.value });
-					}}
-					type="tel"
-					id="input-tel"
-					placeholder="Telefon"
-				/>
-				<input
-					value={company}
-					onChange={(e) => {
-						dispatch({ type: "setCompany", payload: e.target.value });
-					}}
-					type="text"
-					id="input-company"
-					placeholder="Firma"
-				/>
-				<textarea
-					value={message}
-					onChange={(e) => {
-						dispatch({ type: "setMessage", payload: e.target.value });
-					}}
-					maxLength={800}
-					name="message"
-					id=""></textarea>
-				<input type="submit" />
-			</form>
-		</section>
-	);
+            fetch('https://localhost:7143/api/email', {
+                method: 'POST', // nebo 'PUT', 'DELETE' atd.
+                headers: {
+                    'Content-Type': 'application/json', // Typ obsahu
+                },
+                body: JSON.stringify(state), // Převod dat na JSON
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Zpracování odpovědi
+                })
+                .then(() => setEmailMessage('Odesláno:'))
+                .catch((error) => {console.error('Error:', error); setEmailMessage("Odeslání se nezdařilo.")});
+        } else {
+            setEmailMessage('Chybí údaje!');
+        }
+    };
+
+    return (
+        <section className="email">
+            <h3>Email</h3>
+            <form onSubmit={submitForm}>
+                <p className='message'>{emailMessage}</p>
+                <input
+                    value={name}
+                    onChange={(e) => {
+                        dispatch({ type: 'setName', payload: e.target.value });
+                    }}
+                    minLength={4}
+                    maxLength={30}
+                    type="text"
+                    id="input-name"
+                    placeholder="Jméno *"
+                />
+                <input
+                    value={email}
+                    onChange={(e) => {
+                        dispatch({ type: 'setEmail', payload: e.target.value });
+                    }}
+                    minLength={4}
+                    maxLength={30}
+                    type="email"
+                    id="input-email"
+                    placeholder="Email *"
+                />
+                <input
+                    value={tel}
+                    onChange={(e) => {
+                        dispatch({ type: 'setTel', payload: e.target.value });
+                    }}
+                    maxLength={20}
+                    type="tel"
+                    id="input-tel"
+                    placeholder="Telefon"
+                />
+                <input
+                    value={company}
+                    onChange={(e) => {
+                        dispatch({ type: 'setCompany', payload: e.target.value });
+                    }}
+                    maxLength={30}
+                    type="text"
+                    id="input-company"
+                    placeholder="Firma"
+                />
+                <textarea
+                    value={message}
+                    onChange={(e) => {
+                        dispatch({ type: 'setMessage', payload: e.target.value });
+                    }}
+                    maxLength={800}
+                    name="message"
+                    id=""></textarea>
+                <input type="submit" />
+            </form>
+        </section>
+    );
 };
 
 export default Email;
