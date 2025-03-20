@@ -39,6 +39,9 @@ const Email = () => {
         if (name && email && message) {
             console.log(`Sending: ${name}, ${email}, ${message}`);
 
+
+
+            
             fetch('https://localhost:7143/api/email', {
                 method: 'POST', // nebo 'PUT', 'DELETE' atd.
                 headers: {
@@ -55,7 +58,7 @@ const Email = () => {
                 .then(() => setEmailMessage('Odesláno:'))
                 .catch((error) => {
                     console.error('Error:', error);
-                    setEmailMessage('Odeslání se nezdařilo.');
+                    setEmailMessage('Odeslání se nezdařilo.')
                 });
         } else {
             setEmailMessage('Chybí údaje!');
