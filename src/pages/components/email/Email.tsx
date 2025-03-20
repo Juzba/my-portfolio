@@ -80,7 +80,7 @@ const Email = () => {
 
     return (
         <section className="email">
-            <form onSubmit={submitForm}>
+            <form onSubmit={()=>submitForm}>
                 <div className={emailMessage ? 'contact-me active' : 'contact-me'}>
                     {emailMessage ? <p className="message">{emailMessage}</p> : <p className="message">Kontaktní formulář</p>}
                 </div>

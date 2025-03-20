@@ -1,11 +1,8 @@
 @use '../../../index.scss';
 
 .bars {
-    @media (max-width: index.$screen-size) {
-		margin: 0;;
-    }
-
-    align-self: stretch;
+  
+    width: 65%;
     height: fit-content;
     border: solid black 5px;
     background-color: #242424;

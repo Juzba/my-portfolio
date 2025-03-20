@@ -1,0 +1,57 @@
+@use "../../index.scss";
+
+.about {
+	@media (max-width: index.$screen-size) {
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		.first-block {
+			padding: 15px;
+			.box {
+				margin: 0;
+				.nadpis {
+					margin: 0;
+				}
+			}
+		}
+
+		.second-block {
+			.box {
+				margin: 0;
+				.working {
+					margin: 20px 0;
+				}
+
+				p {
+					margin: 40px 0;
+				}
+			}
+		}
+
+		.third-block {
+			margin: 0;
+		}
+
+		.fourth-block {
+			margin: 0;
+
+         // Tech bars
+			.bars {
+				width: 100%;
+			}
+		}
+
+      .fifth-block {
+			margin: 20px 0;
+         padding: 0;
+
+		}
+
+      .sixth-block {
+			margin: 20px 0;
+         padding: 0;
+
+		}
+	}
+}

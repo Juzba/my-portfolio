@@ -1,6 +1,9 @@
 @use "../../index.scss";
+
+
 .about {
 	.third-block {
+		width: 100%;
 		margin: 20px;
 		margin-bottom: 100px;
 
@@ -12,6 +15,7 @@
 	}
 
 	.fourth-block {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -30,15 +34,15 @@
 	}
 
 	.fifth-block {
+		width: 100%;
 		margin: 20px;
 		padding: 20px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 40px;
+		gap: 50px;
 
 		p {
-			// margin: 20px;
 			padding: 20px;
 			flex: 1;
 			text-align: justify;
@@ -48,13 +52,13 @@
 			aspect-ratio: 5/3;
 			height: 400px;
 			width: auto;
-			margin-top: 70px;
-			// border: red 1px solid;
+			margin: 70px auto 0;
 			position: relative;
 			flex-shrink: 0;
 			background-image: url(../../images/factory.jpg);
 			background-size: cover;
-			// background-attachment:fixed;
+
+
 			.robot {
 				position: absolute;
 				top: -170px;
@@ -68,6 +72,7 @@
 
 	.sixth-block {
 	
+		width: 100%;
 		margin: 20px;
 		padding: 20px;
 		

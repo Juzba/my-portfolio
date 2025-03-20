@@ -1,6 +1,7 @@
 import "./About-First-Box.scss";
 import "./About-Second-Box.scss";
 import "./About-Third-Box.scss";
+import "./About-Responsivity-Width.scss"
 import TechBars from "../components/tech_bars/TechBars";
 import Slider from "../components/slider/Slider";
 import imgBaldMan from "../../images/bman.png";

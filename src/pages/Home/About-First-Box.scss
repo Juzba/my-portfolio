@@ -1,22 +1,23 @@
 @use "../../index.scss";
 
-
 .about {
 	box-sizing: border-box;
 	width: 86vw;
 	padding: 15px;
 	font-size: 1.5rem;
-
+	overflow: hidden;
 
 	.first-block {
 		display: flex;
+		width: 100%;
 		box-sizing: border-box;
-		height: max-content;
 
 		.box {
+			box-sizing: border-box;
 			display: flex;
 			flex-wrap: wrap;
 			margin: 20px;
+			width: 100%;
 			align-items: center;
 
 			.nadpis {
@@ -68,15 +69,21 @@
 		}
 	}
 
-	@media (max-width: index.$screen-size) {
-		width: 100vw;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		.first-block {
-			padding: 15px;
-		}
-	}
+	// @media (max-width: index.$screen-size) {
+	// 	width: 100vw;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	flex-wrap: wrap;
+	// 	.first-block {
+	// 		padding: 15px;
+	// 		.box {
+	// 			margin: 0;
+	// 			.nadpis {
+	// 				margin: 0;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	@keyframes fadeIn {
 		to {

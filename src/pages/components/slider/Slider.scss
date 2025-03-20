@@ -2,15 +2,15 @@
 
 .slider {
 	height: 150px;
-    width: 100%;
+	width: 100%;
 	position: relative;
-	display:flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 
 	.icon {
-		transition: all 4s linear ;
+		transition: all 4s linear;
 
 		&.pos1 {
 			transform: translateX(-450%) scale(0.5);
@@ -25,7 +25,6 @@
 		}
 
 		&.pos3 {
-            // box-shadow: 0 0 15px index.$text-color;
 			transform: translateX(0) scale(1.2);
 			position: absolute;
 			opacity: 1;
@@ -37,11 +36,9 @@
 			opacity: 0.7;
 		}
 		&.pos5 {
-            // transform: scale(0.5);
 			transform: translateX(450%) scale(0.5);
 			position: absolute;
 			opacity: 0;
 		}
-		
 	}
 }
