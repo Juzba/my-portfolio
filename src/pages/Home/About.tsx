@@ -45,9 +45,12 @@ const About = () => {
 						<h1>O mně</h1>
 						<p className="text1">Jmenuji se Jiří Strnadel</p>
 						<p className="text2">a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.</p>
+						<div className="icons-box">
+
 						<StackIcon className="react-icon react" name={"reactjs"} />
 						<StackIcon className="react-icon typescript" name={"typescript"} />
 						<StackIcon className="react-icon csharp" name={"csharp"} />
+						</div>
 					</div>
 					<img className="me" src={imgBaldMan} alt="" />
 				</div>

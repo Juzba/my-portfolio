@@ -4,6 +4,7 @@ import Sidebar from './navShared/Sidebar';
 import "./scss/NavShared.scss"
 
 const NavShared = () => {
+
     return (
         <section className='navigation-shared'>
             <Sidebar/>

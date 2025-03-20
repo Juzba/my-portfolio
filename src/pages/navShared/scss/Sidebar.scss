@@ -64,7 +64,7 @@ header {
 			left: -140px;
 		}
 	}
-	@media (max-width: 1000px) {
+	@media (max-width: index.$screen-size) {
 		min-width: 0;
 		width: 0;
 		margin: 0;
@@ -80,17 +80,10 @@ header {
 			overflow-x: hidden;
 			background-color: rgba($color: index.$background-color, $alpha: 0.9);
 
-			// .icon{
-			//     opacity: 0;
-			//     transition: opacity 3s ease-out;
-			// }
+		
 
 			&.open {
 				min-width: 190px;
-
-				// .icon {
-				//     opacity: 1;
-				// }
 			}
 
 			button {

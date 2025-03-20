@@ -48,11 +48,17 @@
 					animation: fadeIn 1.5s forwards ease-in-out, opacityIn 2s forwards;
 				}
 
-				.react-icon {
-					margin: 25px;
+				.icons-box {
+					display: flex;
+					// flex-wrap: wrap;
+					justify-content: space-around;
+					.react-icon {
+						margin: 25px;
+						// width: 50px;
 
-					&.react {
-						animation: rotate 20s forwards infinite linear;
+						&.react {
+							animation: rotate 20s forwards infinite linear;
+						}
 					}
 				}
 			}
@@ -68,22 +74,6 @@
 			}
 		}
 	}
-
-	// @media (max-width: index.$screen-size) {
-	// 	width: 100vw;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	flex-wrap: wrap;
-	// 	.first-block {
-	// 		padding: 15px;
-	// 		.box {
-	// 			margin: 0;
-	// 			.nadpis {
-	// 				margin: 0;
-	// 			}
-	// 		}
-	// 	}
-	// }
 
 	@keyframes fadeIn {
 		to {

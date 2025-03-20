@@ -28,8 +28,8 @@ $screen-size: 1000px;
 	width: 100vw;
 	height: 100vh;
 
-	background: linear-gradient(135deg, black, #141414, #012e40);
-	// background-color: white;
+	background: linear-gradient(60deg, black, #141414, #012e40);
+	background-color: $background-color-secondary;
 	background-attachment: fixed;
 	overflow-x: hidden;
 	color: $text-color;
