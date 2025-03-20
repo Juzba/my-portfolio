@@ -8,6 +8,8 @@ $first-color: #d94f04;
 $second-color: #3d5b81;
 $third-color: #9bc0d9;
 
+$screen-size: 1000px;
+
 @mixin coloredFont {
 	background: linear-gradient(to right, red , $second-color);
 	background-clip: text;

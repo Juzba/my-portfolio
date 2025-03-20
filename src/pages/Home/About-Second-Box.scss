@@ -3,12 +3,13 @@
 .about {
     .second-block {
         margin-bottom: 70px;
+		display: flex;
 
         .box {
 			display:flex;
             flex-wrap: wrap;
             margin: 100px 20px 20px;
-            padding: 20px;
+            padding: 40px 20px;
             align-items: center;
 
             border: rgb(14, 145, 206) solid 3px;
@@ -35,6 +36,7 @@
                 // transform: scaleX(-1);
                 width: 25vw;
                 height: 25vw;
+				margin: 20px;
 
                 min-width: 300px;
                 min-height: 300px;

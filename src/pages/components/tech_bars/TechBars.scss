@@ -1,92 +1,94 @@
-$height: 60px;
-$width: 45vw;
+@use '../../../index.scss';
 
 .bars {
-	width: $width + 10vw;
-	height: fit-content;
-	border: solid black 5px;
-	background-color: #242424;
-	overflow: hidden;
-	.box {
-		border-radius: 15px;
-		width: $width;
-		margin: 40px;
-		height: fit-content;
-		position: relative;
+    @media (max-width: index.$screen-size) {
+		margin: 0;;
+    }
 
-		.circle {
-			position: absolute;
-			border-radius: 50%;
-			background-color: #242424;
-			height: 90px;
-			width: 90px;
-			left: -20px;
-			top: -20px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			box-shadow: 0 0 8px black;
-			overflow: hidden;
-		}
+    align-self: stretch;
+    height: fit-content;
+    border: solid black 5px;
+    background-color: #242424;
+    overflow: hidden;
+    margin: 0 15vw;
+    .box {
+        border-radius: 15px;
+        margin: 40px;
+        height: fit-content;
+        position: relative;
 
-		.icon {
-			height: $height;
-			left: 10px;
-			top: 0;
-		}
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #242424;
+            height: 90px;
+            width: 90px;
+            left: -20px;
+            top: -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 8px black;
+            overflow: hidden;
+        }
 
-		.bar {
-			margin-left: 50px;
-			height: $height;
-			box-shadow: 5px 5px 5px #141414;
-		}
+        .icon {
+            height: 60px;
+            left: 10px;
+            top: 0;
+        }
 
-		.reactjs {
-			border-radius: 0 15px 15px 0;
-			background: linear-gradient(360deg, #1f9deb, #025c90);
-			width: 0;
-			transition: all 4s ease-out;
-			
-			&.active{
-				width: $width * 0.8;
-			}
-		}
+        .bar {
+            margin-left: 50px;
+            height: 60px;
+            box-shadow: 5px 5px 5px #141414;
+        }
 
-		.typescript {
-			background: linear-gradient(360deg, #086096, #062c7e);
-			border-radius: 0 15px 15px 0;
+        .reactjs {
+            border-radius: 0 15px 15px 0;
+            background: linear-gradient(360deg, #1f9deb, #025c90);
+            width: 0;
+            transition: all 4s ease-out;
 
-			width: 0;
-			transition: all 4s ease-out;
-			
-			&.active{
-				width: $width * 0.75;
-			}
-		}
+            &.active {
+                width: 80%;
+            }
+        }
 
-		.csharp {
-			background: linear-gradient(360deg, #8105e7, #48035f);
-			border-radius: 0 15px 15px 0;
+        .typescript {
+            background: linear-gradient(360deg, #086096, #062c7e);
+            border-radius: 0 15px 15px 0;
 
-			width: 0;
-			transition: all 4s ease-out;
-			
-			&.active{
-				width: $width * 0.5;
-			}
-		}
+            width: 0;
+            transition: all 4s ease-out;
 
-		.sass {
-			background: linear-gradient(360deg, #e705a3, #5f0317);
-			border-radius: 0 15px 15px 0;
+            &.active {
+                width: 75%;
+            }
+        }
 
-			width: 0;
-			transition: all 4s ease-out;
-			
-			&.active{
-				width: $width * 0.9;
-			}
-		}
-	}
+        .csharp {
+            background: linear-gradient(360deg, #8105e7, #48035f);
+            border-radius: 0 15px 15px 0;
+
+            width: 0;
+            transition: all 4s ease-out;
+
+            &.active {
+                width: 50%;
+            }
+        }
+
+        .sass {
+            background: linear-gradient(360deg, #e705a3, #5f0317);
+            border-radius: 0 15px 15px 0;
+
+            width: 0;
+            transition: all 4s ease-out;
+
+            &.active {
+                width: 90%;
+            }
+        }
+    }
 }
-
