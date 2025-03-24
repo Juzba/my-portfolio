@@ -1,3 +1,21 @@
+@use "../../../index.scss";
+
 .footer {
-	margin: 30px;
+	// position:;
+	bottom: 0;
+	width: 100%;
+	// margin: 0px;
+	.wave{
+		// background-color: aqua;
+		fill: index.$second-color;
+	}
+	.background{
+		background-color: index.$second-color;
+		p{
+			margin: 0;
+			padding: 10px 0 10px 40px;
+			z-index: 10;
+	
+		}
+	}
 }

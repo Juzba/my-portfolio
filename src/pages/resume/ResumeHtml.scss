@@ -1,3 +1,5 @@
+@use '../../index.scss';
+
 .resume {
     border: 1px solid white;
     box-sizing: border-box;
@@ -12,17 +14,19 @@
     height: 100%;
     padding: 5%;
     font-size: index.$font-size;
-
+    margin-bottom: 60px;
+    
     @media (max-width: 500px) {
         font-size: 0.9rem;
     }
 
     h1 {
         text-align: center;
+        margin: 0 0 30px;
+        font-size: 2em;
     }
 
     .info {
-        margin-bottom: 60px;
         table {
             border-collapse: collapse;
             tr {
@@ -51,10 +55,7 @@
                 vertical-align: top;
                 th {
                     padding-left: 50px;
-					text-wrap: noWrap;
-                    &:first-child {
-                        // width: 12vw;
-                    }
+                    text-wrap: noWrap;
                 }
             }
         }

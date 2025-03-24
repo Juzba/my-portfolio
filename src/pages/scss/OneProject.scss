@@ -2,8 +2,10 @@
 
 
 .one-project{
-   min-width: 80vw;
+   min-width: 100%;
    min-height: 100vh;
+   padding: 20px 0;
+
    display: grid;
    place-items: center;
 }
