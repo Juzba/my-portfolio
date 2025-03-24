@@ -1,61 +1,75 @@
-@use "../../index.scss";
+@use '../../index.scss';
 
 .about {
-	@media (max-width: index.$screen-size) {
-		width: 100%;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		.first-block {
-			padding: 0px;
-			.box {
-				margin: 0;
-				.nadpis {
-					margin: 0;
-					padding: 0px;
-					.text2{
-					}
-				}
+    @media (max-width: index.$screen-size) {
+        width: 100%;
+        padding: 15px;
+        // padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .first-block {
+            .box {
+                margin: 0;
+                .nadpis {
+                    margin: 0;
+                    padding: 0px;
+                    .text2 {
+                    }
+                }
+            }
+        }
+
+        .second-block {
+            .box {
+                margin: 0;
+                padding: 0;
+                .working {
+                    margin: 20px 0;
+                }
+
+                p {
+                    margin: 40px 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        .third-block {
+            margin: 0;
+        }
+
+        .fourth-block {
+            margin: 0;
+
+            // Tech bars
+            .bars {
+                width: 100%;
+            }
+        }
+
+        .fifth-block {
+            margin: 20px 0;
+            padding: 0;
+
+			overflow: hidden;
+            p {
+                padding: 0px;
+				margin-bottom: 30px;
+            }
+        }
+
+        .sixth-block {
+            margin: 20px 0;
+            padding: 0;
+
+			p{
+				padding: 0;
 			}
-		}
 
-		.second-block {
-			.box {
-				margin: 0;
-				.working {
-					margin: 20px 0;
-				}
-
-				p {
-					margin: 40px 0;
-				}
+			.email{
+				padding: 0;
 			}
-		}
-
-		.third-block {
-			margin: 0;
-		}
-
-		.fourth-block {
-			margin: 0;
-
-         // Tech bars
-			.bars {
-				width: 100%;
-			}
-		}
-
-      .fifth-block {
-			margin: 20px 0;
-         padding: 0;
-
-		}
-
-      .sixth-block {
-			margin: 20px 0;
-         padding: 0;
-
-		}
-	}
+        }
+    }
 }

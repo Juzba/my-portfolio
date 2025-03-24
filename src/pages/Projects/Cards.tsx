@@ -7,7 +7,7 @@ const Cards = () => {
         <section className="cards-component">
             <input type="text" placeholder="Vyhledání projectu" />
             <div className="cards-box">
-                {data.map(({ id, name, image, created, description, playable }) => {
+                {data.map(({ id, name, image, created, playable }) => {
                     return (
                         <div key={id} className="one-card">
                             <img src={image}></img>

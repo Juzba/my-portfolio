@@ -1,0 +1,82 @@
+.advenced-slider {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 20px #e50914;
+    border-radius: 2px;
+    width: 400px;
+    height: 450px;
+    overflow: hidden;
+    padding: 10px;
+    display: block;
+    justify-self: center;
+    align-self: center;
+
+    position: relative;
+    transition: all 2s ease;
+
+    &:hover {
+        box-shadow: 0 0 35px white;
+    }
+
+    .card {
+        position: absolute;
+        text-align: center;
+        top: 15px;
+        left: 25px;
+        right: 25px;
+        justify-items: center;
+        opacity: 0;
+        transition: opacity 0.5s linear, transform 0.2s linear;
+
+        img {
+            width: 285px;
+            height: 159px;
+        }
+    }
+
+    #nextPosition {
+        transform: translateX(100%);
+    }
+
+    #position {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #lastPosition {
+        transform: translateX(-100%);
+    }
+
+    .buttons {
+        width: 100%;
+        align-items: end;
+
+        display: flex;
+        justify-content: center;
+
+        button {
+            border-radius: 50%;
+            font-size: 25px;
+            width: 40px;
+            height: 40px;
+            background-color: #96040b;
+            color: aliceblue;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 1s ease;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+            :hover {
+                box-shadow: 0 0 25px #e50914;
+                background-color: white;
+                color: #e50914;
+            }
+        }
+    }
+}
