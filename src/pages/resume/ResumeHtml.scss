@@ -1,0 +1,115 @@
+.resume {
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: block;
+
+    justify-self: center;
+    align-self: center;
+    text-align: left;
+
+    width: 90%;
+    max-width: 900px;
+    height: 100%;
+    padding: 5%;
+    font-size: index.$font-size;
+
+    @media (max-width: 500px) {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .info {
+        margin-bottom: 60px;
+        table {
+            border-collapse: collapse;
+            tr {
+                vertical-align: top;
+                th {
+                    padding-left: 30px;
+                    &:first-child {
+                        text-wrap: noWrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .jobs {
+        margin-bottom: 60px;
+
+        h3 {
+            padding-left: 30px;
+            margin: 35px 0 0px;
+        }
+
+        table {
+            border-collapse: collapse;
+            tr {
+                vertical-align: top;
+                th {
+                    padding-left: 50px;
+					text-wrap: noWrap;
+                    &:first-child {
+                        // width: 12vw;
+                    }
+                }
+            }
+        }
+
+        p {
+            padding-left: 50px;
+            margin: 0;
+            overflow-wrap: break-word;
+        }
+    }
+
+    .study {
+        margin-bottom: 60px;
+        h2 {
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            tr {
+                vertical-align: top;
+                th {
+                    padding-left: 30px;
+                    &:last-child {
+                        text-wrap: noWrap;
+                    }
+                }
+            }
+        }
+
+        p {
+            padding-left: 30px;
+            margin: 0 0 20px;
+        }
+    }
+
+    .courses {
+        margin-bottom: 60px;
+        p {
+            padding-left: 30px;
+        }
+    }
+
+    .other {
+        margin-bottom: 60px;
+        table {
+            border-collapse: collapse;
+            tr {
+                vertical-align: top;
+                th {
+                    padding-left: 30px;
+                    &:first-child {
+                        text-wrap: noWrap;
+                    }
+                }
+            }
+        }
+    }
+}
