@@ -2,16 +2,20 @@
 
 .about {
 	@media (max-width: index.$screen-size) {
-		width: 100vw;
+		width: 100%;
+		padding: 0;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		.first-block {
-			padding: 15px;
+			padding: 0px;
 			.box {
 				margin: 0;
 				.nadpis {
 					margin: 0;
+					padding: 0px;
+					.text2{
+					}
 				}
 			}
 		}

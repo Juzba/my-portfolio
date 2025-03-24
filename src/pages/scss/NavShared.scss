@@ -1,8 +1,24 @@
 @use '../../index.scss';
 
 .navigation-shared {
-    width: fit-content;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
 
+    .right-side {
+        width: 80%;
+    }
+
+
+@media (max-width: index.$screen-size) {
+    .right-side {
+        width: 100%;
+    }
 }
+
+}
+
+
+

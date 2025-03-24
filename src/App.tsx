@@ -7,6 +7,7 @@ import Resume from './pages/Resume';
 import GitHub from './pages/GitHub';
 import OneProject from './pages/OneProject';
 
+
 const App = () => {
     return (
         <BrowserRouter>

@@ -2,8 +2,7 @@
 
 .about {
 	box-sizing: border-box;
-	width: 86vw;
-	padding: 15px;
+	width: 100%;
 	font-size: 1.5rem;
 	overflow: hidden;
 
@@ -16,7 +15,7 @@
 			box-sizing: border-box;
 			display: flex;
 			flex-wrap: wrap;
-			margin: 20px;
+			// margin: 20px;
 			width: 100%;
 			align-items: center;
 
