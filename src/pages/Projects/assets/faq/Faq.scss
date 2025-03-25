@@ -1,0 +1,49 @@
+.appContainer {
+    margin-top: 80px;
+
+    .cardContainer {
+        width: 60%;
+        margin: 30px auto;
+        padding: 5px 50px;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.667);
+
+        h2 {
+            font-weight: 400;
+            padding-right: 10px;
+        }
+
+        .firstBox {
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close {
+            /* padding: 5px; */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 3s ease;
+        }
+
+        .open {
+            max-height: fit-content;
+        }
+        
+        button {
+            text-align: center;
+            height: 30px;
+            min-width: 100px;
+            background-color: #e50a15;
+            color: aliceblue;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+
+
+

@@ -1,4 +1,5 @@
 import img1 from './images/snake.png';
+import img2 from "./Advenced-slider.png"
 
 interface type {
     id: number;
@@ -21,17 +22,17 @@ const ProjectData: type[] = [
     {
         id: 1,
         name: 'Advenced Slider',
-        image: img1,
+        image: img2,
         created: ['React', 'Scss', 'Typescript'],
         description: 'Automatické posouvání filmů nebo přes buttony.',
         playable: true,
     },
     {
         id: 2,
-        name: 'Snake',
+        name: 'Faq',
         image: img1,
-        created: ['React', 'Scss', 'Java Script'],
-        description: 'Classic Snake ovladaný klavesnicí wasd a start -> Enter',
+        created: ['React', 'Scss', 'TypeScript'],
+        description: 'Otevírací lišty dotazy a odpovědi.',
         playable: true,
     },
     {

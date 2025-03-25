@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Snake from "./Projects/assets/snake/Snake";
 import AdvencedSlider from "./Projects/assets/advenced-slider/AdvencedSlider";
+import Faq from "./Projects/assets/faq/Faq"
 import "./scss/OneProject.scss"
 
 const OneProject = () => {
@@ -13,6 +14,7 @@ const OneProject = () => {
 			{/* <h1>One Project</h1> */}
 			{id === "0" && <Snake/>}
 			{id === "1" && <AdvencedSlider/>}
+			{id === "2" && <Faq/>}
 		</section>
 	);
 };
