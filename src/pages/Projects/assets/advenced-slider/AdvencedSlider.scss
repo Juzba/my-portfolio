@@ -1,16 +1,17 @@
 .advenced-slider {
+    box-shadow: 0 0 20px #e50914;
+    border-radius: 2px;
+    margin-top: 50px;
+    padding: 10px;
+    width: 320px;
+    height: 450px;
+    overflow: hidden;
+    justify-self: center;
+    // align-self: center;
+    
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    box-shadow: 0 0 20px #e50914;
-    border-radius: 2px;
-    width: 400px;
-    height: 450px;
-    overflow: hidden;
-    padding: 10px;
-    display: block;
-    justify-self: center;
-    align-self: center;
 
     position: relative;
     transition: all 2s ease;
@@ -73,8 +74,6 @@
             z-index: 1;
 
             :hover {
-                box-shadow: 0 0 25px #e50914;
-                background-color: white;
                 color: #e50914;
             }
         }

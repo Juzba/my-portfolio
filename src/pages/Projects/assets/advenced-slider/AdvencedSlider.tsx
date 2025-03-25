@@ -8,7 +8,6 @@ function Slider() {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        console.log('useeffect 1');
         if (index > data.length - 1) setIndex(0);
         else if (index < 0) setIndex(data.length - 1);
 
