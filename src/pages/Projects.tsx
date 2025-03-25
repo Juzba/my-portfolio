@@ -1,4 +1,5 @@
 import Cards from './Projects/Cards';
+import "./scss/Projects.scss"
 
 const Projects = () => {
     return (

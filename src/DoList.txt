@@ -1,0 +1,1 @@
+Potreba vyřešit v projectech aby se po otevřeni karty otevřelo okno nahoře.

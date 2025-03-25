@@ -1,5 +1,6 @@
 import img1 from './images/snake.png';
-import img2 from "./Advenced-slider.png"
+import img2 from "./images/Advenced-slider.png"
+import img3 from "./images/faq.png"
 
 interface type {
     id: number;
@@ -13,7 +14,7 @@ interface type {
 const ProjectData: type[] = [
     {
         id: 0,
-        name: 'Snake',
+        name: 'Had',
         image: img1,
         created: ['React', 'Scss', 'TypeScript'],
         description: 'Classic Snake. Optimized for PC',
@@ -29,8 +30,8 @@ const ProjectData: type[] = [
     },
     {
         id: 2,
-        name: 'Faq',
-        image: img1,
+        name: 'Otázky a odpovědi',
+        image: img3,
         created: ['React', 'Scss', 'TypeScript'],
         description: 'Otevírací lišty dotazy a odpovědi.',
         playable: true,

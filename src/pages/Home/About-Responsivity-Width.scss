@@ -4,7 +4,6 @@
     @media (max-width: index.$screen-size) {
         width: 100%;
         padding: 15px;
-        // padding: 0;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -14,8 +13,7 @@
                 .nadpis {
                     margin: 0;
                     padding: 0px;
-                    .text2 {
-                    }
+               
                 }
             }
         }

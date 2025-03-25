@@ -1,11 +1,10 @@
 @use '../../index.scss';
 
-
-.one-project{
-   width: 100%;
-   min-height: 100vh;
-   padding: 20px 0;
-
-   // display: grid;
-   // place-items: center;
+.one-project {
+    width: 100%;
+    min-height: 100vh;
+   //  padding: 20px 15px;
+    box-sizing: border-box;
+    // display: grid;
+    // place-items: center;
 }

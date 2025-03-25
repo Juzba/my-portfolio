@@ -1,10 +1,17 @@
+@use "../../../../index.scss";
+
+
+
 .appContainer {
     margin-top: 80px;
 
+
+
     .cardContainer {
-        width: 60%;
+        // width: 60%;
+        max-width: 600px;
         margin: 30px auto;
-        padding: 5px 50px;
+        padding: 5px 10px;
         border-radius: 5px;
         box-shadow: 0 0 15px rgba(255, 0, 0, 0.667);
 
@@ -36,11 +43,13 @@
             text-align: center;
             height: 30px;
             min-width: 100px;
-            background-color: #e50a15;
+            background-color: rgb(130, 9, 9);
             color: aliceblue;
             border-radius: 5px;
             cursor: pointer;
             border: none;
+
+            &:hover{box-shadow: 0 0 15px white;}
         }
     }
 }

@@ -15,7 +15,14 @@
 @media (max-width: index.$screen-size) {
     .right-side {
         width: 100%;
+        padding: 15px;
         overflow: hidden;
+        box-sizing: border-box;
+        // position: relative;
+
+        // display: block;
+        // justify-content: center;
+        // align-items: center;
     }
 }
 
