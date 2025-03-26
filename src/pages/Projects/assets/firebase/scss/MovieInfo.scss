@@ -1,0 +1,41 @@
+@use '../../../../../index.scss';
+
+.movies {
+	position: relative;
+   
+		
+        .movie-card {
+			position: absolute;
+			top: 50px;
+			border: solid index.$first-color 1px;
+            box-shadow: 0 0 15px index.$second-color;
+            padding: 20px;
+            font-size: 1.2rem;
+            background: index.$background-gradient;
+			z-index: 5;
+			text-wrap: noWrap;
+			
+            h2 {
+                margin-top: 5px;
+                justify-self: center;
+                font-size: 1.8rem;
+            }
+            table {
+                thead {
+                    text-align: left;
+                    th {
+                        padding: 6px;
+                    }
+                }
+            }
+            a {
+                display: block;
+                // margin-top: 100px;
+                padding: 8px 0 0 7px;
+                color: index.$first-color;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    
+}

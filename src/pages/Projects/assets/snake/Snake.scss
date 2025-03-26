@@ -1,5 +1,6 @@
+@use "../../../../index.scss";
+
 .snake {
-	width: 840px;
 	margin-top: 50px;
 	display: flex;
 	flex-direction: column;
@@ -11,6 +12,14 @@
 		font-size: 60px;
         margin: 0;
 	}
+
+	h2{
+		padding: 10px;
+		text-align: center;
+		color: index.$first-color;
+		background-color: rgba($color: index.$background-color, $alpha: 1.0);
+	}
+	
 
 	.border {
         margin: 50px;

@@ -3,8 +3,29 @@
 .one-project {
     width: 100%;
     min-height: 100vh;
-   //  padding: 20px 15px;
     box-sizing: border-box;
-    // display: grid;
-    // place-items: center;
+
+    a {
+        background-color: index.$first-color;
+        color: index.$text-color;
+        text-decoration: none;
+        width: 120px;
+        padding: 5px 10px;
+        margin: 60px 0;
+        font-size: index.$font-size;
+
+        text-align: center;
+        display: flex;
+        justify-self: center;
+
+        &:hover{
+            box-shadow: 0 0 15px;
+        }
+
+        .icon {
+            align-self: center;
+            padding-right: 15px;
+            padding: 0 15px;
+        }
+    }
 }

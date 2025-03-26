@@ -1,6 +1,7 @@
-import img1 from './images/snake.png';
-import img2 from "./images/Advenced-slider.png"
-import img3 from "./images/faq.png"
+import img1 from './images/firebase1.png';
+import img2 from './images/Advenced-slider.png';
+import img3 from './images/faq.png';
+import img4 from './images/snake.png';
 
 interface type {
     id: number;
@@ -14,10 +15,10 @@ interface type {
 const ProjectData: type[] = [
     {
         id: 0,
-        name: 'Had',
+        name: 'FirebaseDB project',
         image: img1,
-        created: ['React', 'Scss', 'TypeScript'],
-        description: 'Classic Snake. Optimized for PC',
+        created: ['React', 'Firebase', 'Scss', 'TypeScript'],
+        description: 'Uklládání a načítání filmu z databáze',
         playable: true,
     },
     {
@@ -38,11 +39,11 @@ const ProjectData: type[] = [
     },
     {
         id: 3,
-        name: 'Snake',
-        image: img1,
-        created: ['React', 'Scss', 'Java Script'],
-        description: 'Classic Snake ovladaný klavesnicí wasd a start -> Enter',
-        playable: false,
+        name: 'Had',
+        image: img4,
+        created: ['React', 'Scss', 'TypeScript'],
+        description: 'Classic Snake. Optimized for PC',
+        playable: true,
     },
     {
         id: 4,

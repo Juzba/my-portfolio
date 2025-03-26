@@ -10,8 +10,10 @@ const Cards = () => {
                 {data.map(({ id, name, image, created, playable }) => {
                     return (
                         <div key={id} className="one-card">
-                            <img src={image}></img>
-                            <div className='text-box'>
+                            <div className="img-box">
+                                <img src={image}></img>
+                            </div>
+                            <div className="text-box">
                                 <h3>{name}</h3>
 
                                 {/* přidání čarky mezi slova */}
@@ -21,7 +23,13 @@ const Cards = () => {
                                     })}
                                 </p>
                                 {/* <p>{description}</p> */}
-                                {playable ? <Link className="button-open" to={`/oneproject/${id}`}>Open</Link> : <></>}
+                                {playable ? (
+                                    <Link className="button-open" to={`/oneproject/${id}`}>
+                                        Open
+                                    </Link>
+                                ) : (
+                                    <></>
+                                )}
                             </div>
                         </div>
                     );

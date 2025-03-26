@@ -1,23 +1,25 @@
 @use '../../index.scss';
 
 .navigation-shared {
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
-
+    
     .right-side {
         width: 80%;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
 
 @media (max-width: index.$screen-size) {
     .right-side {
         width: 100%;
-        padding: 15px;
-        overflow: hidden;
-        box-sizing: border-box;
+        max-width: 100vw;
+        padding: 15px 15px 0 15px;
         // position: relative;
 
         // display: block;

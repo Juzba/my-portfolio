@@ -1,0 +1,21 @@
+@use "../../index.scss";
+.error-page{
+    width: 100%;
+    max-width: 100vw;
+    min-height: 70vh;
+    padding: 0;
+    margin: 0;
+
+
+display: flex;
+flex-direction: column;
+
+font-size:index.$font-size ;
+text-justify: auto;
+text-align: center;
+
+
+
+
+
+}

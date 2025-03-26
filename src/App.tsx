@@ -6,6 +6,7 @@ import NavShared from './pages/NavShared';
 import Resume from './pages/Resume';
 import GitHub from './pages/GitHub';
 import OneProject from './pages/OneProject';
+import Error from './pages/Error';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/github" element={<GitHub />} />
+                    <Route path="/*" element={<Error />} />
                 </Route>
             </Routes>
         </BrowserRouter>

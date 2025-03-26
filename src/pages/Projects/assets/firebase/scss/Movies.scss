@@ -1,0 +1,68 @@
+@use '../../../../../index.scss';
+
+.movies {
+    // min-height: 60vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    h1 {
+        display: block;
+        font-size: 2rem;
+        color: index.$first-color;
+        // text-wrap: wrap;
+    }
+
+    .one-movie {
+        padding: 10px;
+        margin: 15px;
+
+        box-shadow: 0 0 15px index.$third-color;
+        background: linear-gradient(45deg, index.$background-color, rgb(44, 43, 43));
+
+        display: flex;
+        flex-wrap: wrap;
+        text-wrap: nowrap;
+
+        align-items: center;
+        overflow: hidden;
+
+        h3 {
+            margin: 0 0;
+            max-width: 400px;
+            width: 200px;
+            font-size: 1.4rem;
+        }
+        .info-smazat-box {
+            display: flex;
+            height: 100%;
+            // width: 100%;
+            flex: 1;
+            justify-content: space-between;
+    
+            
+            .info-btn {
+                margin: 5px 5px 5px 0;
+                padding: 0 15px 0 0;
+                background-color: transparent;
+                color: index.$third-color;
+                cursor: pointer;
+                border: none;
+                font-size: 1.1rem;
+
+            }
+
+            .delete-btn {
+                margin: 5px 5px 5px 0;
+                background-color: index.$third-color;
+                box-shadow: 0 0 15px index.$third-color;
+                border: none;
+                color: index.$text-color;
+                cursor: pointer;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

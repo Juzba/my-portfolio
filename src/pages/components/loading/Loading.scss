@@ -1,0 +1,59 @@
+@use "../../../index.scss";
+
+.loading {
+	// opacity: 0;
+	animation: fadeIn 3s forwards;
+	position: relative;
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1; /* Na konci animace se opacity změní na 1 */
+		}
+	}
+
+	.load-box {
+		width: 60px;
+		height: 60px;
+		border: 10px solid;
+		border-radius: 50%;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		animation: rotation 2s infinite linear, color 4s infinite linear;
+	}
+
+	p {
+		color: index.$third-color;
+		position: absolute;
+		font-weight: 500;
+		font-size: 16px;
+		top: 13px;
+		left: 13px;
+		text-shadow: 0 0 2px index.$second-color;
+	}
+	@keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes color {
+		0% {
+			border-left-color: index.$third-color;
+			border-right-color: index.$third-color;
+		}
+		50% {
+			border-left-color: index.$first-color;
+			border-right-color: index.$first-color;
+		}
+		100% {
+			border-left-color: index.$third-color;
+			border-right-color: index.$third-color;
+		}
+	}
+}
