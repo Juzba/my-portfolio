@@ -1,72 +1,56 @@
-@use "../../index.scss";
+@use '../../index.scss';
 
 .about {
-	.second-block {
-		margin-bottom: 30px;
-		width: 100%;
-		display: flex;
+    .second-block {
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
 
-		.box {
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-			box-sizing: border-box;
-			margin: 100px 0px 20px;
-			padding: 40px 20px;
-			align-items: center;
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 100px 0px 20px;
+            padding: 40px 20px;
+            align-items: center;
 
-			border: rgb(14, 145, 206) solid 3px;
-			border-right-color: transparent;
-			border-left-color: transparent;
-			border-bottom-color: transparent;
+            border: rgb(14, 145, 206) solid 3px;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
 
-			p {
-				margin: 30px;
-				padding-left: 20px;
-				flex: 1;
-				text-align: justify;
+            p {
+                margin: 30px;
+                padding-left: 20px;
+                flex: 1;
+                text-align: justify;
 
-				transform: translateX(300px);
-				opacity: 0;
+                opacity: 0;
+                transform: translateY(70px);
+                transition: all 1s ease-out;
+                &.active {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
 
-				&.active {
-					animation: fadeIn 1.5s forwards ease-in-out, opacityIn 2s forwards;
-				}
-			}
+            .working {
+                width: 25vw;
+                height: 25vw;
+                margin: 20px;
 
-			.working {
-				// transform: scaleX(-1);
-				width: 25vw;
-				height: 25vw;
-				margin: 20px;
+                min-width: 300px;
+                min-height: 300px;
 
-				min-width: 300px;
-				min-height: 300px;
+                transition: all 2s linear;
+                opacity: 0;
 
-				transition: all 2s linear;
-				opacity: 0;
-
-				&.active {
-					transform: scale(1.15);
-					opacity: 1;
-				}
-			}
-		}
-	}
-
-	// @media (max-width: index.$screen-size) {
-	// 	.second-block {
-	// 		.box {
-	// 			margin: 0;
-   //              .working{
-   //                  margin: 20px 0;
-   //              }
-
-   //              p{
-   //                  margin: 40px 0;
-   //              }
-	// 		}
-	// 		// width: 100%;
-	// 	}
-	// }
+                &.active {
+                    transform: scale(1.15);
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }

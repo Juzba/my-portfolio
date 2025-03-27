@@ -1,97 +1,108 @@
-@use "../../index.scss";
+@use '../../index.scss';
 
 .about {
-	box-sizing: border-box;
-	width: 100%;
-	font-size: index.$font-size;
-	overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: index.$font-size;
+    overflow: hidden;
 
-	.first-block {
-		display: flex;
-		width: 100%;
-		box-sizing: border-box;
+    .first-block {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
 
-		.box {
-			box-sizing: border-box;
-			display: flex;
-			flex-wrap: wrap;
-			// margin: 20px;
-			width: 100%;
-			align-items: center;
+        .box {
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
 
-			.nadpis {
-				min-width: 200px;
-				margin: 20px;
-				padding: 20px;
-				flex: 1;
-				text-align: center;
-				overflow: hidden;
+            .nadpis {
+                min-width: 200px;
+                margin: 20px;
+                padding: 20px;
+                flex: 1;
+                text-align: center;
 
-				h1 {
-					@include index.coloredFont;
-					font-size: 3rem;
-					transform: translateX(600px);
-					animation: fadeIn 0.3s forwards ease-in-out;
-				}
+                .t0 {
+                    @include index.coloredFont;
+                    font-size: 3rem;
 
-				.text1 {
-					font-size: 2.5rem;
-					transform: translateX(600px);
+                    opacity: 0;
+                    transform: translateY(70px);
+					transition: all 0.5s ease-out;
+                    &.active {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+
+                .t1 {
+                    font-size: 2.5rem;
+
 					opacity: 0;
-					animation: fadeIn 1s forwards ease-in-out, opacityIn 2s forwards;
-				}
+                    transform: translateY(70px);
+					transition: all 1s ease-out;
+                    &.active {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
 
-				.text2 {
-					transform: translateX(600px);
+                .t2 {
 					opacity: 0;
-					animation: fadeIn 1.5s forwards ease-in-out, opacityIn 2s forwards;
-				}
+                    transform: translateY(70px);
+					transition: all 1.5s ease-out;
+                    &.active {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
 
-				.icons-box {
-					display: flex;
-					// flex-wrap: wrap;
-					justify-content: space-around;
-					.react-icon {
-						margin: 25px;
-						// width: 50px;
+                .icons-box {
+                    display: flex;
+					z-index: 2;
+                    justify-content: space-around;
 
-						&.react {
-							animation: rotate 20s forwards infinite linear;
-						}
-					}
-				}
-			}
+                    opacity: 0;
+                    transform: translateY(70px);
+					transition: all 2s ease-out;
 
-			img.me {
-				width: 38vw;
-				height: 38vw;
+                    &.active {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
 
-				min-width: 300px;
-				min-height: 300px;
-				margin-top: 15px;
-				z-index: 5;
-			}
-		}
-	}
+                    .react-icon {
+                        margin: 25px;
 
-	@keyframes fadeIn {
-		to {
-			transform: translateX(0px);
-		}
-	}
+                        &.react {
+                            animation: rotate 20s forwards infinite linear;
+                        }
+                    }
+                }
+            }
 
-	@keyframes opacityIn {
-		to {
-			opacity: 1;
-		}
-	}
+            img.me {
+                width: 38vw;
+                height: 38vw;
 
-	@keyframes rotate {
-		from {
-			transform: rotate(0);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
+                min-width: 300px;
+                min-height: 300px;
+                margin-top: 15px;
+                z-index: 5;
+            }
+        }
+    }
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
