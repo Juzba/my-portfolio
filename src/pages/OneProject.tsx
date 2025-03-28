@@ -6,6 +6,7 @@ import "./scss/OneProject.scss"
 import { Link } from "react-router-dom";
 import { TfiControlBackward } from "react-icons/tfi";
 import FirebaseProject from "./Projects/assets/firebase/AddMovie";
+import Coordinates from "./Projects/assets/issCoordinates/Coordinates";
 
 const OneProject = () => {
 	const {id} = useParams();
@@ -19,6 +20,7 @@ const OneProject = () => {
 			{id === "1" && <AdvencedSlider/>}
 			{id === "2" && <Faq/>}
 			{id === "3" && <Snake/>}
+			{id === "4" && <Coordinates/>}
 
 
 

@@ -5,8 +5,8 @@
    
 		
         .movie-card {
-			position: absolute;
-			top: 50px;
+			position: fixed;
+			top: 150px;
 			border: solid index.$first-color 1px;
             box-shadow: 0 0 15px index.$second-color;
             padding: 20px;

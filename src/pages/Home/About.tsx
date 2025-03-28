@@ -13,27 +13,37 @@ import { useEffect, useState } from 'react';
 
 
 const About = () => {
-    const [animation, setAnimation] = useState({
-        text0: false,
-        text1: false,
-        text2: false,
-        text3: false,
-        text4: false,
-        text5: false,
-        text6: false,
-    });
+    // const [animation, setAnimation] = useState({
+    //     text0: false,
+    //     text1: false,
+    //     text2: false,
+    //     text3: false,
+    //     text4: false,
+    //     text5: false,
+    //     text6: false,
+    // });
+    const [animation0, setAnimation0] = useState(false)
+    const [animation1, setAnimation1] = useState(false)
+    const [animation2, setAnimation2] = useState(false)
+    const [animation3, setAnimation3] = useState(false)
+    const [animation4, setAnimation4] = useState(false)
+    const [animation5, setAnimation5] = useState(false)
+    const [animation6, setAnimation6] = useState(false)
+
+    // console.log(animation);
+    
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
 				
-                if (entry.isIntersecting && entry.target.id === 'text0') setAnimation({ ...animation, text0: true });
-                else if (entry.isIntersecting && entry.target.id === 'text1') setAnimation({ ...animation, text1: true });
-                else if (entry.isIntersecting && entry.target.id === 'text2') setAnimation({ ...animation, text2: true });
-                else if (entry.isIntersecting && entry.target.id === 'text3') setAnimation({ ...animation, text3: true });
-                else if (entry.isIntersecting && entry.target.id === 'text4') setAnimation({ ...animation, text4: true });
-                else if (entry.isIntersecting && entry.target.id === 'text5') setAnimation({ ...animation, text5: true });
-                else if (entry.isIntersecting && entry.target.id === 'text6') setAnimation({ ...animation, text6: true });
+                if (entry.isIntersecting && entry.target.id === 'text0') setAnimation0(true);
+                else if (entry.isIntersecting && entry.target.id === 'text1') setAnimation1(true);
+                else if (entry.isIntersecting && entry.target.id === 'text2') setAnimation2(true);
+                else if (entry.isIntersecting && entry.target.id === 'text3') setAnimation3(true);
+                else if (entry.isIntersecting && entry.target.id === 'text4') setAnimation4(true);
+                else if (entry.isIntersecting && entry.target.id === 'text5') setAnimation5(true);
+                else if (entry.isIntersecting && entry.target.id === 'text6') setAnimation6(true);
             });
         });
 
@@ -76,12 +86,12 @@ const About = () => {
             <div className="first-block">
                 <div className="box">
                     <div className="nadpis">
-                        <h1 className={animation.text0 ? 'active t0' : 't0'}>O mně</h1>
-                        <p className={animation.text0 ? 't1 active' : 't1'}>Jmenuji se Jiří Strnadel</p>
-                        <p className={animation.text0 ? 't2 active' : 't2'} id="text0">
+                        <h1 className={animation0 ? 'active t0' : 't0'}>O mně</h1>
+                        <p className={animation0 ? 't1 active' : 't1'}>Jmenuji se Jiří Strnadel</p>
+                        <p className={animation0 ? 't2 active' : 't2'} id="text0">
                             a věnuji se vývoji webových aplikací se zaměřením na React a TypeScript.
                         </p>
-                        <div className={animation.text0 ? 'icons-box active' : 'icons-box'}>
+                        <div className={animation0 ? 'icons-box active' : 'icons-box'}>
                             <StackIcon className="react-icon react" name={'reactjs'} />
                             <StackIcon className="react-icon typescript" name={'typescript'} />
                             <StackIcon className="react-icon csharp" name={'csharp'} />
@@ -93,8 +103,8 @@ const About = () => {
 
             <div className="second-block">
                 <div className="box">
-                    <img className={animation.text1 ? 'working active' : 'working'} id="text1" src={comp} alt="" />
-                    <p className={animation.text2 ? 'active' : ''} id="text2">
+                    <img className={animation1 ? 'working active' : 'working'} id="text1" src={comp} alt="" />
+                    <p className={animation2 ? 'active' : ''} id="text2">
                         Programování mě nadchlo natolik, že mu věnuji každý volný moment už více než rok a půl. Neustále se učím nové
                         technologie a zdokonaluji své dovednosti.
                     </p>
@@ -106,10 +116,10 @@ const About = () => {
             </div>
 
             <div className="fourth-block">
-                <h2 className={animation.text3 ? 'active' : ''} id="text3">
+                <h2 className={animation3 ? 'active' : ''} id="text3">
                     Zkušenosti
                 </h2>
-                <p className={animation.text4 ? 'active' : ''} id="text4">
+                <p className={animation4 ? 'active' : ''} id="text4">
                     Mám zkušenosti s JavaScriptem, SCSS, HTML, CSS, Git a databázemi jako Firebase. Zároveň si rozšiřuji znalosti v C#, kde
                     se pohybuji na mírně pokročilé úrovni.
                 </p>
@@ -117,7 +127,7 @@ const About = () => {
             </div>
 
             <div className="fifth-block">
-                <p className={animation.text5 ? 'active' : ''} id="text5">
+                <p className={animation5 ? 'active' : ''} id="text5">
                     Nyní pracuji jako elektro údržbář a programátor průmyslových robotů Kuka, Reis, Yaskawa a PLC Simatic. Tato práce mě
                     naučila analytickému myšlení a efektivnímu řešení problémů, což dnes využívám při vývoji aplikací.
                 </p>
@@ -127,7 +137,7 @@ const About = () => {
             </div>
 
             <div className="sixth-block">
-                <p className={animation.text6 ? 'text6 active' : 'text6'} id="text6">
+                <p className={animation6 ? 'text6 active' : 'text6'} id="text6">
                     Hledám příležitost, kde bych mohl své dovednosti dále rozvíjet a přispět svým nadšením pro moderní frontendový vývoj.
                 </p>
 

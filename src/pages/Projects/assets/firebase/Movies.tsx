@@ -20,6 +20,8 @@ const Movies = () => {
     const [dataDB, setDataDB] = useState<DocumentWithId[] | null>(null);
     const [openInfo, setOpenInfo] = useState<string | null>(null);
 
+
+    // PopUp window Info
     const openMovieInfo = () => {
         const oneMovie = dataDB?.find((item) => {
             if (!openInfo) return;
