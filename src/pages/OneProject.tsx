@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { TfiControlBackward } from "react-icons/tfi";
 import FirebaseProject from "./Projects/assets/firebase/AddMovie";
 import Coordinates from "./Projects/assets/issCoordinates/Coordinates";
+import SudokuSolver from "./Projects/assets/sudoku-solver/SudokuSolver";
 
 const OneProject = () => {
 	const {id} = useParams();
@@ -16,11 +17,12 @@ const OneProject = () => {
 	return (
 		<section className="one-project">
 			{/* <h1>One Project</h1> */}
-			{id === "0" && <FirebaseProject/>}
-			{id === "1" && <AdvencedSlider/>}
-			{id === "2" && <Faq/>}
-			{id === "3" && <Snake/>}
-			{id === "4" && <Coordinates/>}
+			{id === "0" && <SudokuSolver/>}
+			{id === "1" && <FirebaseProject/>}
+			{id === "2" && <AdvencedSlider/>}
+			{id === "3" && <Faq/>}
+			{id === "4" && <Snake/>}
+			{id === "5" && <Coordinates/>}
 
 
 
