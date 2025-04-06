@@ -13,15 +13,6 @@ import { useEffect, useState } from 'react';
 
 
 const About = () => {
-    // const [animation, setAnimation] = useState({
-    //     text0: false,
-    //     text1: false,
-    //     text2: false,
-    //     text3: false,
-    //     text4: false,
-    //     text5: false,
-    //     text6: false,
-    // });
     const [animation0, setAnimation0] = useState(false)
     const [animation1, setAnimation1] = useState(false)
     const [animation2, setAnimation2] = useState(false)

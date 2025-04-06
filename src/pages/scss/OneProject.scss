@@ -5,6 +5,24 @@
     min-height: 100vh;
     box-sizing: border-box;
 
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+.description{
+    width: 100%;
+    max-width: 1000px;
+    text-align: justify;
+    
+    h1{
+        font-size: 3rem;
+        @include index.coloredFont;
+    }
+}
+
+
+
     a {
         background-color: index.$first-color;
         color: index.$text-color;
