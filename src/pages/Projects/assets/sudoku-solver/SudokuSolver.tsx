@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { dataArray, dataArray2 } from "./Data";
 import "./SudokuSolver.scss";
-import UseAxios from "./UseAxios";
+import UseAxios from "../../../components/useFetch/UseAxios";
 
 interface SudokuResponse {
 	statusText: string;
@@ -16,7 +16,7 @@ interface CrossState {
 	FocusedNumber: number;
 }
 
-const urlSolve = "https://localhost:7214/api/sudoku/solve";
+const urlSolve = "https://localhost:7143/api/sudoku/solve";
 
 const SudokuSolver = () => {
 	const [sudokuArray, setSudokuArray] = useState<number[][][]>(dataArray);
