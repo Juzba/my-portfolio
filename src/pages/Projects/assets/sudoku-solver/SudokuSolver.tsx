@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { dataArray, dataArray2 } from "./Data";
 import "./SudokuSolver.scss";
-import UseAxios from "../../../components/useFetch/UseAxios";
+import UseAxios from "../../../components/hooks/UseAxios";
 
 interface SudokuResponse {
 	statusText: string;

@@ -8,6 +8,7 @@ import { TfiControlBackward } from "react-icons/tfi";
 import FirebaseProject from "./Projects/assets/firebase/AddMovie";
 import Coordinates from "./Projects/assets/issCoordinates/Coordinates";
 import SudokuSolver from "./Projects/assets/sudoku-solver/SudokuSolver";
+import EmailProject from "./Projects/assets/email-form/EmailProject"
 
 const OneProject = () => {
 	const {id} = useParams();
@@ -23,6 +24,7 @@ const OneProject = () => {
 			{id === "3" && <Faq/>}
 			{id === "4" && <Snake/>}
 			{id === "5" && <Coordinates/>}
+			{id === "6" && <EmailProject/>}
 
 
 

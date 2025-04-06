@@ -70,13 +70,15 @@
         .robot-div {
             aspect-ratio: 5/3;
             height: 400px;
+            
             width: auto;
-            margin: 70px auto 0;
+            margin: 70px auto;
             position: relative;
             flex-shrink: 0;
             background-image: url(../../images/factory.jpg);
             background-size: cover;
-
+            box-shadow: 0 0 25px white;
+            
             .robot {
                 position: absolute;
                 top: -170px;

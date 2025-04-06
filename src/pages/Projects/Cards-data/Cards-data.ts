@@ -4,6 +4,7 @@ import img3 from './images/Advenced-slider.png';
 import img4 from './images/faq.png';
 import img5 from './images/snake.png';
 import img6 from './images/iss-image.png';
+import img7 from './images/email-form.png';
 
 interface type {
     id: number;
@@ -60,6 +61,14 @@ const ProjectData: type[] = [
         name: 'Iss-Coordinates Api ',
         image: img6,
         created: ['React', 'Scss', 'TS'],
+        description: 'Načtení aktuálních souřadnic ze servru pomoci Api',
+        playable: true,
+    },
+    {
+        id: 6,
+        name: 'Email Form',
+        image: img7,
+        created: ['C#', 'Web Api', 'React', "Scss"],
         description: 'Načtení aktuálních souřadnic ze servru pomoci Api',
         playable: true,
     },

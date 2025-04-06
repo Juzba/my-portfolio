@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./Email.scss";
-import UseAxios from "../hooks/UseAxios";
+import "./EmailProject.scss";
+import UseAxios from "../../../components/hooks/UseAxios";
 
 const url = "https://localhost:7143/Email/send";
 
@@ -28,8 +28,8 @@ const Email = () => {
 		e.preventDefault();
 
 		if (name && email && message) {
+			console.log("submit");
 			sendEmail();
-			setEmailInfo("Odesílám...")
 		}
 		else{
 			setEmailInfo("Chybné zadání!")
@@ -50,7 +50,7 @@ const Email = () => {
 	}, [emailInfo]);
 
 	return (
-		<section className="email">
+		<section className="emailForm">
 			<form onSubmit={submitForm}>
 				<div className={emailInfo ? "contact-me active" : "contact-me"}>
 					{emailInfo ? <p className="message">{emailInfo}</p> : <p className="message">Kontaktní formulář</p>}

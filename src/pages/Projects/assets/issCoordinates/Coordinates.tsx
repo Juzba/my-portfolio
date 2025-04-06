@@ -1,5 +1,5 @@
 import './Coordinate.scss';
-import useFetch from '../../../components/useFetch/useFetch';
+import useFetch from '../../../components/hooks/useFetch';
 import Loading from '../../../components/loading/Loading';
 import issImg from './iss.png';
 import { useEffect } from 'react';
