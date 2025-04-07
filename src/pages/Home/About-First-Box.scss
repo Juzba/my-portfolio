@@ -1,112 +1,111 @@
-@use '../../index.scss';
+@use "../../index.scss";
 
 .about {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: index.$font-size;
-    // background-color: index.$background-color-secondary;
-    overflow: hidden;
+	box-sizing: border-box;
+	width: 100%;
+	font-size: index.$font-size;
+	// background-color: index.$background-color-secondary;
+	overflow: hidden;
 
-    .first-block {
-        display: flex;
-        width: 100%;
-        box-sizing: border-box;
+	.first-block {
+		display: flex;
+		width: 100%;
+		box-sizing: border-box;
 
-        .box {
-            box-sizing: border-box;
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            align-items: center;
+		.box {
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			align-items: center;
 
+			background-color: index.$background-color-secondary;
+			border-radius: 15px;
 
-            
+			.nadpis {
+				min-width: 200px;
+				margin: 20px;
+				padding: 20px;
+				flex: 1;
+				text-align: center;
 
-            .nadpis {
-                min-width: 200px;
-                margin: 20px;
-                padding: 20px;
-                flex: 1;
-                text-align: center;
+				.t0 {
+					@include index.coloredFont;
+					font-size: 3rem;
 
-                .t0 {
-                    @include index.coloredFont;
-                    font-size: 3rem;
-
-                    opacity: 0;
-                    transform: translateY(70px);
+					opacity: 0;
+					transform: translateY(70px);
 					transition: all 0.5s ease-out;
-                    &.active {
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
-                }
+					&.active {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
 
-                .t1 {
-                    font-size: 2.5rem;
+				.t1 {
+					font-size: 2.5rem;
 
 					opacity: 0;
-                    transform: translateY(70px);
+					transform: translateY(70px);
 					transition: all 1s ease-out;
-                    &.active {
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
-                }
+					&.active {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
 
-                .t2 {
+				.t2 {
 					opacity: 0;
-                    transform: translateY(70px);
+					transform: translateY(70px);
 					transition: all 1.5s ease-out;
-                    &.active {
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
-                }
+					&.active {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
 
-                .icons-box {
-                    display: flex;
+				.icons-box {
+					display: flex;
 					z-index: 2;
-                    justify-content: space-around;
+					justify-content: space-around;
 
-                    opacity: 0;
-                    transform: translateY(70px);
+					opacity: 0;
+					transform: translateY(70px);
 					transition: all 2s ease-out;
 
-                    &.active {
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
+					&.active {
+						opacity: 1;
+						transform: translateY(0px);
+					}
 
-                    .react-icon {
-                        margin: 25px;
+					.react-icon {
+						margin: 25px;
 
-                        &.react {
-                            animation: rotate 20s forwards infinite linear;
-                        }
-                    }
-                }
-            }
+						&.react {
+							animation: rotate 20s forwards infinite linear;
+						}
+					}
+				}
+			}
 
-            img.me {
-                width: 38vw;
-                height: 38vw;
+			img.me {
+				width: 38vw;
+				height: 38vw;
 
-                min-width: 300px;
-                min-height: 300px;
-                margin-top: 15px;
-                z-index: 5;
-            }
-        }
-    }
+				min-width: 300px;
+				min-height: 300px;
+				margin-top: 15px;
+				z-index: 5;
+			}
+		}
+	}
 }
 
-
 @keyframes rotate {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

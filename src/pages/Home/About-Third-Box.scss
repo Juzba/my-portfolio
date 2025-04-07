@@ -1,111 +1,119 @@
-@use '../../index.scss';
+@use "../../index.scss";
 
 .about {
-    .third-block {
-        width: 100%;
-        margin: 20px;
-        margin-bottom: 100px;
-        z-index: 2;
+	.third-block {
+		width: 100%;
+		margin: 30px 0 0px;
+		z-index: 2;
 
-    }
+		background-color: index.$background-color-secondary;
+		border-radius: 15px;
+	}
 
-    .fourth-block {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-        margin-bottom: 100px;
+	.fourth-block {
+		margin: 30px 0 0px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 100px;
 
-        h2 {
-            @include index.coloredFont;
-            font-size: 3rem;
+		background-color: index.$background-color-secondary;
+		border-radius: 15px;
 
-            opacity: 0;
-            transform: translateY(70px);
-            transition: all 1s ease-out;
-            &.active {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
+		h2 {
+			@include index.coloredFont;
+			font-size: 3rem;
 
-        p {
-            max-width: 800px;
+			opacity: 0;
+			transform: translateY(70px);
+			transition: all 1s ease-out;
+			&.active {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
 
-            opacity: 0;
-            transform: translateY(70px);
-            transition: all 1.5s ease-out;
-            &.active {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-    }
+		p {
+			max-width: 800px;
 
-    .fifth-block {
-        width: 100%;
-        margin: 20px;
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 50px;
+			opacity: 0;
+			transform: translateY(70px);
+			transition: all 1.5s ease-out;
+			&.active {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
 
-        p {
-            padding: 20px;
+	.fifth-block {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		align-content: space-around;
+		// gap: 50px;
+
+		background-color: index.$background-color-secondary;
+		border-radius: 15px;
+
+		p {
+			padding: 20px;
+			flex: 1;
+			text-align: justify;
+
+			opacity: 0;
+			transform: translateY(70px);
+			transition: all 2s ease-out;
+			&.active {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+
+		.robot-div {
+			aspect-ratio: 5/3;
+			height: 400px;
+
+			width: auto;
+			// margin: 70px auto;
+			position: relative;
+			// flex-shrink: 0;
             flex: 1;
-            text-align: justify;
+			background-image: url(../../images/factory.jpg);
+			background-size: cover;
+			box-shadow: 0 0 25px white;
 
-            opacity: 0;
-            transform: translateY(70px);
-            transition: all 2s ease-out;
-            &.active {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
+			.robot {
+				position: absolute;
+				top: -170px;
+				left: 0;
+				width: 550px;
+				transform: scaleX(-1);
+				z-index: 2;
+			}
+		}
+	}
 
-        .robot-div {
-            aspect-ratio: 5/3;
-            height: 400px;
-            
-            width: auto;
-            margin: 70px auto;
-            position: relative;
-            flex-shrink: 0;
-            background-image: url(../../images/factory.jpg);
-            background-size: cover;
-            box-shadow: 0 0 25px white;
-            
-            .robot {
-                position: absolute;
-                top: -170px;
-                left: 0;
-                width: 550px;
-                transform: scaleX(-1);
-                z-index: 2;
-            }
-        }
-    }
+	.sixth-block {
+		width: 100%;
+		margin: 20px;
+		padding: 20px;
 
-    .sixth-block {
-        width: 100%;
-        margin: 20px;
-        padding: 20px;
+		.text6 {
+			padding: 20px;
+			max-width: 800px;
 
-        .text6 {
-            padding: 20px;
-            max-width: 800px;
-
-            opacity: 0;
-            transform: translateY(70px);
-            transition: all 2s ease-out;
-            &.active {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-    }
+			opacity: 0;
+			transform: translateY(70px);
+			transition: all 2s ease-out;
+			&.active {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
 }

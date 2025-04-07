@@ -3,7 +3,7 @@
 .about {
     @media (max-width: index.$screen-size) {
         width: 100%;
-        padding: 15px;
+        // padding: 15px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -14,6 +14,7 @@
                     margin: 0;
                     padding: 0px;
                
+                    p{padding: 0 5px;}
                 }
             }
         }
