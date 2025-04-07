@@ -20,7 +20,7 @@
 			align-items: center;
 
 			background-color: index.$background-color-secondary;
-			border-radius: 15px;
+			border-radius: index.$box-radius;
 
 			.nadpis {
 				min-width: 200px;

@@ -91,8 +91,10 @@ const About = () => {
 
 			<div className="second-block">
 				<div className="box">
-					<img className={animation1 ? "working active" : "working"} id="text1" src={comp} alt="" />
-					<div className="box">
+					<div className="box-workingimg">
+						<img className={animation1 ? "working active" : "working"} id="text1" src={comp} alt="" />
+					</div>
+					<div className="box-text">
 						<p className={animation2 ? "active" : ""} id="text2">
 							V současnosti také aktivně pracuji s jazykem C#, kde se nacházím na středně pokročilé úrovni. Zaměřuji se
 							na rozšiřování svých znalostí, zejména v oblasti Web API, což považuji za klíčové pro usnadnění komunikace

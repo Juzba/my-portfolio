@@ -7,7 +7,7 @@
 		z-index: 2;
 
 		background-color: index.$background-color-secondary;
-		border-radius: 15px;
+		border-radius: index.$box-radius;
 	}
 
 	.fourth-block {
@@ -20,7 +20,7 @@
 		margin-bottom: 100px;
 
 		background-color: index.$background-color-secondary;
-		border-radius: 15px;
+		border-radius: index.$box-radius;
 
 		h2 {
 			@include index.coloredFont;
@@ -58,7 +58,7 @@
 		// gap: 50px;
 
 		background-color: index.$background-color-secondary;
-		border-radius: 15px;
+		border-radius: index.$box-radius;
 
 		p {
 			padding: 20px;

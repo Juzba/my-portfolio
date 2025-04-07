@@ -14,6 +14,7 @@ $background-color: #151f30;
 
 $screen-size: 1000px;
 $font-size: 1.5rem;
+$box-radius: 10px;
 
 @mixin coloredFont {
     background: linear-gradient(to right, red, $second-color);
