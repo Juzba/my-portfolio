@@ -110,26 +110,34 @@ const About = () => {
 			</div>
 
 			<div className="fourth-block">
-				<h2 className={animation3 ? "active" : ""} id="text3">
-					Zkušenosti
-				</h2>
-				<p className={animation4 ? "active" : ""} id="text4">
-					Programování mě natolik nadchlo, že mu věnuji každý volný moment již více než rok a půl. Neustále se učím nové
-					technologie a snažím se neustále zdokonalovat své dovednosti. Mám rozsáhlé zkušenosti s JavaScriptem, SCSS,
-					HTML a CSS, stejně jako s verzovacím nástrojem Git a databázemi, jako je Firebase.
-				</p>
-				<TechBars />
+				<div className="box-tech-bars">
+					<TechBars />
+				</div>
+				<div className="box-text">
+					<h2 className={animation3 ? "active" : ""} id="text3">
+						Zkušenosti
+					</h2>
+					<p className={animation4 ? "active" : ""} id="text4">
+						Programování mě natolik nadchlo, že mu věnuji každý volný moment již více než rok a půl. Neustále se učím
+						nové technologie a snažím se neustále zdokonalovat své dovednosti. Mám rozsáhlé zkušenosti s JavaScriptem,
+						SCSS, HTML a CSS, stejně jako s verzovacím nástrojem Git a databázemi, jako je Firebase.
+					</p>
+				</div>
 			</div>
 
 			<div className="fifth-block">
-				<p className={animation5 ? "active" : ""} id="text5">
-					Kromě toho pracuji jako elektro údržbář a programátor průmyslových robotů od značek Kuka, Reis, Yaskawa a PLC
-					Simatic. Tato pozice mi poskytla cenné zkušenosti v analytickém myšlení a efektivním řešení problémů, což dnes
-					aplikuji při vývoji aplikací. Moje práce v technických oborech mě naučila důležitosti detailu a preciznosti,
-					které jsou klíčové při programování a vývoji softwarových řešení.
-				</p>
-				<div className="robot-div">
-					<img className="robot" src={robot} alt="" />
+				<div className="box-text">
+					<p className={animation5 ? "active" : ""} id="text5">
+						Kromě toho pracuji jako elektro údržbář a programátor průmyslových robotů od značek Kuka, Reis, Yaskawa a
+						PLC Simatic. Tato pozice mi poskytla cenné zkušenosti v analytickém myšlení a efektivním řešení problémů,
+						což dnes aplikuji při vývoji aplikací. Moje práce v technických oborech mě naučila důležitosti detailu a
+						preciznosti, které jsou klíčové při programování a vývoji softwarových řešení.
+					</p>
+				</div>
+				<div className="box-robot">
+					<div className="robot-div">
+						<img className="robot" src={robot} alt="" />
+					</div>
 				</div>
 			</div>
 
@@ -139,8 +147,12 @@ const About = () => {
 					vývoj. Věřím, že s mojí vášní a odhodláním mohu přinést hodnotu vašemu týmu a zapojit se do zajímavých
 					projektů, které posunou moje schopnosti na novou úroveň.
 				</p>
+			</div>
 
-				<Email />
+			<div className="seven-block">
+				<div className="box-email">
+					<Email />
+				</div>
 			</div>
 		</section>
 	);

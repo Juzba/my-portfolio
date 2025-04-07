@@ -2,12 +2,13 @@
 
 .bars {
   
-    width: 65%;
+    min-width: 290px;
     height: fit-content;
-    border: solid black 5px;
-    background-color: #242424;
+    // border: solid black 5px;
+    // background-color: #242424;
+    background-color: transparent;
     overflow: hidden;
-    margin: 0 15vw;
+    // margin: 0 15vw;
     z-index: 2;
     .box {
         border-radius: 15px;

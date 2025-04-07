@@ -13,99 +13,144 @@
 	.fourth-block {
 		margin: 30px 0 0px;
 		width: 100%;
+		height: auto;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 100px;
+		flex-wrap: wrap;
+		flex-direction: row;
+		// align-items: center;
+		// justify-content: center;
+		justify-content: space-around;
+		align-content: space-around;
+		gap: 30px;
 
-		background-color: index.$background-color-secondary;
-		border-radius: index.$box-radius;
+		.box-text {
+			background-color: index.$background-color-secondary;
+			border-radius: index.$box-radius;
+			flex: 1;
+			flex-grow: 1;
 
-		h2 {
-			@include index.coloredFont;
-			font-size: 3rem;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
 
-			opacity: 0;
-			transform: translateY(70px);
-			transition: all 1s ease-out;
-			&.active {
-				opacity: 1;
-				transform: translateY(0px);
+			text-align: justify;
+			hyphens: auto; 
+			h2 {
+				@include index.coloredFont;
+				font-size: 3rem;
+margin-bottom: 5px;
+				opacity: 0;
+				transform: translateY(70px);
+				transition: all 1s ease-out;
+				&.active {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+
+			p {
+				max-width: 800px;
+				padding: 30px;
+
+				opacity: 0;
+				transform: translateY(70px);
+				transition: all 1.5s ease-out;
+				&.active {
+					opacity: 1;
+					transform: translateY(0px);
+				}
 			}
 		}
-
-		p {
-			max-width: 800px;
-
-			opacity: 0;
-			transform: translateY(70px);
-			transition: all 1.5s ease-out;
-			&.active {
-				opacity: 1;
-				transform: translateY(0px);
-			}
+		.box-tech-bars {
+			flex: 1;
+			flex-grow: 1.2;
+			background-color: index.$background-color-secondary;
+			border-radius: index.$box-radius;
 		}
 	}
 
 	.fifth-block {
 		width: 100%;
+		margin: 30px 0 0;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-around;
-		align-content: space-around;
-		// gap: 50px;
+		gap: 30px;
 
-		background-color: index.$background-color-secondary;
-		border-radius: index.$box-radius;
-
-		p {
-			padding: 20px;
+		.box-text {
 			flex: 1;
-			text-align: justify;
+			height: auto;
+			background-color: index.$background-color-secondary;
+			border-radius: index.$box-radius;
 
-			opacity: 0;
-			transform: translateY(70px);
-			transition: all 2s ease-out;
-			&.active {
-				opacity: 1;
-				transform: translateY(0px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				padding: 30px;
+				flex: 1;
+				text-align: justify;
+				hyphens: auto; 
+
+				opacity: 0;
+				transform: translateY(70px);
+				transition: all 2s ease-out;
+				&.active {
+					opacity: 1;
+					transform: translateY(0px);
+				}
 			}
 		}
 
-		.robot-div {
-			aspect-ratio: 5/3;
-			height: 400px;
+		.box-robot {
+			padding: 10px;
+			background-color: index.$background-color-secondary;
+			border-radius: index.$box-radius;
+			flex: 1;
+			flex-grow: 1.4;
 
-			width: auto;
-			// margin: 70px auto;
-			position: relative;
-			// flex-shrink: 0;
-            flex: 1;
-			background-image: url(../../images/factory.jpg);
-			background-size: cover;
-			box-shadow: 0 0 25px white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.robot-div {
+				aspect-ratio: 5/3;
+				// padding: 10px;
+				// height: 300px;
 
-			.robot {
-				position: absolute;
-				top: -170px;
-				left: 0;
-				width: 550px;
-				transform: scaleX(-1);
-				z-index: 2;
+				// max-width: 550px;
+				position: relative;
+
+				border-radius: index.$box-radius;
+				height: 367px;
+				background-image: url(../../images/factory.jpg);
+				background-size: cover;
+				// box-shadow: 0 0 25px white;
+
+				.robot {
+					position: absolute;
+					top: -95px;
+					left: 30px;
+					width: 450px;
+					transform: scaleX(-1);
+					z-index: 2;
+				}
 			}
 		}
 	}
 
 	.sixth-block {
 		width: 100%;
-		margin: 20px;
-		padding: 20px;
+		margin: 30px 0 0;
+
+		background-color: index.$background-color-secondary;
+		border-radius: index.$box-radius;
 
 		.text6 {
 			padding: 20px;
-			max-width: 800px;
+			text-align: justify;
+			hyphens: auto; 
+			// max-width: 800px;
 
 			opacity: 0;
 			transform: translateY(70px);
@@ -114,6 +159,18 @@
 				opacity: 1;
 				transform: translateY(0px);
 			}
+		}
+	}
+
+	.seventh-block {
+		width: 100%;
+		margin: 30px 0 0;
+	
+
+		.box-email {
+			background-color: index.$background-color-secondary;
+			border-radius: index.$box-radius;
+			flex: 1;
 		}
 	}
 }
