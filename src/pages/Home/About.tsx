@@ -153,7 +153,9 @@ const About = () => {
 				<div className="box-email">
 					<Email />
 				</div>
+				<div className="box-text">{/* <Email /> */}</div>
 			</div>
+			
 		</section>
 	);
 };

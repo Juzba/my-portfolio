@@ -7,10 +7,12 @@
 	// background-color: index.$background-color-secondary;
 	overflow: hidden;
 
+
 	.first-block {
 		display: flex;
 		width: 100%;
 		box-sizing: border-box;
+		margin-bottom: 15px;
 
 		.box {
 			box-sizing: border-box;

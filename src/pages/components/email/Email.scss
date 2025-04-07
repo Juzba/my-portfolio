@@ -1,94 +1,138 @@
-@use '../../../index.scss';
+@use "../../../index.scss";
 
-.email {
-    padding: 15px;
-    form {
-        box-sizing: border-box;
-        padding-top: 55px;
-        // border: red solid 1px;
-        display: flex;
-        flex-direction: column;
+.email-form {
+	width: 100%;
+	padding: 15px;
+    box-sizing: border-box;
 
-        .contact-me {
-            box-sizing: border-box;
-            margin: 10px;
-            max-width: 500px;
-            border: red solid 1px;
-            box-shadow: 0 0 10px white;
-            border-radius: 5px;
-            font-size: 1.8rem;
-            background-color: index.$first-color;
-            color: index.$background-color;
-            transition: all 1s linear;
-            
-            &.active {
-                color: index.$text-color;
-                background-color: index.$background-color;
-                box-shadow: none;
+	display: flex;
+
+	form {
+		box-sizing: border-box;
+
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
+
+		.contact-me {
+			box-sizing: border-box;
+			margin: 10px;
+			// border: red solid 1px;
+			// box-shadow: 0 0 10px white;
+			padding: 5px;
+			border-radius: 5px;
+			font-size: 1.8rem;
+			background-color: index.$background-color;
+			color: index.$text-color;
+			transition: all 1s linear;
+            border: solid 1px rgba(255, 255, 255, 0.2);
+
+			&.active {
+				color: index.$text-color;
+				background-color: index.$background-color;
+				box-shadow: none;
+			}
+
+			.message {
+				display: block;
+				margin: 0;
+				padding: 5px 10px;
+				justify-self: center;
+				align-self: center;
+				font-weight: 600;
+			}
+		}
+
+		.main-box {
+            // overflow: hidden;
+			display: flex;
+            // align-content: space-between;
+            // align-content: space-around;
+            justify-content: space-between;
+			.box-inputs {
+				display: flex;
+				flex-direction: column;
+                flex:1;
+				.inp-text {
+                    margin: 10px;
+					font-size: 1.2rem;
+					max-width: 320px;
+                    // width: 250px;
+					height: 30px;
+					padding: 5px 25px;
+					outline: none;
+					border: none;
+					background-color: index.$background-color;
+					color: index.$text-color;
+					border-radius: 5px;
+                    
+					box-shadow: 0 0 0 30px index.$background-color inset;
+					-webkit-text-fill-color: index.$text-color;
+                    border: solid 1px rgba(255, 255, 255, 0.2);
+				}
+			}
+			.email-icon {
+                color: rgba(247, 86, 86, 0.825);
+                font-size: 9rem;
+                font-weight: 100;
+                padding-right: 35px;
+                // border: solid 1px rgba(255, 255, 255, 0.345);
+                // ;
+			}
+
+            @media (max-width:700px) {
+                .email-icon{
+                    display: none;
+                }
+
             }
-            
-            .message {
-                display: block;
-                margin: 0;
-                padding: 5px 10px;
-                justify-self: center;
-                align-self: center;
-                font-weight: 600;
-            }
-        }
-        
-        input {
-            box-sizing: border-box;
-            margin: 10px;
-            font-size: 1.2rem;
-            max-width: 250px;
-            height: 30px;
-            padding: 5px 10px;
-            outline: none;
-            border: none;
-            box-shadow: 0 0 3px index.$first-color;
-            border: 1px solid index.$first-color;
-            background-color: index.$background-color;
-            color: index.$text-color;
-            border-radius: 5px;
-            
-            // -webkit-box-shadow: 0 0 0 30px index.$background-color; /* Změňte #xyz na požadovanou barvu pozadí */
-            box-shadow: 0 0 0 30px index.$background-color inset;
-            -webkit-text-fill-color: index.$text-color;
-            // color: index.$text-color;
-        }
-        
-        textarea {
-            box-sizing: border-box;
-            border-radius: 5px;
-            max-width: 500px;
-            padding: 5px 10px;
-            height: 150px;
-            display: block;
-            margin: 10px;
-            font-size: 1.2rem;
-            border: none;
-            resize: none;
-            outline: none;
-            box-shadow: 0 0 3px index.$first-color;
-            border: 1px solid index.$first-color;
-            background-color: index.$background-color;
-            color: index.$text-color;
-            // background-color: black;
-        }
-        
-        input[type='submit'] {
-            width: 250px;
-            background-color: index.$first-color;
-            transition: box-shadow 1s linear;
-            cursor: pointer;
-            &:hover {
-                box-shadow: 0 0 15px white;
-            }
-            
-            &:active {
-                background-color: index.$second-color;
-            }
-        }
-    }
+		}
+		textarea {
+			box-sizing: border-box;
+			border-radius: 5px;
+
+			padding: 5px 10px;
+			height: 150px;
+			display: block;
+			margin: 10px;
+			font-size: 1.2rem;
+			border: none;
+			resize: none;
+			outline: none;
+            border: solid 1px rgba(255, 255, 255, 0.2);
+			// box-shadow: 0 0 3px index.$first-color;
+			// border: 1px solid index.$first-color;
+			background-color: index.$background-color;
+			color: index.$text-color;
+			// background-color: black;
+		}
+
+		.send-button {
+			margin: 10px;
+			font-size: 1.2rem;
+			height: 30px;
+			// padding: 5px 25px;
+			outline: none;
+			border: none;
+
+			box-sizing: content-box;
+			padding: 5px 0;
+			background-color: index.$background-color;
+			color: index.$text-color;
+			transition: box-shadow 1s linear;
+            border: solid 1px rgba(255, 255, 255, 0.2);
+			cursor: pointer;
+			&:hover {
+				// box-shadow: 0 0 15px white;
+				background-color: index.$second-color;
+				// color: black;
+			}
+
+			&:active {
+				background-color: index.$second-color;
+			}
+		}
+	}
 }

@@ -2,8 +2,8 @@
 
 .about {
 	.second-block {
-		margin-bottom: 30px;
-		margin-top: 30px;
+		margin-bottom: 15px;
+		// margin-top: 30px;
 		width: 100%;
 		display: flex;
 		box-sizing: border-box;
@@ -27,7 +27,7 @@
 			border-bottom-color: transparent;
 
 			// background-color: black;
-			gap: 30px;
+			gap: 15px;
 
 			.box-text {
 				height: auto;
@@ -38,17 +38,16 @@
 				background-color: index.$background-color-secondary;
 				border-radius: index.$box-radius;
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
 				p {
 					max-width: 700px;
 					// align-self: center;
-                   
+
 					text-align: justify;
-					hyphens: auto; 
+					hyphens: auto;
 					padding: 25px;
 
 					opacity: 0;
@@ -63,7 +62,7 @@
 			}
 			.box-workingimg {
 				flex: 1;
-                min-width: 270px;
+				min-width: 270px;
 				flex-grow: 1;
 				background-color: index.$background-color-secondary;
 				border-radius: index.$box-radius;
