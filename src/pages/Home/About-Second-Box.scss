@@ -3,6 +3,7 @@
 .about {
     .second-block {
         margin-bottom: 30px;
+        // margin-top: 30px;
         width: 100%;
         display: flex;
 
@@ -14,6 +15,7 @@
             margin: 100px 0px 20px;
             padding: 40px 20px;
             align-items: center;
+            justify-content: space-around;
 
             border: rgb(14, 145, 206) solid 3px;
             border-right-color: transparent;
@@ -21,6 +23,8 @@
             border-bottom-color: transparent;
 
             p {
+                width: 100%;
+                max-width: 700px;
                 margin: 30px;
                 padding-left: 20px;
                 flex: 1;
@@ -38,16 +42,16 @@
             .working {
                 width: 25vw;
                 height: 25vw;
-                margin: 20px;
+                margin: 40px 20px 20px;
 
                 min-width: 300px;
                 min-height: 300px;
 
-                transition: all 2s linear;
                 opacity: 0;
-
+                
                 &.active {
-                    transform: scale(1.15);
+                    // transition: all 2s ease-in-out;
+                    // transform: scale(1.15);
                     opacity: 1;
                 }
             }

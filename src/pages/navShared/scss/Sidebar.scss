@@ -5,10 +5,12 @@ $sidebar-size: 20%;
 header {
 	box-sizing: border-box;
 	width: $sidebar-size;
+	max-width: 400px;
 	height: 100vh;
 	.sidebar {
 		box-sizing: border-box;
 		width: $sidebar-size;
+		max-width: 400px;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;

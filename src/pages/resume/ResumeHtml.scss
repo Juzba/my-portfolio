@@ -4,20 +4,23 @@
     border: 1px solid white;
     box-sizing: border-box;
     display: block;
-
+    
     justify-self: center;
     align-self: center;
     text-align: left;
-
+    
     width: 90%;
     max-width: 900px;
     height: 100%;
     padding: 5%;
     font-size: index.$font-size;
+    margin-top: 20px;
     margin-bottom: 60px;
     
     @media (max-width: 500px) {
         font-size: 0.9rem;
+        border: none;
+        width: 100%;
     }
 
     h1 {

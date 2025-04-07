@@ -4,6 +4,7 @@
     box-sizing: border-box;
     width: 100%;
     font-size: index.$font-size;
+    // background-color: index.$background-color-secondary;
     overflow: hidden;
 
     .first-block {
@@ -17,6 +18,9 @@
             flex-wrap: wrap;
             width: 100%;
             align-items: center;
+
+
+            
 
             .nadpis {
                 min-width: 200px;
