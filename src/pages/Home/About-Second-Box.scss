@@ -3,12 +3,9 @@
 .about {
 	.second-block {
 		margin-bottom: 15px;
-		// margin-top: 30px;
 		width: 100%;
 		display: flex;
 		box-sizing: border-box;
-		// background-color: index.$background-color-secondary;
-		// border-radius: 15px;
 
 		.box {
 			display: flex;
@@ -16,28 +13,21 @@
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
-			// margin: 50px 0px 20px;
-			// padding: 40px 20px;
-			// align-items: center;
-			// justify-content: space-around;
 
-			// border: rgb(14, 145, 206) solid 3px;
 			border-right-color: transparent;
 			border-left-color: transparent;
 			border-bottom-color: transparent;
 
-			// background-color: black;
 			gap: 15px;
 
 			.box-text {
+				@include index.borderStyle;
+
 				height: auto;
 				width: 100%;
 				flex: 1;
 				flex-grow: 2;
-				// order: 1;
-				background-color: index.$background-color-secondary;
-				border-radius: index.$box-radius;
-				border: solid 1px index.$border-color;
+
 
 				display: flex;
 				justify-content: center;
@@ -45,7 +35,6 @@
 
 				p {
 					max-width: 700px;
-					// align-self: center;
 
 					text-align: justify;
 					hyphens: auto;
@@ -62,12 +51,11 @@
 				}
 			}
 			.box-workingimg {
+				@include index.borderStyle;
+
 				flex: 1;
 				min-width: 270px;
 				flex-grow: 1;
-				background-color: index.$background-color-secondary;
-				border-radius: index.$box-radius;
-				border: solid 1px index.$border-color;
 				display: flex;
 				justify-content: center;
 				align-items: center;

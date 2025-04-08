@@ -1,115 +1,114 @@
-@use '../../../index.scss';
+@use "../../../index.scss";
 
 .cards-component {
-    padding: 25px;
-    overflow: hidden;
-    background-color: index.$background-color-secondary;
-			border-radius: index.$box-radius;
-			border: solid 1px index.$border-color;
+	@include index.borderStyle;
 
-    input[type='text'] {
-        display: block;
-        margin: 30px 0;
-        padding: 5px 10px;
-        justify-self: center;
-        border: none;
-        outline: none;
-    }
+	padding: 25px;
+	overflow: hidden;
 
-    .cards-box {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 30px;
-        margin: 20px 0;
+	input[type="text"] {
+		display: block;
+		margin: 30px 0;
+		padding: 5px 10px;
+		justify-self: center;
+		border: none;
+		outline: none;
+	}
 
-        justify-content: center;
-        align-items: center;
+	.cards-box {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 30px;
+		margin: 20px 0;
 
-        .one-card {
-            // margin: 10px;
-            padding: 0px;
-            width: 260px;
-            height: 330px;
-            box-shadow: 0 0 15px index.$third-color;
-            overflow: hidden;
-            padding-bottom: 5px;
-            background: index.$background-gradient;
-            // border-radius: 15px;
+		justify-content: center;
+		align-items: center;
 
-            position: relative;
+		.one-card {
+			// margin: 10px;
+			padding: 0px;
+			width: 260px;
+			height: 330px;
+			box-shadow: 0 0 15px index.$third-color;
+			overflow: hidden;
+			padding-bottom: 5px;
+			background: index.$background-gradient;
+			// border-radius: 15px;
 
-            display: flex;
-            flex-direction: column;
+			position: relative;
 
-            &::after {
-                content: '';
-                position: absolute;
-                background-color: index.$background-color;
-                width: 130px;
-                height: 30px;
-                left: 0;
-                top: 179px;
-                border-top-right-radius: 45px;
-                border-top: 10px solid index.$background-color;
-                border-right: 10px solid index.$background-color;
-            }
-            .img-box {
-                height: 65%;
-                overflow: hidden;
+			display: flex;
+			flex-direction: column;
 
-                img {
-                    display: block;
-                    justify-self: center;
-                    height: 100%;
-                }
-            }
+			&::after {
+				content: "";
+				position: absolute;
+				background-color: index.$background-color;
+				width: 130px;
+				height: 30px;
+				left: 0;
+				top: 179px;
+				border-top-right-radius: 45px;
+				border-top: 10px solid index.$background-color;
+				border-right: 10px solid index.$background-color;
+			}
+			.img-box {
+				height: 65%;
+				overflow: hidden;
 
-            .text-box {
-                border-top: 10px solid index.$background-color;
-                display: flex;
-                flex-direction: column;
-                // background-color: index.$third-color;
-                height: 35%;
+				img {
+					display: block;
+					justify-self: center;
+					height: 100%;
+				}
+			}
 
-                position: relative;
+			.text-box {
+				border-top: 10px solid index.$background-color;
+				display: flex;
+				flex-direction: column;
+				// background-color: index.$third-color;
+				height: 35%;
 
-                h3 {
-                    padding: 5px 0;
-                    margin: 20px 15px 5px;
-                    text-align: center;
-                    color: index.$first-color;
-                    background-color: index.$background-color-secondary;
-                    border-radius: 10px;
-                    box-shadow: 0 0 15px index.$third-color;
-                }
+				position: relative;
 
-                p {
-                    margin: 5px 15px;
-                    font-size: index.$font-size;
-                }
-                a {
-                    padding: 5px 10px;
-                    width: 80px;
-                    border-radius: 10px 20px 10px 10px;
-                    cursor: pointer;
-                    text-decoration: none;
-                    border: none;
-                    background-color: index.$third-color;
-                    color: index.$text-color;
-                    box-shadow: 0 0 10px index.$third-color;
-                    transition: all linear 0.5s;
-                    position: absolute;
-                    top: -20px;
-                    left: 15px;
-                    z-index: 10;
+				h3 {
+					padding: 5px 0;
+					margin: 20px 15px 5px;
+					text-align: center;
+					color: index.$first-color;
+					background-color: index.$background-color-secondary;
+					border-radius: 10px;
+					box-shadow: 0 0 15px index.$third-color;
+				}
 
-                    &:hover {
-                        box-shadow: 0 0 20px index.$first-color;
-                    }
-                }
-            }
-        }
-    }
+				p {
+					margin: 5px 15px;
+					font-size: index.$font-size;
+				}
+				a {
+					padding: 5px 10px;
+					width: 80px;
+					border-radius: 10px 20px 10px 10px;
+					cursor: pointer;
+					text-decoration: none;
+					border: none;
+					background-color: index.$third-color;
+					color: index.$text-color;
+					box-shadow: 0 0 10px index.$third-color;
+					transition: all linear 0.5s;
+					position: absolute;
+					top: -20px;
+					left: 15px;
+					z-index: 10;
+
+					&:hover {
+						box-shadow: 0 0 20px index.$first-color;
+					}
+				}
+			}
+		}
+	}
 }

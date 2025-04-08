@@ -1,8 +1,8 @@
 import useFetch from "./components/hooks/useFetch";
 import "./scss/Github.scss";
+import gitLogo from "../images/github-logo.png";
 
-const git = "../images/factory.jpg";
-const url = "https://api.github.com/users/Juzba";
+// const url = "https://api.github.com/users/Juzba";
 
 const GitHub = () => {
 	// const { data, loading, refetch } = useFetch(url);
@@ -15,9 +15,11 @@ const GitHub = () => {
 
 	return (
 		<div className="github-page">
-			<h1>GitHub</h1>
-			<div>
-				<img src={git} alt="" />
+			<div className="box-text">
+				<h1>GitHub</h1>
+			</div>
+			<div className="box-logo">
+				<img src={gitLogo} alt="" />
 			</div>
 
 			<a href="https://github.com/Juzba" target="_blank">

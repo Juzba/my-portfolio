@@ -6,10 +6,20 @@
 		@include index.coloredFont;
 	}
 
-	img {
-		background-color: white;
+	.box-text {
+		@include index.borderStyle;
+		
+	}
+	
+	.box-logo {
+		@include index.borderStyle;
+		
 
-		width: 320px;
-		height: 320px;
+		img {
+			// background-color: white;
+
+			width: 320px;
+			height: 320px;
+		}
 	}
 }

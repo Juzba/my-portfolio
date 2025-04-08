@@ -5,7 +5,6 @@
 	width: 100%;
 	min-width: 290px;
 	font-size: index.$font-size;
-	// background-color: index.$background-color-secondary;
 	overflow: hidden;
 
 
@@ -16,16 +15,15 @@
 		margin-bottom: 15px;
 
 		.box {
+			@include index.borderStyle;
+
 			box-sizing: border-box;
 			display: flex;
 			flex-wrap: wrap;
 			width: 100%;
 			align-items: center;
 
-			background-color: index.$background-color-secondary;
-			border-radius: index.$box-radius;
-			border: solid 1px index.$border-color;
-
+		
 			.nadpis {
 				min-width: 200px;
 				margin: 20px;
@@ -36,8 +34,8 @@
 
 				.t0 {
 					@include index.coloredFont;
-					font-size: 3rem;
 
+					font-size: 3rem;
 					opacity: 0;
 					transform: translateY(70px);
 					transition: all 0.5s ease-out;

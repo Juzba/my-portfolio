@@ -15,32 +15,27 @@
 	align-items: center;
 
 	.description {
-        box-sizing: border-box;
+		@include index.borderStyle;
+
+		box-sizing: border-box;
 		width: 100%;
-        padding: 25px;
+		padding: 25px;
 		text-align: justify;
-        hyphens: auto;
-
-		background-color: index.$background-color-secondary;
-		border-radius: index.$box-radius;
-		border: solid 1px index.$border-color;
-
+		hyphens: auto;
 
 		h1 {
-			font-size: 3rem;
 			@include index.coloredFont;
+
+			font-size: 3rem;
 		}
 	}
 
-    .project-box{
-        margin-top: 30px;
-        width: 100%;
-        background-color: index.$background-color-secondary;
-		border-radius: index.$box-radius;
-		border: solid 1px index.$border-color;
-    }
-
-
+	.project-box {
+		@include index.borderStyle;
+		
+		margin-top: 30px;
+		width: 100%;
+	}
 
 	a {
 		background-color: index.$first-color;
