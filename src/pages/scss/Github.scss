@@ -1,25 +1,43 @@
 @use "../../index.scss";
 
 .github-page {
-	h1 {
-		font-size: 3rem;
-		@include index.coloredFont;
-	}
+	.first-block {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 15px;
 
-	.box-text {
-		@include index.borderStyle;
-		
-	}
-	
-	.box-logo {
-		@include index.borderStyle;
-		
+		.box-text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 25px;
 
-		img {
-			// background-color: white;
+			@include index.borderStyle;
+			flex: 1;
+			h1 {
+				@include index.coloredFont;
 
-			width: 320px;
-			height: 320px;
+				font-size: 10vw;
+				margin: 0;
+			}
+		}
+
+		.box-logo {
+			@include index.borderStyle;
+
+			// flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 25px;
+
+			img {
+				// background-color: white;
+				width: 100%;
+				max-width: 320px;
+				// height: 320px;
+			}
 		}
 	}
 }

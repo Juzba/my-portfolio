@@ -15,11 +15,13 @@ const GitHub = () => {
 
 	return (
 		<div className="github-page">
-			<div className="box-text">
-				<h1>GitHub</h1>
-			</div>
-			<div className="box-logo">
-				<img src={gitLogo} alt="" />
+			<div className="first-block">
+				<div className="box-text">
+					<h1>GitHub</h1>
+				</div>
+				<div className="box-logo">
+					<img src={gitLogo} alt="" />
+				</div>
 			</div>
 
 			<a href="https://github.com/Juzba" target="_blank">

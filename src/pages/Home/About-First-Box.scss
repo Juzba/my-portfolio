@@ -7,47 +7,49 @@
 	font-size: index.$font-size;
 	overflow: hidden;
 
+	.header {
+		@include index.borderStyle;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+
+		h1 {
+			@include index.coloredFont;
+			font-size: 5vw;
+			margin: 0;
+		}
+	}
 
 	.first-block {
 		display: flex;
 		width: 100%;
 		box-sizing: border-box;
-		margin-bottom: 15px;
+		margin: 15px 0;
 
 		.box {
-			@include index.borderStyle;
-
+			
 			box-sizing: border-box;
 			display: flex;
+			flex-direction: row;
 			flex-wrap: wrap;
 			width: 100%;
 			align-items: center;
-
-		
-			.nadpis {
+			padding: 25px;
+			gap: 15px;
+			
+			.text-box {
+				@include index.borderStyle;
 				min-width: 200px;
-				margin: 20px;
-				padding: 20px;
+				// margin: 20px;
 				flex: 1;
 				text-align: center;
-				hyphens: auto; 
-
-				.t0 {
-					@include index.coloredFont;
-
-					font-size: 3rem;
-					opacity: 0;
-					transform: translateY(70px);
-					transition: all 0.5s ease-out;
-					&.active {
-						opacity: 1;
-						transform: translateY(0px);
-					}
-				}
-
+				hyphens: auto;
+				
 				.t1 {
 					font-size: 2.5rem;
-
+					
 					opacity: 0;
 					transform: translateY(70px);
 					transition: all 1s ease-out;
@@ -56,7 +58,7 @@
 						transform: translateY(0px);
 					}
 				}
-
+				
 				.t2 {
 					opacity: 0;
 					padding: 25px;
@@ -67,39 +69,50 @@
 						transform: translateY(0px);
 					}
 				}
-
+				
 				.icons-box {
 					display: flex;
 					z-index: 2;
 					justify-content: space-around;
-
+					
 					opacity: 0;
 					transform: translateY(70px);
 					transition: all 2s ease-out;
-
+					
 					&.active {
 						opacity: 1;
 						transform: translateY(0px);
 					}
-
+					
 					.react-icon {
 						margin: 25px;
-
+						
 						&.react {
 							animation: rotate 20s forwards infinite linear;
 						}
 					}
 				}
 			}
+			
+			.box-myphoto {
+				@include index.borderStyle;
+				border-radius: 15px;
+				overflow: hidden;
+				// box-sizing: border-box;
+				// border: solid 1px rgba(255, 255, 255, 0.192);
 
-			img.me {
-				width: 38vw;
-				height: 38vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.me {
+					// background-color: white;
 
-				min-width: 300px;
-				min-height: 300px;
-				margin-top: 15px;
-				z-index: 5;
+					width: 400px;
+					// min-width: 300px;
+					// min-height: 300px;
+					margin-top: 15px;
+					z-index: 5;
+				}
 			}
 		}
 	}

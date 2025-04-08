@@ -4,7 +4,7 @@ import "./About-Third-Box.scss";
 import "./About-Responsivity-Width.scss";
 import TechBars from "../components/tech_bars/TechBars";
 import Slider from "../components/slider/Slider";
-import imgBaldMan from "../../images/bman.png";
+import myPhoto from "../../images/myPhotocuted.png";
 import robot from "../../images/kuka.png";
 import comp from "../../images/comp.png";
 import Email from "../components/email/Email";
@@ -71,10 +71,12 @@ const About = () => {
 
 	return (
 		<section className="about">
+			<div className="header">
+				<h1>About me</h1>
+			</div>
 			<div className="first-block">
 				<div className="box">
-					<div className="nadpis">
-						<h1 className={animation0 ? "active t0" : "t0"}>O mně</h1>
+					<div className="text-box">
 						<p className={animation0 ? "t1 active" : "t1"}>Jmenuji se Jiří Strnadel</p>
 						<p className={animation0 ? "t2 active" : "t2"} id="text0">
 							a věnuji se vývoji webových aplikací, přičemž se zaměřuji především na technologie React a TypeScript.
@@ -85,7 +87,9 @@ const About = () => {
 							<StackIcon className="react-icon csharp" name={"csharp"} />
 						</div>
 					</div>
-					<img className="me" src={imgBaldMan} alt="" />
+					<div className="box-myphoto">
+						<img className="me" src={myPhoto} alt="" />
+					</div>
 				</div>
 			</div>
 
@@ -155,7 +159,6 @@ const About = () => {
 				</div>
 				<div className="box-text">{/* <Email /> */}</div>
 			</div>
-			
 		</section>
 	);
 };

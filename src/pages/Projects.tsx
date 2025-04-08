@@ -1,12 +1,17 @@
-import Cards from './Projects/Cards';
-import "./scss/Projects.scss"
+import Cards from "./Projects/Cards";
+import "./scss/Projects.scss";
 
 const Projects = () => {
-    return (
-        <div className='all-projects'>
-            <Cards />
-        </div>
-    );
+	return (
+		<div className="all-projects">
+			<div className="projects-box">
+				<h1>Projekty</h1>
+			</div>
+			<div className="cards-box-main">
+				<Cards />
+			</div>
+		</div>
+	);
 };
 
 export default Projects;

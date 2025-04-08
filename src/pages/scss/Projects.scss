@@ -1,6 +1,33 @@
+@use "../../index.scss";
+
 .all-projects{
-    // padding: 20px 0;
-// overflow: hidden;
-// overflow-y: hidden;
-// overflow-x: hidden;
+
+    .projects-box{
+        @include index.borderStyle;
+
+        display: flex;
+        justify-content: center;
+
+
+        h1{
+            @include index.coloredFont;
+            font-size: 8vw;
+            margin: 0;
+            padding: 10px
+            
+        }
+
+
+    }
+
+    .cards-box-main{
+        @include index.borderStyle;
+
+        margin: 15px 0 0;
+        box-sizing: border-box;
+        padding: 25px;
+        overflow: hidden;
+    }
+
+
 }
