@@ -1,10 +1,9 @@
 import "./About-First-Box.scss";
 import "./About-Second-Box.scss";
 import "./About-Third-Box.scss";
-import "./About-Responsivity-Width.scss";
 import TechBars from "../components/tech_bars/TechBars";
 import Slider from "../components/slider/Slider";
-import myPhoto from "../../images/myPhotocuted.png";
+import myPhoto from "../../images/bman.png";
 import robot from "../../images/kuka.png";
 import comp from "../../images/comp.png";
 import Email from "../components/email/Email";
@@ -76,15 +75,19 @@ const About = () => {
 			</div>
 			<div className="first-block">
 				<div className="box">
-					<div className="text-box">
-						<p className={animation0 ? "t1 active" : "t1"}>Jmenuji se Jiří Strnadel</p>
-						<p className={animation0 ? "t2 active" : "t2"} id="text0">
-							a věnuji se vývoji webových aplikací, přičemž se zaměřuji především na technologie React a TypeScript.
-						</p>
-						<div className={animation0 ? "icons-box active" : "icons-box"}>
-							<StackIcon className="react-icon react" name={"reactjs"} />
-							<StackIcon className="react-icon typescript" name={"typescript"} />
-							<StackIcon className="react-icon csharp" name={"csharp"} />
+					<div className="text-icon-box">
+						<div className="text-box">
+							<p className={animation0 ? "t1 active" : "t1"}>
+								Jmenuji se <span>Jiří Strnadel</span>.
+							</p>
+							<p className={animation0 ? "t2 active" : "t2"} id="text0">
+								Věnuji se vývoji webových aplikací, přičemž se zaměřuji především na technologie React a TypeScript.
+							</p>
+						</div>
+						<div className={"icons-box"}>
+							<StackIcon className={animation0 ? "react-icon react active" : "react-icon react"} name={"reactjs"} />
+							<StackIcon className={animation0 ? "react-icon active" : "react-icon"} name={"typescript"} />
+							<StackIcon className={animation0 ? "react-icon active" : "react-icon"} name={"csharp"} />
 						</div>
 					</div>
 					<div className="box-myphoto">

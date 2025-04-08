@@ -41,8 +41,8 @@
 					padding: 25px;
 
 					opacity: 0;
-					transform: translateY(70px);
-					transition: all 1s ease-out;
+					transform: translateY(20px);
+					transition: all 1s ease-in;
 
 					&.active {
 						opacity: 1;

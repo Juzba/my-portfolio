@@ -47,7 +47,7 @@
             border-radius: 0 15px 15px 0;
             background: linear-gradient(360deg, #1f9deb, #025c90);
             width: 0;
-            transition: all 4s ease-out;
+            transition: all 7s ease-in-out;
 
             &.active {
                 width: 80%;
@@ -59,7 +59,7 @@
             border-radius: 0 15px 15px 0;
 
             width: 0;
-            transition: all 4s ease-out;
+            transition: all 3s ease-in-out;
 
             &.active {
                 width: 75%;
@@ -71,7 +71,7 @@
             border-radius: 0 15px 15px 0;
 
             width: 0;
-            transition: all 4s ease-out;
+            transition: all 5s ease-in-out;
 
             &.active {
                 width: 50%;
@@ -83,7 +83,7 @@
             border-radius: 0 15px 15px 0;
 
             width: 0;
-            transition: all 4s ease-out;
+            transition: all 4s ease-in-out;
 
             &.active {
                 width: 90%;

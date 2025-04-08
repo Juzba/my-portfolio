@@ -5,27 +5,33 @@
     .projects-box{
         @include index.borderStyle;
 
+        min-width: 290px;
         display: flex;
         justify-content: center;
-
+        align-items: center;
 
         h1{
             @include index.coloredFont;
-            font-size: 8vw;
+            font-size: 5vw;
             margin: 0;
-            padding: 10px
+            // padding: 10px
             
         }
 
-
+        @media (max-width: index.$screen-size) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        
     }
 
     .cards-box-main{
-        @include index.borderStyle;
+        // @include index.borderStyle;
 
         margin: 15px 0 0;
         box-sizing: border-box;
-        padding: 25px;
+        // padding: 25px;
         overflow: hidden;
     }
 
