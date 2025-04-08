@@ -1,18 +1,17 @@
 @use "../../../index.scss";
 
 .footer {
-	margin: 0 -25px;
-	// position:;
-	bottom: 0;
-	width: 120%;
-	// margin: 0px;
-	.wave{
-		// background-color: aqua;
-		fill: index.$background-color-secondary;
-	}
+	width: 100%;
+	margin: 15px 0;
+	
+	
 	.background{
+		@include index.borderStyle;
+		box-sizing: border-box;
+		padding: 15px;
 		background-color: index.$background-color-secondary;
 		p{
+			font-size: index.$font-size;
 			margin: 0;
 			padding: 10px 0 10px 40px;
 			z-index: 10;
