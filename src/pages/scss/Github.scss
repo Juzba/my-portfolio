@@ -1,0 +1,15 @@
+@use "../../index.scss";
+
+.github-page {
+	h1 {
+		font-size: 3rem;
+		@include index.coloredFont;
+	}
+
+	img {
+		background-color: white;
+
+		width: 320px;
+		height: 320px;
+	}
+}

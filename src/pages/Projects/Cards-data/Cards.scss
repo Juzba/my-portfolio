@@ -1,8 +1,11 @@
 @use '../../../index.scss';
 
 .cards-component {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    padding: 25px;
+    overflow: hidden;
+    background-color: index.$background-color-secondary;
+			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 
     input[type='text'] {
         display: block;

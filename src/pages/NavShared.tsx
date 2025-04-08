@@ -8,10 +8,8 @@ const NavShared = () => {
 		<section className="navigation-shared">
 			<Sidebar />
 			<div className="right-side">
-				<div className="backround">
-					<Outlet />
-					<Footer />
-				</div>
+				<Outlet />
+				<Footer />
 			</div>
 		</section>
 	);

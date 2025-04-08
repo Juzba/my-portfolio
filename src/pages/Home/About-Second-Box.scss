@@ -37,6 +37,7 @@
 				// order: 1;
 				background-color: index.$background-color-secondary;
 				border-radius: index.$box-radius;
+				border: solid 1px index.$border-color;
 
 				display: flex;
 				justify-content: center;
@@ -66,6 +67,7 @@
 				flex-grow: 1;
 				background-color: index.$background-color-secondary;
 				border-radius: index.$box-radius;
+				border: solid 1px index.$border-color;
 				display: flex;
 				justify-content: center;
 				align-items: center;

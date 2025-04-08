@@ -5,9 +5,11 @@
 		width: 100%;
 		margin: 15px 0 0px;
 		z-index: 2;
+		box-sizing: border-box;
 
 		background-color: index.$background-color-secondary;
 		border-radius: index.$box-radius;
+		border: solid 1px index.$border-color;
 	}
 
 	.fourth-block {
@@ -26,6 +28,7 @@
 		.box-text {
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 			flex: 1;
 			flex-grow: 1;
 
@@ -68,6 +71,7 @@
 			flex-grow: 1.2;
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 		}
 	}
 
@@ -83,6 +87,7 @@
 			height: auto;
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 
 			display: flex;
 			justify-content: center;
@@ -104,9 +109,13 @@
 		}
 
 		.box-robot {
+			box-sizing: border-box;
+			// width: 100%;
+			
 			padding: 10px;
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 			flex: 1;
 			flex-grow: 1.4;
 
@@ -115,16 +124,12 @@
 			justify-content: center;
 			.robot-div {
 				aspect-ratio: 5/3;
-				// padding: 10px;
-				// height: 300px;
-
-				// max-width: 550px;
 				position: relative;
-
 				border-radius: index.$box-radius;
 				height: 367px;
 				background-image: url(../../images/factory.jpg);
 				background-size: cover;
+				// object-position: left;
 				// box-shadow: 0 0 25px white;
 
 				.robot {
@@ -142,9 +147,12 @@
 	.sixth-block {
 		width: 100%;
 		margin: 15px 0 0;
+		box-sizing: border-box;
+		overflow: hidden;
 
 		background-color: index.$background-color-secondary;
 		border-radius: index.$box-radius;
+		border: solid 1px index.$border-color;
 
 		.text6 {
 			padding: 20px;
@@ -176,11 +184,13 @@
 		
 
 		.box-email{
+			box-sizing: border-box;
 			width: 100%;
 			flex: 1;
 			flex-grow: 1.4;
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 			
 			padding: 35px 0;
 			
@@ -191,6 +201,7 @@
 			flex-grow: 1;
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 			min-width: 270px;
 		}
 	}

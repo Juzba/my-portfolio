@@ -3,6 +3,7 @@
 .about {
 	box-sizing: border-box;
 	width: 100%;
+	min-width: 290px;
 	font-size: index.$font-size;
 	// background-color: index.$background-color-secondary;
 	overflow: hidden;
@@ -23,6 +24,7 @@
 
 			background-color: index.$background-color-secondary;
 			border-radius: index.$box-radius;
+			border: solid 1px index.$border-color;
 
 			.nadpis {
 				min-width: 200px;
@@ -59,6 +61,7 @@
 
 				.t2 {
 					opacity: 0;
+					padding: 25px;
 					transform: translateY(70px);
 					transition: all 1.5s ease-out;
 					&.active {

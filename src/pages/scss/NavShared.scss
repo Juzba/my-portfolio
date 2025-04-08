@@ -1,46 +1,29 @@
-@use '../../index.scss';
+@use "../../index.scss";
 
 .navigation-shared {
-    width: 100%;
-    max-width: 100vw;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+	width: 100%;
+	max-width: 100vw;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
 
-    justify-content: center;
-    
-    .right-side {
-        width: 80%;
-        max-width: 1300px;
-        padding: 30px 30px 0 30px;
-        overflow: hidden;
-        box-sizing: border-box;
-        flex: 1;
-        
-        // display: flex;
-        // justify-items: center;
-        
-        // justify-content: center;
-        // align-items: center;
-        
-        .backround{
-            width: 100%;
-            overflow: hidden;
-            height: 100%;
-        }
-    }
-    
-    
-    @media (max-width: index.$screen-size) {
-        .right-side {
-            width: 100%;
-            max-width: 100vw;
-            padding: 15px 15px 0 15px;
-       }
+	justify-content: center;
+
+	.right-side {
+		width: 80%;
+		max-width: 1300px;
+		padding: 30px 30px 0 30px;
+		overflow: hidden;
+		box-sizing: border-box;
+		flex: 1;
+	}
+
+	@media (max-width: index.$screen-size) {
+		.right-side {
+			width: 100%;
+			max-width: 100vw;
+			padding: 15px 15px 0 15px;
+		}
+	}
 }
-
-}
-
-
-

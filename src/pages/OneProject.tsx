@@ -29,7 +29,7 @@ const OneProject = () => {
 		return <div>Id Nenalezeno!</div>;
 	}
 
-	const {name, description, description2, description3 } = cardsData.find((_, index) => index == +id) as type;
+	const { name, description, description2, description3 } = cardsData.find((_, index) => index == +id) as type;
 
 	return (
 		<section className="one-project">
@@ -39,14 +39,16 @@ const OneProject = () => {
 				<p>{description2}</p>
 				<p>{description3}</p>
 			</div>
-			{/* <h1>One Project</h1> */}
-			{id === "0" && <SudokuSolver />}
-			{id === "1" && <FirebaseProject />}
-			{id === "2" && <AdvencedSlider />}
-			{id === "3" && <Faq />}
-			{id === "4" && <Snake />}
-			{id === "5" && <Coordinates />}
-			{id === "6" && <EmailProject />}
+			<div className="project-box">
+				{/* <h1>One Project</h1> */}
+				{id === "0" && <SudokuSolver />}
+				{id === "1" && <FirebaseProject />}
+				{id === "2" && <AdvencedSlider />}
+				{id === "3" && <Faq />}
+				{id === "4" && <Snake />}
+				{id === "5" && <Coordinates />}
+				{id === "6" && <EmailProject />}
+			</div>
 
 			<div>
 				<Link to={"/projects"}>

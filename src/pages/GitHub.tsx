@@ -1,21 +1,29 @@
 import useFetch from "./components/hooks/useFetch";
+import "./scss/Github.scss";
+
+const git = "../images/factory.jpg";
 const url = "https://api.github.com/users/Juzba";
-const img = "https://api.github.com/users/Juzba/orgs"
 
 const GitHub = () => {
-	const { data, loading, refetch } = useFetch(url);
+	// const { data, loading, refetch } = useFetch(url);
 
-	const spustit = async () => {
-		refetch();
-		const result = await data;
-		console.log(result);
-	};
+	// const spustit = async () => {
+	// 	refetch();
+	// 	const result = await data;
+	// 	console.log(result);
+	// };
 
 	return (
-		<div>
+		<div className="github-page">
 			<h1>GitHub</h1>
-            <div id="https://api.github.com/users/Juzba/orgs"></div>
-			<button onClick={() => spustit()}>Click</button>
+			<div>
+				<img src={git} alt="" />
+			</div>
+
+			<a href="https://github.com/Juzba" target="_blank">
+				My Github
+			</a>
+			{/* <button onClick={() => spustit()}>Click</button> */}
 		</div>
 	);
 };
