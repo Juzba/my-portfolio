@@ -22,6 +22,10 @@ const About = () => {
 	// console.log(animation);
 
 	useEffect(() => {
+		window.scroll({ top: 0});
+	}, []);
+
+	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting && entry.target.id === "text0") setAnimation0(true);

@@ -1,7 +1,7 @@
 @use '../../index.scss';
 
 .resume {
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.489);
     box-sizing: border-box;
     display: block;
     
@@ -14,13 +14,15 @@
     height: 100%;
     padding: 5%;
     font-size: index.$font-size;
-    margin-top: 20px;
-    margin-bottom: 60px;
     
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
         font-size: 0.9rem;
         border: none;
         width: 100%;
+    }
+    @media (max-width: 360px) {
+        font-size: 0.7rem;
+      
     }
 
     h1 {
@@ -66,7 +68,8 @@
         p {
             padding-left: 50px;
             margin: 0;
-            overflow-wrap: break-word;
+            // overflow-wrap: break-word;
+            hyphens: auto;
         }
     }
 
@@ -87,13 +90,13 @@
                 }
             }
         }
-
+        
         p {
             padding-left: 30px;
             margin: 0 0 20px;
         }
     }
-
+    
     .courses {
         margin-bottom: 60px;
         p {

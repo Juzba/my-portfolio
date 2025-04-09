@@ -23,6 +23,8 @@ interface type {
 	description2: string;
 	description3: string;
 	playable: boolean;
+	url1: string;
+	url2: string;
 }
 
 const OneProject = () => {
@@ -52,7 +54,7 @@ const OneProject = () => {
 		setIdNum(parsedId.toString());
 	};
 
-	const { name, description, description2, description3 } = cardsData.find((_, index) => index == +idNum) as type;
+	const { name, description, description2, description3, url1, url2 } = cardsData.find((_, index) => index == +idNum) as type;
 
 	return (
 		<section className="one-project">
@@ -85,17 +87,17 @@ const OneProject = () => {
 					</svg>
 
 					<h2>GitHub:</h2>
-					<a
-						href="https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/sudoku-solver/SudokuSolver.tsx"
+					<a className="git-link"
+						href={url1}
 						target="_blank"
 						rel="noopener noreferrer">
-						Git text1
+						Ukázka kódu 1.
 					</a>
-					<a
-						href="https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/sudoku-solver/SudokuSolver.tsx"
+					<a className="git-link"
+						href={url2}
 						target="_blank"
 						rel="noopener noreferrer">
-						git text 2
+						Ukázka kódu 2.
 					</a>
 				</div>
 

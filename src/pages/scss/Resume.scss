@@ -1,8 +1,37 @@
-@use '../../index.scss';
+@use "../../index.scss";
 
+.resume-page {
+	width: 100%;
 
-.resume-page{
-    padding-top: 20px;
-    width: 100%;
-    
+	.header {
+		@include index.borderStyle;
+
+		min-width: 290px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+			@include index.coloredFont;
+			font-size: 5vw;
+			margin: 0;
+		}
+
+		@media (max-width: index.$screen-size) {
+			h1 {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	.resume-box {
+		@include index.borderStyle;
+        box-sizing: border-box;
+
+        width: 100%;
+		min-width: 290px;
+        margin-top: 15px;
+        padding: 25px 0;
+
+	}
 }

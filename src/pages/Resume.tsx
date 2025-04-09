@@ -1,12 +1,24 @@
-import './scss/Resume.scss';
-import ResumeHtml from './resume/ResumeHtml';
+import "./scss/Resume.scss";
+import ResumeHtml from "./resume/ResumeHtml";
+import { useEffect } from "react";
 
 const Resume = () => {
-    return (
-        <section className="resume-page">
-            <ResumeHtml />
-        </section>
-    );
+
+useEffect(() => {
+        window.scroll({ top: 0, behavior:"smooth"});
+    }, []);
+
+
+	return (
+		<section className="resume-page">
+			<div className="header">
+				<h1>Životopis</h1>
+			</div>
+			<div className="resume-box">
+				<ResumeHtml />
+			</div>
+		</section>
+	);
 };
 
 export default Resume;

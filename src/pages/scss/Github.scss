@@ -1,13 +1,21 @@
 @use "../../index.scss";
 
 .github-page {
+	min-width: 280px;
+	box-sizing: border-box;
+
 	.first-block {
+		width: 100%;
+		min-width: 280px;
+
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 15px;
 
 		.box-text {
+			box-sizing: border-box;
+			min-width: 280px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -15,29 +23,50 @@
 
 			@include index.borderStyle;
 			flex: 1;
+			flex-grow: 2;
 			h1 {
 				@include index.coloredFont;
 
 				font-size: 10vw;
 				margin: 0;
+
+				@media (max-width: index.$screen-size) {
+					font-size: 5rem;
+				}
 			}
 		}
 
 		.box-logo {
 			@include index.borderStyle;
+			box-sizing: border-box;
 
-			// flex: 1;
+			flex: 1;
+			min-width: 280px;
+			width: auto;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			padding: 25px;
 
 			img {
-				// background-color: white;
-				width: 100%;
+				// width: 100%;
 				max-width: 320px;
-				// height: 320px;
+				min-width: 260px;
 			}
+		}
+	}
+
+	.second-block {
+		@include index.borderStyle;
+		box-sizing: border-box;
+		width: 100%;
+		margin-top: 15px;
+		padding: 25px;
+
+		a{
+			font-size: 5rem;
+			color: index.$text-color;
+			text-decoration: none;
 		}
 	}
 }

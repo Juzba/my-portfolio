@@ -44,10 +44,10 @@ const Sidebar = () => {
 					<FiCoffee className="icon" />
 					<p>Projects</p>
 				</NavLink>
-				<NavLink className={`link ${openMenu}`} to="/gallery">
+				{/* <NavLink className={`link ${openMenu}`} to="/gallery">
 					<FiImage className="icon" />
 					<p>Gallery</p>
-				</NavLink>
+				</NavLink> */}
 				<NavLink className={`link ${openMenu}`} to="/resume">
 					<FiFileText className="icon" />
 					<p>Životopis</p>

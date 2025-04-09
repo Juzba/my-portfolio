@@ -59,19 +59,24 @@
 			flex-direction: column;
 			justify-content: space-around;
 			align-items: center;
-
-			.giticon {
-				// height: 50%;
-			}
+			gap:15px;
 
 			h2 {
 				font-size: 3rem;
 				margin: 0;
 			}
-			a {
+
+			.git-link {
+				padding: 5px 10px;
 				background-color: transparent;
-				font-size: 2rem;
+				font-size: 1.7rem;
+				text-decoration: none;
+				color: white;
 				margin: 0;
+
+				border: 1px solid rgba(255, 255, 255, 0.304);
+				border-radius: 10px;
+				background-color: index.$background-color;
 			}
 		}
 
@@ -123,17 +128,16 @@
 			&:hover {
 				box-shadow: 0 0 15px;
 			}
-			&:active{
+			&:active {
 				color: index.$background-color-secondary;
 				box-shadow: 0 0 15px white;
 			}
-			
-			
+
 			.icon {
 				padding: 0 15px;
 			}
 		}
-		
+
 		a {
 			box-sizing: border-box;
 			background-color: index.$third-color;
@@ -151,8 +155,8 @@
 			&:hover {
 				box-shadow: 0 0 15px white;
 			}
-			
-			&:active{
+
+			&:active {
 				color: index.$background-color;
 				box-shadow: 0 0 15px white;
 			}
@@ -164,7 +168,7 @@
 			}
 
 			@media (max-width: 400px) {
-				span{
+				span {
 					display: none;
 				}
 			}
