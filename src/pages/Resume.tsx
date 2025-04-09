@@ -3,11 +3,10 @@ import ResumeHtml from "./resume/ResumeHtml";
 import { useEffect } from "react";
 
 const Resume = () => {
-
-useEffect(() => {
-        window.scroll({ top: 0, behavior:"smooth"});
-    }, []);
-
+	
+	useEffect(() => {
+		window.scroll({ top: 0 });
+	}, []);
 
 	return (
 		<section className="resume-page">

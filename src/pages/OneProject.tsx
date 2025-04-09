@@ -50,11 +50,13 @@ const OneProject = () => {
 			parsedId += num;
 		}
 
-		window.scroll({ top: 0, behavior: "smooth" });
+		window.scroll({ top: 0 });
 		setIdNum(parsedId.toString());
 	};
 
-	const { name, description, description2, description3, url1, url2 } = cardsData.find((_, index) => index == +idNum) as type;
+	const { name, description, description2, description3, url1, url2 } = cardsData.find(
+		(_, index) => index == +idNum
+	) as type;
 
 	return (
 		<section className="one-project">
@@ -87,16 +89,10 @@ const OneProject = () => {
 					</svg>
 
 					<h2>GitHub:</h2>
-					<a className="git-link"
-						href={url1}
-						target="_blank"
-						rel="noopener noreferrer">
+					<a className="git-link" href={url1} target="_blank" rel="noopener noreferrer">
 						Ukázka kódu 1.
 					</a>
-					<a className="git-link"
-						href={url2}
-						target="_blank"
-						rel="noopener noreferrer">
+					<a className="git-link" href={url2} target="_blank" rel="noopener noreferrer">
 						Ukázka kódu 2.
 					</a>
 				</div>

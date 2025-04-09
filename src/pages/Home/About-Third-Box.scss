@@ -18,12 +18,11 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 
-		justify-content: space-around;
-		align-content: space-around;
 		gap: 15px;
 
 		.box-text {
 			@include index.borderStyle;
+			min-width: 280px;
 
 			flex: 1;
 			flex-grow: 1;
@@ -36,6 +35,7 @@
 
 			text-align: justify;
 			hyphens: auto;
+
 			h2 {
 				@include index.coloredFont;
 
@@ -43,7 +43,7 @@
 				margin-bottom: 5px;
 				opacity: 0;
 				transform: translateY(20px);
-				transition: all 1s ease-in;
+				transition: all 0.5s ease-in;
 
 				&.active {
 					opacity: 1;
@@ -57,7 +57,7 @@
 
 				opacity: 0;
 				transform: translateY(20px);
-				transition: all 1.5s ease-in;
+				transition: all 1s ease-in;
 				&.active {
 					opacity: 1;
 					transform: translateY(0px);
@@ -66,6 +66,11 @@
 		}
 		.box-tech-bars {
 			@include index.borderStyle;
+			min-width: 280px;
+
+			display: flex;
+			// justify-content: center;
+			align-items: center;
 
 			flex: 1;
 			flex-grow: 1.2;
@@ -83,6 +88,7 @@
 			@include index.borderStyle;
 
 			flex: 1;
+			min-width: 280px;
 			height: auto;
 
 			display: flex;
@@ -96,7 +102,7 @@
 
 				opacity: 0;
 				transform: translateY(20px);
-				transition: all 2s ease-in;
+				transition: all 1s ease-in;
 				&.active {
 					opacity: 1;
 					transform: translateY(0px);
@@ -153,7 +159,7 @@
 
 			opacity: 0;
 			transform: translateY(20px);
-			transition: all 2s ease-in;
+			transition: all 1s ease-in;
 			&.active {
 				opacity: 1;
 				transform: translateY(0px);

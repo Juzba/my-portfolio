@@ -25,6 +25,9 @@ const SudokuSolver = () => {
 	const { error, fetchData } = UseAxios(urlSolve);
 	const [displayCross, setDisplayCross] = useState<CrossState>({ Y: null, X: null, FocusedNumber: 0 });
 
+	
+	
+
 	const sendArray = async () => {
 		const vysledek = await fetchData(sudokuArray);
 

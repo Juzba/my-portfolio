@@ -22,12 +22,12 @@
 
 			.box-text {
 				@include index.borderStyle;
+				min-width: 280px;
 
 				height: auto;
 				width: 100%;
 				flex: 1;
 				flex-grow: 2;
-
 
 				display: flex;
 				justify-content: center;
@@ -42,7 +42,7 @@
 
 					opacity: 0;
 					transform: translateY(20px);
-					transition: all 1s ease-in;
+					transition: all 0.5s ease-in;
 
 					&.active {
 						opacity: 1;
@@ -52,6 +52,7 @@
 			}
 			.box-workingimg {
 				@include index.borderStyle;
+				min-width: 280px;
 
 				flex: 1;
 				min-width: 270px;
@@ -69,6 +70,9 @@
 					&.active {
 						opacity: 1;
 					}
+				}
+				@media (max-width: index.$screen-size) {
+					display: none;
 				}
 			}
 		}

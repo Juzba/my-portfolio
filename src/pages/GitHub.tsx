@@ -15,7 +15,7 @@ const GitHub = () => {
 
 			<div className="second-block">
 				<a href="https://github.com/Juzba" target="_blank">
-					My Github
+					Odkaz na muj Github profil
 				</a>
 			</div>
 		</div>

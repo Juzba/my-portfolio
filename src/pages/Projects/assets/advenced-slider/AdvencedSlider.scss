@@ -11,6 +11,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    
 
     position: relative;
     transition: all 2s ease;
@@ -56,9 +57,9 @@
         justify-content: center;
 
         button {
-            border-radius: 50%;
+            border-radius: 5px;
             font-size: 25px;
-            width: 40px;
+            width: 60px;
             height: 40px;
             background-color: #96040b;
             color: aliceblue;
@@ -71,9 +72,12 @@
             justify-content: center;
             align-items: center;
             z-index: 1;
+            // user-select: none;
+            // box-shadow: 0 0 50px whitesmoke;
 
-            :hover {
+            &:hover {
                 color: #e50914;
+                background-color: #96040b;
             }
         }
     }

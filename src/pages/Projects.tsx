@@ -5,7 +5,7 @@ import "./scss/Projects.scss";
 const Projects = () => {
 
 useEffect(()=>{
-window.scroll({top:0, behavior:"smooth"})
+window.scroll({top:0})
 },[])
 
 

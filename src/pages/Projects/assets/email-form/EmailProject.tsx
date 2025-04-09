@@ -5,7 +5,7 @@ import UseAxios from "../../../components/hooks/UseAxios";
 const url = "https://localhost:7143/Email/send";
 
 const Email = () => {
-	const { error, loading, fetchData } = UseAxios(url);
+	const { error, fetchData } = UseAxios(url);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
