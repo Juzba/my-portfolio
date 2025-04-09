@@ -5,11 +5,14 @@ import Faq from "./Projects/assets/faq/Faq";
 import "./scss/OneProject.scss";
 import { Link } from "react-router-dom";
 import { TfiControlBackward } from "react-icons/tfi";
+import { TfiControlForward } from "react-icons/tfi";
 import FirebaseProject from "./Projects/assets/firebase/AddMovie";
 import Coordinates from "./Projects/assets/issCoordinates/Coordinates";
 import SudokuSolver from "./Projects/assets/sudoku-solver/SudokuSolver";
 import EmailProject from "./Projects/assets/email-form/EmailProject";
 import cardsData from "./Projects/Cards-data/Cards-data";
+import { PiCoffeeBold } from "react-icons/pi";
+import { useEffect, useState } from "react";
 
 interface type {
 	id: number;
@@ -24,12 +27,32 @@ interface type {
 
 const OneProject = () => {
 	const { id } = useParams();
+	const [idNum, setIdNum] = useState<string | undefined>(id);
 
-	if (id === undefined) {
+	useEffect(() => {
+		window.scroll({ top: 0, behavior: "smooth" });
+	}, []);
+
+	if (idNum === undefined) {
 		return <div>Id Nenalezeno!</div>;
 	}
 
-	const { name, description, description2, description3 } = cardsData.find((_, index) => index == +id) as type;
+	const nextProject = (num: number) => {
+		let parsedId: number = +idNum;
+
+		if (num === -1 && parsedId === 0) {
+			parsedId = cardsData.length - 1;
+		} else if (num === +1 && parsedId === cardsData.length - 1) {
+			parsedId = 0;
+		} else {
+			parsedId += num;
+		}
+
+		window.scroll({ top: 0, behavior: "smooth" });
+		setIdNum(parsedId.toString());
+	};
+
+	const { name, description, description2, description3 } = cardsData.find((_, index) => index == +idNum) as type;
 
 	return (
 		<section className="one-project">
@@ -38,7 +61,13 @@ const OneProject = () => {
 			</div>
 			<div className="description">
 				<div className="git-box">
-					<svg className="giticon" width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg
+						className="giticon"
+						width="200"
+						height="200"
+						viewBox="0 0 100 100"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
 						<g id="github">
 							<g id="github_2">
 								<path
@@ -76,22 +105,28 @@ const OneProject = () => {
 					<p>{description3}</p>
 				</div>
 			</div>
+
 			<div className="project-box">
 				{/* <h1>One Project</h1> */}
-				{id === "0" && <SudokuSolver />}
-				{id === "1" && <FirebaseProject />}
-				{id === "2" && <AdvencedSlider />}
-				{id === "3" && <Faq />}
-				{id === "4" && <Snake />}
-				{id === "5" && <Coordinates />}
-				{id === "6" && <EmailProject />}
+				{idNum === "0" && <SudokuSolver />}
+				{idNum === "1" && <FirebaseProject />}
+				{idNum === "2" && <AdvencedSlider />}
+				{idNum === "3" && <Faq />}
+				{idNum === "4" && <Snake />}
+				{idNum === "5" && <Coordinates />}
+				{idNum === "6" && <EmailProject />}
 			</div>
-
-			<div>
-				<Link to={"/projects"}>
+			<div className="back-to-projects">
+				<button onClick={() => nextProject(-1)}>
 					<TfiControlBackward className="icon" />
-					Zpět
+				</button>
+				<Link to={"/projects"}>
+					<PiCoffeeBold className="icon" />
+					<span>Projekty</span>
 				</Link>
+				<button onClick={() => nextProject(+1)}>
+					<TfiControlForward className="icon" />
+				</button>
 			</div>
 		</section>
 	);

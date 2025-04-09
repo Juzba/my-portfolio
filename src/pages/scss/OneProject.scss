@@ -5,6 +5,7 @@
 	min-width: 290px;
 	min-height: 100vh;
 	box-sizing: border-box;
+	overflow: hidden;
 
 	align-self: center;
 	justify-self: center;
@@ -16,10 +17,12 @@
 	.header {
 		@include index.borderStyle;
 
+		box-sizing: border-box;
 		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 
 		h1 {
 			@include index.coloredFont;
@@ -39,15 +42,15 @@
 		margin-top: 15px;
 		box-sizing: border-box;
 		gap: 15px;
-		
+
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		
+
 		.git-box {
 			@include index.borderStyle;
-			min-width: 300px;
-			min-height: 300px;
+			min-width: 280px;
+			min-height: 280px;
 			padding: 25px;
 			box-sizing: border-box;
 			flex: 1;
@@ -57,21 +60,21 @@
 			justify-content: space-around;
 			align-items: center;
 
-			.giticon{
+			.giticon {
 				// height: 50%;
 			}
 
-			h2{
+			h2 {
 				font-size: 3rem;
 				margin: 0;
 			}
-			a{
+			a {
 				background-color: transparent;
 				font-size: 2rem;
-				margin: 0
+				margin: 0;
 			}
 		}
-		
+
 		.text-box {
 			@include index.borderStyle;
 			padding: 25px;
@@ -94,27 +97,77 @@
 		box-sizing: border-box;
 	}
 
-	a {
-		background-color: index.$first-color;
-		color: index.$text-color;
-		text-decoration: none;
-		width: 120px;
-		padding: 5px 10px;
-		margin: 60px 0;
-		font-size: index.$font-size;
+	.back-to-projects {
+		@include index.borderStyle;
+		margin-top: 15px;
+		box-sizing: border-box;
+		width: 100%;
 
-		text-align: center;
 		display: flex;
-		justify-self: center;
+		flex-direction: row;
 
-		&:hover {
-			box-shadow: 0 0 15px;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+
+		button {
+			box-sizing: border-box;
+			height: 40px;
+			padding: 5px 10px;
+			background-color: index.$third-color;
+			color: index.$text-color;
+			font-size: 2rem;
+			border-radius: 5px;
+			border: none;
+
+			&:hover {
+				box-shadow: 0 0 15px;
+			}
+			&:active{
+				color: index.$background-color-secondary;
+				box-shadow: 0 0 15px white;
+			}
+			
+			
+			.icon {
+				padding: 0 15px;
+			}
 		}
+		
+		a {
+			box-sizing: border-box;
+			background-color: index.$third-color;
+			color: index.$text-color;
+			text-decoration: none;
+			height: 40px;
+			padding: 5px 10px;
+			margin: 30px 0px;
+			font-size: index.$font-size;
+			text-align: center;
+			display: flex;
+			justify-self: center;
+			border-radius: 5px;
 
-		.icon {
-			align-self: center;
-			padding-right: 15px;
-			padding: 0 15px;
+			&:hover {
+				box-shadow: 0 0 15px white;
+			}
+			
+			&:active{
+				color: index.$background-color;
+				box-shadow: 0 0 15px white;
+			}
+
+			.icon {
+				align-self: center;
+				padding-right: 15px;
+				padding: 0 15px;
+			}
+
+			@media (max-width: 400px) {
+				span{
+					display: none;
+				}
+			}
 		}
 	}
 }

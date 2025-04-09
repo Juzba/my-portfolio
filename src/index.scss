@@ -10,8 +10,10 @@ $third-color: #0593a2;
 $border-color: rgba(255, 255, 255, 0.186);
 
 $screen-size: 1000px;
-$font-size: 1.5rem;
+$font-size: 1.3rem;
 $box-radius: 10px;
+
+$font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
 @mixin coloredFont {
 	background: linear-gradient(to right, red, $second-color);
@@ -48,9 +50,7 @@ $box-radius: 10px;
 	overflow-x: hidden;
 	color: $text-color;
 
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-	// font-family: cursive;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-family: $font-family;
 
 	font-weight: 400;
 	font-size: 14px;

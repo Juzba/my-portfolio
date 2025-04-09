@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import Cards from "./Projects/Cards";
 import "./scss/Projects.scss";
 
 const Projects = () => {
+
+useEffect(()=>{
+window.scroll({top:0, behavior:"smooth"})
+},[])
+
+
+
 	return (
 		<div className="all-projects">
 			<div className="projects-box">
