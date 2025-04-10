@@ -11,7 +11,7 @@ import { SiServerless } from "react-icons/si";
 import UseGetAxios from "../components/hooks/UseGetAxios";
 
 // const url = "https://localhost:7143/api/Online";
-const url = "portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/online";
+const url = "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/Online";
 
 const Sidebar = () => {
 	const { fetchData } = UseGetAxios(url);

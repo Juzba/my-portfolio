@@ -17,7 +17,7 @@ interface CrossState {
 }
 
 // const urlSolve = "https://localhost:7143/api/sudoku/solve";
-const urlSolve = "portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/sudoku/solve";
+const urlSolve = "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/sudoku/solve";
 
 const SudokuSolver = () => {
 	const [sudokuArray, setSudokuArray] = useState<number[][][]>(dataArray);

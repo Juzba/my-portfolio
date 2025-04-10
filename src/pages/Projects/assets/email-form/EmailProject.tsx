@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./EmailProject.scss";
 import UseAxios from "../../../components/hooks/UseAxios";
 
-const url = "https://localhost:7143/Email/send";
+// const url = "https://localhost:7143/Email/send";
+const url = "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/Email/send";
 
 const Email = () => {
 	const { error, fetchData } = UseAxios(url);

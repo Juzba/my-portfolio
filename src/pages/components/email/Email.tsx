@@ -3,7 +3,8 @@ import "./Email.scss";
 import UseAxios from "../hooks/UseAxios";
 import { MdOutlineMailOutline } from "react-icons/md";
 
-const url = "https://localhost:7143/Email/send";
+// const url = "https://localhost:7143/Email/send";
+const url = "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/Email/send";
 
 const Email = () => {
 	const { error, fetchData } = UseAxios(url);
