@@ -7,9 +7,16 @@ import { FiHome } from "react-icons/fi";
 import { FiFileText } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { FiCoffee } from "react-icons/fi";
+import { SiServerless } from "react-icons/si";
+import UseGetAxios from "../components/hooks/UseGetAxios";
+
+const url = "https://localhost:7143/api/Online";
+// const url = "portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/online";
 
 const Sidebar = () => {
+	const { fetchData } = UseGetAxios(url);
 	const [openMenu, setOpenMenu] = useState("");
+	const [serverStatus, setServerStatus] = useState(false);
 	const sidebar = useRef<HTMLDivElement | null>(null);
 
 	const sidebarCloseOnClickOnWindow = (e: MouseEvent) => {
@@ -27,32 +34,49 @@ const Sidebar = () => {
 		}
 	});
 
+	useEffect(() => {
+		fetchData().then((data) => {
+			if (data) {
+				if (data === "Server je online!") setServerStatus(true);
+			}
+		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
 	return (
 		<header>
 			<nav ref={sidebar} className={`sidebar ${openMenu}`} id="sidebar">
 				<button onClick={() => setOpenMenu(() => (openMenu ? "" : "open"))}>
 					<IoMenuSharp />
 				</button>
-				<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/" end>
-					<FiHome className="icon" />
-					<p>About me</p>
-				</NavLink>
-				<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/projects">
-					<FiCoffee className="icon" />
-					<p>Projects</p>
-				</NavLink>
-				{/* <NavLink onClick={()=>setOpenMenu("")} className={`link ${openMenu}`} to="/gallery">
+
+				<div className="nav-box">
+					<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/" end>
+						<FiHome className="icon" />
+						<p>About me</p>
+					</NavLink>
+					<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/projects">
+						<FiCoffee className="icon" />
+						<p>Projects</p>
+					</NavLink>
+					{/* <NavLink onClick={()=>setOpenMenu("")} className={`link ${openMenu}`} to="/gallery">
 					<FiImage className="icon" />
 					<p>Gallery</p>
-				</NavLink> */}
-				<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/resume">
-					<FiFileText className="icon" />
-					<p>Životopis</p>
-				</NavLink>
-				<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/github">
-					<FiGithub className="icon" />
-					<p>Github</p>
-				</NavLink>
+					</NavLink> */}
+					<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/resume">
+						<FiFileText className="icon" />
+						<p>Životopis</p>
+					</NavLink>
+					<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/github">
+						<FiGithub className="icon" />
+						<p>Github</p>
+					</NavLink>
+				</div>
+				<div className="server-stat">
+					<SiServerless className={serverStatus ? "icon active" : "icon"} />
+					<p>Server</p>
+				</div>
+
 				<img className="rainbow" src={rainbow2} alt="" />
 			</nav>
 		</header>

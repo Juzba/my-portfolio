@@ -7,18 +7,21 @@ header {
 	width: $sidebar-size;
 	max-width: 400px;
 	height: 100vh;
+
 	.sidebar {
 		box-sizing: border-box;
 		width: $sidebar-size;
 		max-width: 400px;
 		height: 100vh;
+
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+
 		background-color: index.$background-color;
 		top: 0;
 		left: 0;
-		overflow-y: hidden; /* Pokud je obsah menu větší než výška obrazovky, umožní skrolování v menu */
-		overflow-x: hidden;
+		overflow: hidden;
 		z-index: 20;
 		border-right: index.$background-color-secondary solid 2px;
 
@@ -27,15 +30,50 @@ header {
 		button {
 			display: none;
 		}
+		.nav-box {
+			display: flex;
+			flex-direction: column;
 
-		.link {
+			z-index: 5;
+			.link {
+				text-wrap: noWrap;
+				padding: 10px 25px;
+				margin: 20px 0 0;
+				text-decoration: none;
+				font-size: 1.4rem;
+				color: index.$text-color;
+				z-index: 6;
+				background: linear-gradient(90deg, index.$background-color, black);
+				border-radius: 5px;
+
+				border: black 2px solid;
+
+				display: flex;
+				align-items: center;
+
+				.icon {
+					padding-right: 10px;
+					min-width: 23px;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				&.active {
+					color: index.$third-color;
+					border: index.$third-color 2px solid;
+				}
+			}
+		}
+
+		.server-stat {
 			text-wrap: noWrap;
 			padding: 10px 25px;
-			margin: 20px 0 0;
-			text-decoration: none;
+			margin: 0 0 20px;
 			font-size: 1.4rem;
 			color: index.$text-color;
-			z-index: 5;
+			z-index: 6;
 			background: linear-gradient(90deg, index.$background-color, black);
 			border-radius: 5px;
 
@@ -46,16 +84,15 @@ header {
 
 			.icon {
 				padding-right: 10px;
-               min-width: 23px;
+				min-width: 23px;
+
+				&.active {
+					color: rgb(17, 226, 17);
+				}
 			}
 
 			p {
 				margin: 0;
-			}
-
-			&.active {
-				color: index.$third-color;
-				border: index.$third-color 2px solid;
 			}
 		}
 
@@ -82,8 +119,6 @@ header {
 			overflow-x: hidden;
 			background-color: rgba($color: index.$background-color, $alpha: 0.9);
 
-		
-
 			&.open {
 				min-width: 190px;
 			}
@@ -93,7 +128,7 @@ header {
 				font-size: 45px;
 				color: index.$text-color;
 				border: none;
-				display:block;
+				display: block;
 				position: fixed;
 				right: 30px;
 				top: 10px;
