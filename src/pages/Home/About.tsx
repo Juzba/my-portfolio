@@ -1,14 +1,17 @@
+import React from "react";
 import "./About-First-Box.scss";
 import "./About-Second-Box.scss";
 import "./About-Third-Box.scss";
-import TechBars from "../components/tech_bars/TechBars";
-import Slider from "../components/slider/Slider";
 import myPhoto from "../../images/bman.png";
 import robot from "../../images/kuka.png";
 import comp from "../../images/comp.png";
-import Email from "../components/email/Email";
 import StackIcon from "tech-stack-icons";
 import { useEffect, useState } from "react";
+
+const TechBars = React.lazy(() => import("../components/tech_bars/TechBars"));
+const Slider = React.lazy(() => import("../components/slider/Slider"));
+const Email = React.lazy(() => import("../components/email/Email"));
+
 
 const About = () => {
 	const [animation0, setAnimation0] = useState(false);
