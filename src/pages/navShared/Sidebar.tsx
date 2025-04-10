@@ -20,7 +20,6 @@ const Sidebar = () => {
 	const sidebar = useRef<HTMLDivElement | null>(null);
 
 	const sidebarCloseOnClickOnWindow = (e: MouseEvent) => {
-		console.log("click");
 		if (sidebar.current && !sidebar.current.contains(e.target as Node)) {
 			setOpenMenu("");
 		}
@@ -37,6 +36,7 @@ const Sidebar = () => {
 	useEffect(() => {
 		fetchData().then((data) => {
 			if (data) {
+				console.log(data);
 				if (data === "Server je online!") setServerStatus(true);
 			}
 		});
