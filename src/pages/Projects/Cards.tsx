@@ -1,5 +1,6 @@
 import "./Cards-data/Cards.scss";
 import data from "./Cards-data/Cards-data";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
 
@@ -8,7 +9,7 @@ const Cards = () => {
 		<section className="cards-box">
 			{data.map(({ id, name, image, created }) => {
 				return (
-					<a href={`/oneproject/${id}`} key={id} className="one-card">
+					<Link to={`/oneproject/${id}`} key={id} className="one-card">
 						<div className="img-box">
 							<img src={image}></img>
 						</div>
@@ -23,7 +24,7 @@ const Cards = () => {
 							</p>
 							{/* <p>{description}</p> */}
 						</div>
-					</a>
+					</Link>
 				);
 			})}
 		</section>

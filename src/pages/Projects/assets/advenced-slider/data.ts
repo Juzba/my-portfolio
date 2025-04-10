@@ -1,7 +1,7 @@
-import image1 from './images/movie1.png';
-import image2 from './images/movie2.png';
-import image3 from './images/movie3.png';
-import image4 from './images/movie4.png';
+import image1 from '../../../../images/slider-images/movie1.png';
+import image2 from '../../../../images/slider-images/movie2.png';
+import image3 from '../../../../images/slider-images/movie3.png';
+import image4 from '../../../../images/slider-images/movie4.png';
 
 interface states {
     id: number;

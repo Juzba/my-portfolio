@@ -1,10 +1,10 @@
-import img1 from "./images/Sudoku.png";
-import img2 from "./images/firebase1.png";
-import img3 from "./images/Advenced-slider.png";
-import img4 from "./images/faq.png";
-import img5 from "./images/snake.png";
-import img6 from "./images/iss-image.png";
-import img7 from "./images/email-form.png";
+import img1 from "../../../images/cards-images/Sudoku.png";
+import img2 from "../../../images/cards-images/firebase1.png";
+import img3 from "../../../images/cards-images/Advenced-slider.png";
+import img4 from "../../../images/cards-images/faq.png";
+import img5 from "../../../images/cards-images/snake.png";
+import img6 from "../../../images/cards-images/iss-image.png";
+import img7 from "../../../images/cards-images/email-form.png";
 
 interface type {
 	id: number;

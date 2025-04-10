@@ -1,7 +1,7 @@
 import './Coordinate.scss';
 import useFetch from '../../../components/hooks/useFetch';
 import Loading from '../../../components/loading/Loading';
-import issImg from './iss.png';
+import issImg from '../../../../images/iss.png';
 import { useEffect } from 'react';
 
 const apiUrl = 'http://api.open-notify.org/iss-now.json';
