@@ -1,4 +1,3 @@
-import React, { Suspense } from "react";
 import { useParams } from "react-router-dom";
 import "./scss/OneProject.scss";
 import { Link } from "react-router-dom";
@@ -7,15 +6,21 @@ import { TfiControlForward } from "react-icons/tfi";
 import cardsData from "./Projects/Cards-data/Cards-data";
 import { PiCoffeeBold } from "react-icons/pi";
 import { useEffect, useState } from "react";
-import Loading from "./components/loading/Loading";
+import FirebaseProject from "./Projects/assets/firebase/AddMovie";
+import Coordinates from "./Projects/assets/issCoordinates/Coordinates";
+import SudokuSolver from "./Projects/assets/sudoku-solver/SudokuSolver";
+import EmailProject from "./Projects/assets/email-form/EmailProject"
+import Faq from "./Projects/assets/faq/Faq";
+import AdvencedSlider from "./Projects/assets/advenced-slider/AdvencedSlider"
+import Snake from "./Projects/assets/snake/Snake";
 
-const FirebaseProject = React.lazy(() => import("./Projects/assets/firebase/AddMovie"));
-const Coordinates = React.lazy(() => import("./Projects/assets/issCoordinates/Coordinates"));
-const SudokuSolver = React.lazy(() => import("./Projects/assets/sudoku-solver/SudokuSolver"));
-const EmailProject = React.lazy(() => import("./Projects/assets/email-form/EmailProject"));
-const Faq = React.lazy(() => import("./Projects/assets/faq/Faq"));
-const AdvencedSlider = React.lazy(() => import("./Projects/assets/advenced-slider/AdvencedSlider"));
-const Snake = React.lazy(() => import("./Projects/assets/snake/Snake"));
+// const FirebaseProject = React.lazy(() => import("./Projects/assets/firebase/AddMovie"));
+// const Coordinates = React.lazy(() => import("./Projects/assets/issCoordinates/Coordinates"));
+// const SudokuSolver = React.lazy(() => import("./Projects/assets/sudoku-solver/SudokuSolver"));
+// const EmailProject = React.lazy(() => import("./Projects/assets/email-form/EmailProject"));
+// const Faq = React.lazy(() => import("./Projects/assets/faq/Faq"));
+// const AdvencedSlider = React.lazy(() => import("./Projects/assets/advenced-slider/AdvencedSlider"));
+// const Snake = React.lazy(() => import("./Projects/assets/snake/Snake"));
 
 interface type {
 	id: number;
@@ -29,7 +34,6 @@ interface type {
 	url1: string;
 	url2: string;
 }
-
 
 const OneProject = () => {
 	const { id } = useParams();
@@ -110,15 +114,13 @@ const OneProject = () => {
 
 			<div className="project-box">
 				{/* <h1>One Project</h1> */}
-				<Suspense fallback={<Loading/>}>
-					{idNum === "0" && <SudokuSolver />}
-					{idNum === "1" && <FirebaseProject />}
-					{idNum === "2" && <AdvencedSlider />}
-					{idNum === "3" && <Faq />}
-					{idNum === "4" && <Snake />}
-					{idNum === "5" && <Coordinates />}
-					{idNum === "6" && <EmailProject />}
-				</Suspense>
+				{idNum === "0" && <SudokuSolver />}
+				{idNum === "1" && <FirebaseProject />}
+				{idNum === "2" && <AdvencedSlider />}
+				{idNum === "3" && <Faq />}
+				{idNum === "4" && <Snake />}
+				{idNum === "5" && <Coordinates />}
+				{idNum === "6" && <EmailProject />}
 			</div>
 			<div className="back-to-projects">
 				<button onClick={() => nextProject(-1)}>
