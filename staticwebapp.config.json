@@ -1,10 +1,1 @@
-{
-  "routes": [
-    {
-      "route": "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net",
-      "methods": [
-        "get"
-      ]
-    }
-  ]
-}
+{}
