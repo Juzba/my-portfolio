@@ -35,7 +35,6 @@ const Sidebar = () => {
 
 	useEffect(() => {
 		fetchData().then((data) => {
-			console.log(data);
 			if (data) {
 				if (data === "Server je online!") setServerStatus(true);
 			}
