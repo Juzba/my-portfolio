@@ -11,7 +11,7 @@ const Cards = () => {
 		<section className="cards-box">
 			{data.map(({ id, name, image, created }) => {
 				return (
-					<div key={id} className="one-card">
+					<Link to={`/oneproject/${id}`} key={id} className="one-card">
 						<div className="img-box">
 							<img src={image}></img>
 						</div>
@@ -24,9 +24,8 @@ const Cards = () => {
 									return index === 0 ? item : ", " + item;
 								})}
 							</p>
-							<Link to={`/oneproject/${id}`}>Open Project</Link>
 						</div>
-					</div>
+					</Link>
 				);
 			})}
 		</section>

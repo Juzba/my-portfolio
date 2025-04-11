@@ -8,15 +8,14 @@ import { FiFileText } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { FiCoffee } from "react-icons/fi";
 import { SiServerless } from "react-icons/si";
-// import UseGetAxios from "../components/hooks/UseGetAxios";
+import UseGetAxios from "../components/hooks/UseGetAxios";
 
-// const url = "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/Online";
+const url = "https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/Online";
 
 const Sidebar = () => {
-	// const { fetchData } = UseGetAxios(url);
+	const { fetchData } = UseGetAxios(url);
 	const [openMenu, setOpenMenu] = useState("");
-	const [serverStatus] = useState(false);
-	// const [serverStatus, setServerStatus] = useState(false);
+	const [serverStatus, setServerStatus] = useState(false);
 	const sidebar = useRef<HTMLDivElement | null>(null);
 
 	const sidebarCloseOnClickOnWindow = (e: MouseEvent) => {
@@ -33,14 +32,14 @@ const Sidebar = () => {
 		}
 	});
 
-	// useEffect(() => {
-	// 	fetchData().then((data) => {
-	// 		if (data) {
-	// 			if (data === "Server je online!") setServerStatus(true);
-	// 		}
-	// 	});
-	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	// }, []);
+	useEffect(() => {
+		fetchData().then((data) => {
+			if (data) {
+				if (data === "Server je online!") setServerStatus(true);
+			}
+		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<header>
