@@ -22,6 +22,9 @@ const Email = () => {
 			setEmailInfo("Odeslání se nezdařilo.");
 		} else {
 			setEmailInfo(result);
+			setName("")
+			setEmail("")
+			setEmailInfo("")
 		}
 	};
 

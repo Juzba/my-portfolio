@@ -86,7 +86,7 @@ const ProjectData: type[] = [
 	},
 	{
 		id: 5,
-		name: "Iss-Coordinates Api ",
+		name: "Iss Coordinates Api ",
 		image: img6,
 		created: ["Web Api","React"],
 		description:

@@ -21,6 +21,9 @@ const Email = () => {
 			setEmailInfo("Odeslání se nezdařilo.");
 		} else {
 			setEmailInfo(result);
+			setMessage("");
+			setEmail("");
+			setName("");
 		}
 	};
 
@@ -54,7 +57,7 @@ const Email = () => {
 				<div className={emailInfo ? "contact-me active" : "contact-me"}>
 					{emailInfo ? <p className="message">{emailInfo}</p> : <p className="message">Kontaktní formulář</p>}
 				</div>
-				<div className="main-box" >
+				<div className="main-box">
 					<div className="box-inputs">
 						<input
 							value={name}
@@ -77,7 +80,7 @@ const Email = () => {
 							placeholder="Email *"
 						/>
 					</div>
-				<MdOutlineMailOutline className="email-icon" />
+					<MdOutlineMailOutline className="email-icon" />
 				</div>
 
 				<textarea

@@ -121,7 +121,7 @@ const SudokuSolver = () => {
 				{infoMessage && <p className="info-message">{infoMessage}</p>}
 			</div>
 			<p>{statusText ? statusText : "Žádný text!"}</p>
-			<p>{error ? error : "Spojení bez chyby."}</p>
+			{/* <p>{error ? error : "Spojení bez chyby."}</p> */}
 		</div>
 	);
 };

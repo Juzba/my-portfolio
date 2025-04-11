@@ -74,8 +74,6 @@
 				color: index.$third-color;
 				margin: 0;
 
-				// border: 1px solid rgba(255, 255, 255, 0.304);
-				// border-radius: 2px;
 				background: linear-gradient(45deg, black, #141414);
 				background-color: index.$background-color;
 			}
@@ -83,6 +81,7 @@
 
 		.text-box {
 			@include index.borderStyle;
+			min-width: 270px;
 			padding: 25px;
 			box-sizing: border-box;
 			flex: 1;
@@ -91,6 +90,7 @@
 
 			text-align: justify;
 			hyphens: auto;
+			
 		}
 	}
 
