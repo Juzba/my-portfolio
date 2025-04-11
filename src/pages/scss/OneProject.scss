@@ -71,11 +71,12 @@
 				background-color: transparent;
 				font-size: 1.7rem;
 				text-decoration: none;
-				color: white;
+				color: index.$third-color;
 				margin: 0;
 
-				border: 1px solid rgba(255, 255, 255, 0.304);
-				border-radius: 10px;
+				// border: 1px solid rgba(255, 255, 255, 0.304);
+				// border-radius: 2px;
+				background: linear-gradient(45deg, black, #141414);
 				background-color: index.$background-color;
 			}
 		}

@@ -12,7 +12,7 @@
 		@include index.borderStyle;
 
 		max-width: 500px;
-		min-width: 220px;
+		min-width: 250px;
 		flex: 1;
 		padding: 15px;
 		height: auto;
@@ -83,22 +83,7 @@
 				color: index.$text-color;
 				text-decoration: none;
 			}
-			// a {
-			// 	padding: 5px 10px;
-			// 	width: 80px;
-			// 	border-radius: 10px 20px 10px 10px;
-			// 	cursor: pointer;
-			// 	text-decoration: none;
-			// 	border: none;
-			// 	background-color: index.$third-color;
-			// 	color: index.$text-color;
-			// 	box-shadow: 0 0 10px index.$third-color;
-			// 	transition: all linear 0.5s;
-
-			// 	&:hover {
-			// 		box-shadow: 0 0 20px index.$first-color;
-			// 	}
-			// }
+		
 		}
 	}
 }

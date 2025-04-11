@@ -1,10 +1,10 @@
-import img1 from "../../../images/cards-images/Sudoku.png";
-import img2 from "../../../images/cards-images/firebase1.png";
-import img3 from "../../../images/cards-images/Advenced-slider.png";
+import img1 from "../../../images/cards-images/Sudoku.jpg";
+import img2 from "../../../images/cards-images/firebase.jpg";
+import img3 from "../../../images/cards-images/Advenced-slider.jpg";
 import img4 from "../../../images/cards-images/faq.png";
-import img5 from "../../../images/cards-images/snake.png";
-import img6 from "../../../images/cards-images/iss-image.png";
-import img7 from "../../../images/cards-images/email-form.png";
+import img5 from "../../../images/cards-images/snake.jpg";
+import img6 from "../../../images/cards-images/iss.jpg";
+import img7 from "../../../images/cards-images/email-form.jpg";
 
 interface type {
 	id: number;
@@ -103,6 +103,20 @@ const ProjectData: type[] = [
 			"Celkově je aplikace užitečným nástrojem nejen pro nadšence do astronautiky a vesmíru, ale také pro každého, kdo má zájem sledovat pohyb naší orbitální stanice v reálném čase.",
 		url1: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/issCoordinates/Coordinates.tsx",
 		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/components/hooks/useFetch.ts",
+	},
+	{
+		id: 6,
+		name: "Email Form",
+		image: img7,
+		created: ["C#", "Web Api", "React", "Scss"],
+		description:
+			"Jedná se o e-mailový formulář pro kontakt, který jsem navrhl tak, aby uživatelům usnadnil zasílání dotazů a požadavků. Tento formulář obsahuje robustní funkce pro hlídání chyb, jež uživatelům pomáhají vyplnit formulář správně. Také zahrnuje sledování připojení se serverem, což zajišťuje, že uživatelé budou informováni o úspěšném nebo neúspěšném odeslání dat. Můj cíl je poskytnout uživatelsky přívětivé rozhraní, které minimalizuje frustraci a maximalizuje efektivitu při vyplňování formuláře.",
+		description2:
+			"Formulář je vytvořen v Reactu s TypeScriptem a stylizován pomocí SASS, což umožňuje snadnou správu stylů a přehlednou strukturu kódu. Při odesílání dat využívám svůj vlastní hook useAxios, který efektivně zpracovává HTTP požadavky a zajišťuje plynulou komunikaci s backendem. Data jsou poté odesílána do controlleru ve webovém API napsaném v C#, což mi umožňuje mít plnou kontrolu nad zpracováním a validací dat na serverové straně.",
+		description3:
+			"Při odesílání e-mailů využívám svůj e-mail vytvořený speciálně pro tyto účely, a veškeré zprávy jsou doručovány na můj oficiální e-mail. Celkově je formulář plně funkční, a já jsem spokojený s tím, jak se mi podařilo důkladně implementovat všechny potřebné funkce. Doufám, že tento e-mailový formulář bude užitečný jak pro mě, tak pro uživatele, kteří se chtějí se mnou spojit.",
+		url1: "https://github.com/Juzba/MyPortfolioBackend/blob/master/MyPortfolioBackend/Controllers/EmailController.cs",
+		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/email-form/EmailProject.tsx",
 	},
 	{
 		id: 6,

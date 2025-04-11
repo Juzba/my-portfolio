@@ -1,29 +1,25 @@
 @use "../../../../index.scss";
 
 .coordinates {
-    // height: 0vh;
-    // border: solid red;
-    background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+	font-size: index.$font-size;
 
-    font-size: index.$font-size ;
+	overflow: hidden;
 
-    overflow: hidden;
+	h2 {
+		text-wrap: wrap;
+	}
 
-    h2{
-        text-wrap: wrap;
-    }
+	img {
+		max-width: 100%;
+	}
 
-    img{
-        max-width: 100%;
-    }
-
-    .box{
-        height: 150px;
-    }
+	.box {
+		height: 150px;
+	}
 }

@@ -4,7 +4,7 @@ import Loading from '../../../components/loading/Loading';
 import issImg from '../../../../images/iss.png';
 import { useEffect } from 'react';
 
-const apiUrl = 'http://api.open-notify.org/iss-now.json';
+const apiUrl = 'https://portfolio-backend-juzba-h7dtdva0fvadach3.westeurope-01.azurewebsites.net/api/Iss';
 
 interface IssPosition {
     latitude: number;
@@ -21,7 +21,7 @@ const Coordinates = () => {
     useEffect(() => {
         const int1 = setInterval(() => {
             refetch();
-        }, 2000);
+        }, 4000);
 
         return () => clearInterval(int1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -33,8 +33,8 @@ const Coordinates = () => {
             <h2>Aktuální pozice vesmírné stanice ISS.</h2>
             {data ? (
                 <div className="box">
-                    <p>{`Zeměpisná šířka: ${data.iss_position.latitude}`}</p>
-                    <p>{`Zeměpisná délka: ${data.iss_position.longitude}`}</p>
+                    <p>{`Zeměpisná šířka: ${data.iss_position.latitude}°`}</p>
+                    <p>{`Zeměpisná délka: ${data.iss_position.longitude}°`}</p>
                 </div>
             ) : (
                 <div className="box loading">
