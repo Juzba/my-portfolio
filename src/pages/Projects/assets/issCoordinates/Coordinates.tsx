@@ -21,7 +21,7 @@ const Coordinates = () => {
     useEffect(() => {
         const int1 = setInterval(() => {
             refetch();
-        }, 4000);
+        }, 3000);
 
         return () => clearInterval(int1);
     // eslint-disable-next-line react-hooks/exhaustive-deps

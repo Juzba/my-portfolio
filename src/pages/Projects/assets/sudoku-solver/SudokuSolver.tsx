@@ -95,7 +95,6 @@ const SudokuSolver = () => {
 								{/* {index} */}
 								<input
 									className={displayCross.FocusedNumber === OneNumber[0] ? "input-number" : ""}
-									readOnly
 									value={OneNumber[0] !== 0 ? OneNumber[0] : ""}
 									onKeyDown={(e) => addNumberToArray(indexY, indexX, e)}
 									onClick={() => setDisplayCross({ Y: indexY, X: indexX, FocusedNumber: OneNumber[0] })}

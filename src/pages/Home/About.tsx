@@ -23,8 +23,6 @@ const About = () => {
 	const [animation5, setAnimation5] = useState(false);
 	const [animation6, setAnimation6] = useState(false);
 
-	// console.log(animation);
-
 	useEffect(() => {
 		window.scroll({ top: 0 });
 	}, []);
@@ -73,8 +71,6 @@ const About = () => {
 		if (text6) observer.observe(text6);
 		else console.error("text4 nenalezen observerem! Coponent-About");
 	}, []);
-
-	// if (loading) return <h1>Loading...</h1>;
 
 	return (
 		<section className="about">
@@ -135,8 +131,8 @@ const About = () => {
 					</h2>
 					<p className={animation4 ? "active" : ""} id="text4">
 						Programování mě natolik nadchlo, že mu věnuji každý volný moment již více než rok a půl. Neustále se učím
-						nové technologie a snažím se neustále zdokonalovat své dovednosti. Mám rozsáhlé zkušenosti s JavaScriptem,
-						SCSS, HTML a CSS, stejně jako s verzovacím nástrojem Git a databázemi, jako je Firebase.
+						nové technologie a snažím se neustále zdokonalovat své dovednosti. Mám zkušenosti s JavaScriptem,
+						SCSS, HTML a CSS, stejně jako s verzovacím nástrojem Git a databází Firebase.
 					</p>
 				</div>
 			</div>

@@ -25,10 +25,8 @@ const ProjectData: type[] = [
 		name: "Sudoku solver",
 		image: img1,
 		created: ["C#", "Web Api", "TS", "React"],
-		description:
-			"Vytvářím inovativní aplikaci zaměřenou na řešení sudoku. Po zadání hodnot a stisknutí tlačítka „Solve“ aplikace vytvoří trojrozměrné pole, které se odešle na server pro zpracování pomocí webového API v C#. Na serverové straně se nejprve ověří vstupní parametry, a poté se aplikují různé metody pro vyřešení sudoku.",
-		description2:
-			"Můj sofistikovaný algoritmus dokáže pomocí techniky „pokus-omyl“ zvládnout i ty nejkomplexnější úlohy. Pro uživatelské rozhraní jsem zvolil moderní přístup s využitím SCSS grid pro responzivní design. Aplikace zahrnuje také funkci pro poznámky, která umožňuje uživatelům zapisovat si strategie a myšlenky přímo při řešení sudoku, čímž jim poskytuje praktické nástroje pro zlepšení jejich dovedností.",
+		description:"Aplikace je zaměřena na řešení sudoku. Po zadání hodnot a stisknutí tlačítka „Solve“ aplikace vytvoří trojrozměrné pole, které se odešle na server pro zpracování pomocí webového API v C#. Na serverové straně se nejprve ověří vstupní parametry a následuje proces, který pomocí různých metod hledá možné umístění čísel v mřížce sudoku. Algoritmus kontroluje, zda nevznikly žádné chyby a v případě potřeby vyhledává alternativní řešení. Po úspěšném vyřešení sudoku se odešle odpověď zpět do frontendu aplikace přes API, aby uživatel mohl vidět výsledek.",
+		description2:"Můj sofistikovaný algoritmus dokáže pomocí techniky „pokus-omyl“ zvládnout i ty nejkomplexnější úlohy. Pro uživatelské rozhraní jsem zvolil moderní přístup s využitím SCSS grid pro responzivní design. Tento přístup zaručuje, že aplikace se správně zobrazuje na všech zařízeních, což zlepšuje celkovou uživatelskou zkušenost.",
 		description3: "",
 		url1: "https://github.com/Juzba/MyPortfolioBackend/blob/master/MyPortfolioBackend/SudokuSolver/SudokuMain.cs",
 		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/sudoku-solver/SudokuSolver.tsx",
@@ -39,7 +37,7 @@ const ProjectData: type[] = [
 		image: img2,
 		created: ["React", "Firebase", "Scss", "TS"],
 		description:
-			"Vytvořil jsem aplikaci využívající Google Firebase, kde se data ukládají pomocí hooku useState v Reactu. Uživatel zadává parametry a kliknutím na tlačítko se údaje odesílají do databáze funkcí addDoc, která zajišťuje správné uložení dat. Implementoval jsem také funkci pro zpracování chyb, která upozorňuje uživatele na problémy s připojením k databázi.",
+			"Vytvořil jsem aplikaci využívající Google Firebase, kde se data ukládají pomocí hooku useState lokálně v Reactu. Uživatel zadá parametry a kliknutím na tlačítko se údaje odesílají do databáze funkcí addDoc, která zajišťuje správné uložení dat. Implementoval jsem také funkci pro zpracování chyb, která upozorňuje uživatele na problémy s připojením k databázi.",
 		description2:
 			"Aplikace obsahuje funkci onSnapshot, jež neustále monitoruje stav databáze a automaticky aktualizuje uživatelské rozhraní v reálném čase. Uživatelé vidí indikátor načítání při získávání nejnovějších informací, což zlepšuje uživatelský zážitek. Dále je zde možnost mazání jednotlivých položek a jejich detailního zobrazení, čímž se zajišťuje přehlednost a uživatelská přívětivost aplikace.",
 		description3: "",
@@ -54,7 +52,7 @@ const ProjectData: type[] = [
 		description:
 			"Vytvořil jsem pokročilý slider v Reactu, který využívá TypeScript (TSX) a SCSS pro stylování. Slider efektivně zobrazuje data uložená v souboru data.ts a zahrnuje klíčové funkce, jako je useEffect, která spravuje vedlejší účinky komponenty. Implementoval jsem cleanup funkci pro úklid efektů při odpojení komponenty od DOMu a setInterval pro automatické posouvání slideru.",
 		description2:
-			"Slider se automaticky posouvá po předem stanoveném časovém intervalu, což uživatelům umožňuje snadno prohlížet položky. Když uživatel s sliderem aktivně nemanipuluje, vrací se do původního stavu a pokračuje v posuvu. Tímto designem jsem zajistil plynulé a intuitivní uživatelské prostředí, které zjednodušuje interakci a zvyšuje celkový zážitek při prohlížení obsahu.",
+			"Slider se automaticky posouvá po předem stanoveném časovém intervalu, což uživatelům umožňuje snadno prohlížet položky. Když uživatel se sliderem aktivně nemanipuluje, vrací se do původního stavu a pokračuje v posuvu. Tímto designem jsem zajistil plynulé a intuitivní uživatelské prostředí, které zjednodušuje interakci a zvyšuje celkový zážitek při prohlížení obsahu.",
 		description3: "",
 		url1: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/advenced-slider/AdvencedSlider.tsx",
 		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/advenced-slider/AdvencedSlider.scss",
@@ -102,7 +100,7 @@ const ProjectData: type[] = [
 		name: "Email Form",
 		image: img7,
 		created: ["C#", "Web Api", "React", "Scss"],
-		description:"Vyvinul jsem e-mailový formulář pro kontakt, který usnadňuje uživatelům zasílání dotazů a požadavků. Formulář má pokročilé funkce hlídání chyb, které zajišťují správné vyplnění, a zahrnuje sledování připojení se serverem, aby uživatelé byli informováni o úspěšném nebo neúspěšném odeslání dat. Mým cílem je vytvořit uživatelsky přívětivé rozhraní, které maximalizuje efektivitu a minimalizuje frustraci.",
+		description:"Jedná se o e-mailový formulář pro kontakt, který usnadňuje uživatelům zasílání dotazů a požadavků. Formulář má pokročilé funkce hlídání chyb, které zajišťují správné vyplnění, a zahrnuje sledování připojení se serverem, aby uživatelé byli informováni o úspěšném nebo neúspěšném odeslání dat. Mým cílem je vytvořit uživatelsky přívětivé rozhraní, které maximalizuje efektivitu a minimalizuje frustraci.",
 		description2:"Formulář je implementován pomocí Reactu a TypeScriptu, se styly řízenými SASS pro přehlednost kódu. K odesílání dat využívám vlastní hook useAxios, což zajišťuje plynulou komunikaci s backendem. Data se posílají do C# API, kde je zajištěna kontrola a validace. Všechny zprávy jsou směrovány na můj oficiální e-mail, což činí formulář plně funkční a efektivní pro komunikaci se mnou.",
 		description3:"",
 		url1: "https://github.com/Juzba/MyPortfolioBackend/blob/master/MyPortfolioBackend/Controllers/EmailController.cs",
