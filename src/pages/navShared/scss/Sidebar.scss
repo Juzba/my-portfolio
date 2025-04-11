@@ -27,6 +27,8 @@ header {
 
 		position: fixed;
 
+		background: linear-gradient(0deg, #0C1629,#0C1629,#010626 );
+
 		button {
 			display: none;
 		}
@@ -43,10 +45,8 @@ header {
 				font-size: 1.4rem;
 				color: index.$text-color;
 				z-index: 6;
-				background: linear-gradient(90deg, index.$background-color, black);
 				border-radius: 5px;
 
-				border: black 2px solid;
 
 				display: flex;
 				align-items: center;
@@ -74,10 +74,8 @@ header {
 			font-size: 1.4rem;
 			color: index.$text-color;
 			z-index: 6;
-			background: linear-gradient(90deg, index.$background-color, black);
 			border-radius: 5px;
-
-			border: black 2px solid;
+			
 
 			display: flex;
 			align-items: center;
@@ -96,20 +94,6 @@ header {
 			}
 		}
 
-		// .rainbow {
-		// 	position: absolute;
-		// 	width: 550px;
-		// 	bottom: 0;
-		// 	left: -140px;
-		// }
-		.rainbow {
-			position: absolute;
-			width: 550px;
-			bottom: 0;
-			left: -140px;
-
-			
-		}
 	}
 	@media (max-width: index.$screen-size) {
 		min-width: 0;

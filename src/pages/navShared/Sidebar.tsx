@@ -1,6 +1,4 @@
 import { NavLink } from "react-router-dom";
-// import rainbow2 from "../../images/rainbow2.png";
-import img from "../../images/img.png"
 import "./scss/Sidebar.scss";
 import { IoMenuSharp } from "react-icons/io5";
 import { useEffect, useRef, useState } from "react";
@@ -72,8 +70,6 @@ const Sidebar = () => {
 					<p>online</p>
 				</div>
 
-				{/* <img className="rainbow" src={rainbow2} alt="" /> */}
-				<img className="rainbow" src={img} alt="" />
 			</nav>
 		</header>
 	);
