@@ -24,10 +24,11 @@ header {
 		overflow: hidden;
 		z-index: 20;
 		border-right: index.$background-color-secondary solid 2px;
+		opacity: 0.95;
 
 		position: fixed;
 
-		background: linear-gradient(0deg, #0C1629,#0C1629,#010626 );
+		background: linear-gradient(0deg, #0c1629, #0c1629, #010626);
 
 		button {
 			display: none;
@@ -46,7 +47,6 @@ header {
 				color: index.$text-color;
 				z-index: 6;
 				border-radius: 5px;
-
 
 				display: flex;
 				align-items: center;
@@ -75,7 +75,6 @@ header {
 			color: index.$text-color;
 			z-index: 6;
 			border-radius: 5px;
-			
 
 			display: flex;
 			align-items: center;
@@ -93,7 +92,6 @@ header {
 				margin: 0;
 			}
 		}
-
 	}
 	@media (max-width: index.$screen-size) {
 		min-width: 0;
@@ -109,7 +107,6 @@ header {
 			padding: 0;
 			transition: min-width 0.2s linear;
 			overflow-x: hidden;
-			background-color: rgba($color: index.$background-color, $alpha: 0.9);
 
 			&.open {
 				min-width: 190px;

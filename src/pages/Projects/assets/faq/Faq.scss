@@ -53,8 +53,10 @@
 			cursor: pointer;
 			border: none;
 
-			&:hover {
+			
+			&:active {
 				box-shadow: 0 0 15px white;
+				background-color: #141414;
 			}
 		}
 	}

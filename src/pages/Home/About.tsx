@@ -86,7 +86,7 @@ const About = () => {
 					<div className="text-icon-box">
 						<div className="text-box">
 							<p className={animation0 ? "t1 active" : "t1"}>
-								Jmenuji se <span>Jiří Strnadel</span>.
+								Jmenuji se <span>Jiří Strnadel</span>
 							</p>
 							<p className={animation0 ? "t2 active" : "t2"} id="text0">
 								Věnuji se vývoji webových aplikací, přičemž se zaměřuji především na technologie React a TypeScript.

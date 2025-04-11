@@ -126,9 +126,7 @@
 			border-radius: 5px;
 			border: none;
 
-			&:hover {
-				box-shadow: 0 0 15px;
-			}
+		
 			&:active {
 				color: index.$background-color-secondary;
 				box-shadow: 0 0 15px white;
@@ -153,9 +151,7 @@
 			justify-self: center;
 			border-radius: 5px;
 
-			&:hover {
-				box-shadow: 0 0 15px white;
-			}
+		
 
 			&:active {
 				color: index.$background-color;
