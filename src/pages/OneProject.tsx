@@ -13,6 +13,7 @@ import EmailProject from "./Projects/assets/email-form/EmailProject";
 import Faq from "./Projects/assets/faq/Faq";
 import AdvencedSlider from "./Projects/assets/advenced-slider/AdvencedSlider";
 import Snake from "./Projects/assets/snake/Snake";
+import Netflix from "./Projects/assets/netflix/SeznamNetflix"
 
 // const FirebaseProject = React.lazy(() => import("./Projects/assets/firebase/AddMovie"));
 // const Coordinates = React.lazy(() => import("./Projects/assets/issCoordinates/Coordinates"));
@@ -122,6 +123,7 @@ const OneProject = () => {
 				{idNum === "4" && <Snake />}
 				{idNum === "5" && <Coordinates />}
 				{idNum === "6" && <EmailProject />}
+				{idNum === "7" && <Netflix />}
 			</div>
 			<div className="back-to-projects">
 				<button onClick={() => nextProject(-1)}>

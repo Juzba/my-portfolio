@@ -5,6 +5,7 @@ import img4 from "../../../images/cards-images/faq.png";
 import img5 from "../../../images/cards-images/snake.jpg";
 import img6 from "../../../images/cards-images/iss.jpg";
 import img7 from "../../../images/cards-images/email-form.jpg";
+import img8 from "../../../images/cards-images/netflix.jpg";
 
 interface type {
 	id: number;
@@ -108,12 +109,12 @@ const ProjectData: type[] = [
 		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/email-form/EmailProject.tsx",
 	},
 	{
-		id: 6,
-		name: "Email Form",
-		image: img7,
-		created: ["C#", "Web Api", "React", "Scss"],
-		description:"Vyvinul jsem e-mailový formulář pro kontakt, který usnadňuje uživatelům zasílání dotazů a požadavků. Formulář má pokročilé funkce hlídání chyb, které zajišťují správné vyplnění, a zahrnuje sledování připojení se serverem, aby uživatelé byli informováni o úspěšném nebo neúspěšném odeslání dat. Mým cílem je vytvořit uživatelsky přívětivé rozhraní, které maximalizuje efektivitu a minimalizuje frustraci.",
-		description2:"Formulář je implementován pomocí Reactu a TypeScriptu, se styly řízenými SASS pro přehlednost kódu. K odesílání dat využívám vlastní hook useAxios, což zajišťuje plynulou komunikaci s backendem. Data se posílají do C# API, kde je zajištěna kontrola a validace. Všechny zprávy jsou směrovány na můj oficiální e-mail, což činí formulář plně funkční a efektivní pro komunikaci se mnou.",
+		id: 7,
+		name: "Film finder",
+		image: img8,
+		created: ["React","TS", "Scss"],
+		description:"Tato React aplikace je navržena tak, aby uživatelům umožnila vyhledávat filmy podle zadaného textu. Parametry každého filmu jsou uloženy v objektu, což usnadňuje manipulaci s daty. Pro zobrazení filmů využívám funkci map, která generuje jednotlivé karty s informacemi o filmech. Díky funkci filter pak vyhledávám filmy, které odpovídají zadaným parametrům ve vyhledávání, takže uživatelé mohou snadno najít přesně to, co hledají.",
+		description2:"Styl aplikace je inspirován designem platformy Netflix, což mi umožňuje vytvořit moderní a atraktivní uživatelské rozhraní. SCSS používám k dosažení modulárních a přehledných stylů, které odrážejí estetiku oblíbené streamovací služby. Díky tomu je aplikace nejen vizuálně příjemná, ale také responzivní a intuitivní. Pracuji na vylepšení uživatelského zážitku, abych zajistil, že uživatelé budou mít snadný a pohodlný přístup k filmům, které hledají. Těším se na další rozvoj tohoto projektu a plánování nových funkcí, které by mohly zvýšit jeho užitečnost a příjemnost pro uživatele.",
 		description3:"",
 		url1: "https://github.com/Juzba/MyPortfolioBackend/blob/master/MyPortfolioBackend/Controllers/EmailController.cs",
 		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/email-form/EmailProject.tsx",

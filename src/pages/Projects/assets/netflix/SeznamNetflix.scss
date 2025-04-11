@@ -1,0 +1,24 @@
+.seznam-netflix {
+
+    input[type='text'] {
+        display: block;
+        outline: none;
+        width: 200px;
+        margin: 25px auto;
+        padding: 5px 10px;
+    }
+    
+    .film-container {
+        
+        
+        width: 96%;
+        margin: 15px auto;
+        
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        
+        gap: 15px;
+        justify-content: center;
+    }
+}
