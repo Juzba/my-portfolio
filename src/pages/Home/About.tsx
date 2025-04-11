@@ -5,7 +5,7 @@ import "./About-Third-Box.scss";
 import myPhoto from "../../images/bman.png";
 import robot from "../../images/kuka.png";
 import comp from "../../images/comp.png";
-// import emailImg from "../../images/emailimg.png";
+import img from "../../images/img.png"
 import hands from "../../images/hands.png"
 import StackIcon from "tech-stack-icons";
 import { useEffect, useState } from "react";

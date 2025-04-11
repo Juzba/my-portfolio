@@ -24,7 +24,7 @@ const Email = () => {
 			setEmailInfo(result);
 			setName("")
 			setEmail("")
-			setEmailInfo("")
+			setEmail("")
 		}
 	};
 
