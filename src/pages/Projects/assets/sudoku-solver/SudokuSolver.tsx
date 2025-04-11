@@ -23,7 +23,7 @@ const SudokuSolver = () => {
 	const [sudokuArray, setSudokuArray] = useState<number[][][]>(dataArray);
 	const [statusText, setStatusText] = useState<string | null>(null);
 	const [infoMessage, setinfoMessage] = useState<string | null>(null);
-	const { error, fetchData } = UseAxios(urlSolve);
+	const { fetchData } = UseAxios(urlSolve);
 	const [displayCross, setDisplayCross] = useState<CrossState>({ Y: null, X: null, FocusedNumber: 0 });
 
 	
