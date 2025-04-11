@@ -125,7 +125,7 @@
 			box-sizing: border-box;
 			width: 100%;
 
-			padding: 10px;
+			padding:  10px ;
 			flex: 1;
 			flex-grow: 1.4;
 
@@ -144,8 +144,9 @@
 				height: 367px;
 				background-image: url(../../images/factory.jpg);
 				background-size: cover;
-
+				
 				.robot {
+					filter: drop-shadow(0 4px 30px rgba(183, 159, 159, 0.5));
 					position: absolute;
 					top: -95px;
 					left: 30px;

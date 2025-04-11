@@ -116,8 +116,8 @@ const ProjectData: type[] = [
 		description:"Tato React aplikace je navržena tak, aby uživatelům umožnila vyhledávat filmy podle zadaného textu. Parametry každého filmu jsou uloženy v objektu, což usnadňuje manipulaci s daty. Pro zobrazení filmů využívám funkci map, která generuje jednotlivé karty s informacemi o filmech. Díky funkci filter pak vyhledávám filmy, které odpovídají zadaným parametrům ve vyhledávání, takže uživatelé mohou snadno najít přesně to, co hledají.",
 		description2:"Styl aplikace je inspirován designem platformy Netflix, což mi umožňuje vytvořit moderní a atraktivní uživatelské rozhraní. SCSS používám k dosažení modulárních a přehledných stylů, které odrážejí estetiku oblíbené streamovací služby. Díky tomu je aplikace nejen vizuálně příjemná, ale také responzivní a intuitivní. Pracuji na vylepšení uživatelského zážitku, abych zajistil, že uživatelé budou mít snadný a pohodlný přístup k filmům, které hledají. Těším se na další rozvoj tohoto projektu a plánování nových funkcí, které by mohly zvýšit jeho užitečnost a příjemnost pro uživatele.",
 		description3:"",
-		url1: "https://github.com/Juzba/MyPortfolioBackend/blob/master/MyPortfolioBackend/Controllers/EmailController.cs",
-		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/email-form/EmailProject.tsx",
+		url1: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/netflix/SeznamNetflix.tsx",
+		url2: "https://github.com/Juzba/my-portfolio/blob/main/src/pages/Projects/assets/netflix/data-netflix.ts",
 	},
 ];
 
