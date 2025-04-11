@@ -72,7 +72,7 @@ const Sidebar = () => {
 				</div>
 				<div className="server-stat">
 					<SiServerless className={serverStatus ? "icon active" : "icon"} />
-					<p>Server</p>
+					<p>online</p>
 				</div>
 
 				<img className="rainbow" src={rainbow2} alt="" />

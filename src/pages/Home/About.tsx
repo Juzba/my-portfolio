@@ -5,13 +5,14 @@ import "./About-Third-Box.scss";
 import myPhoto from "../../images/bman.png";
 import robot from "../../images/kuka.png";
 import comp from "../../images/comp.png";
+// import emailImg from "../../images/emailimg.png";
+import hands from "../../images/hands.png"
 import StackIcon from "tech-stack-icons";
 import { useEffect, useState } from "react";
 
 const TechBars = React.lazy(() => import("../components/tech_bars/TechBars"));
 const Slider = React.lazy(() => import("../components/slider/Slider"));
 const Email = React.lazy(() => import("../components/email/Email"));
-
 
 const About = () => {
 	const [animation0, setAnimation0] = useState(false);
@@ -25,7 +26,7 @@ const About = () => {
 	// console.log(animation);
 
 	useEffect(() => {
-		window.scroll({ top: 0});
+		window.scroll({ top: 0 });
 	}, []);
 
 	useEffect(() => {
@@ -167,7 +168,10 @@ const About = () => {
 				<div className="box-email">
 					<Email />
 				</div>
-				<div className="box-text">{/* <Email /> */}</div>
+				<div className="box-text">
+
+					<img src={hands} alt="" />
+				</div>
 			</div>
 		</section>
 	);
