@@ -9,9 +9,9 @@ import { useEffect, useState } from "react";
 import FirebaseProject from "./Projects/assets/firebase/AddMovie";
 import Coordinates from "./Projects/assets/issCoordinates/Coordinates";
 import SudokuSolver from "./Projects/assets/sudoku-solver/SudokuSolver";
-import EmailProject from "./Projects/assets/email-form/EmailProject"
+import EmailProject from "./Projects/assets/email-form/EmailProject";
 import Faq from "./Projects/assets/faq/Faq";
-import AdvencedSlider from "./Projects/assets/advenced-slider/AdvencedSlider"
+import AdvencedSlider from "./Projects/assets/advenced-slider/AdvencedSlider";
 import Snake from "./Projects/assets/snake/Snake";
 
 // const FirebaseProject = React.lazy(() => import("./Projects/assets/firebase/AddMovie"));
@@ -44,7 +44,9 @@ const OneProject = () => {
 	}, []);
 
 	if (idNum === undefined) {
-		return <div>Id Nenalezeno!</div>;
+		return (
+			<div style={{ width: "500px", height: "500px", backgroundColor: "black", color: " white" }}>Id Nenalezeno!</div>
+		);
 	}
 
 	const nextProject = (num: number) => {

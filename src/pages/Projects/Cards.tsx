@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 const Cards = () => {
 
-
+	////////////////////
+	if (!data) return <p>Data nejsou nalezena</p>;
+	///////////////////////////////////////
+	
 	return (
 		<section className="cards-box">
 			{data.map(({ id, name, image, created }) => {
