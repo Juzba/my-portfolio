@@ -124,10 +124,20 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
+
+				position: relative;
 				.me {
-					// filter: drop-shadow(0 4px 30px rgba(1, 138, 250, 0.5));
+					filter: drop-shadow(0 4px 30px rgb(0, 0, 0));
 					width: 400px;
 					z-index: 5;
+				}
+
+				.me2 {
+					opacity: 0.4;
+					position: absolute;
+					top: 0px;
+					right: -100px;
+					width: 600px;
 				}
 			}
 		}

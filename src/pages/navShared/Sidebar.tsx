@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import rainbow2 from "../../images/rainbow2.png";
+// import rainbow2 from "../../images/rainbow2.png";
+import img from "../../images/img.png"
 import "./scss/Sidebar.scss";
 import { IoMenuSharp } from "react-icons/io5";
 import { useEffect, useRef, useState } from "react";
@@ -57,10 +58,6 @@ const Sidebar = () => {
 						<FiCoffee className="icon" />
 						<p>Projects</p>
 					</NavLink>
-					{/* <NavLink onClick={()=>setOpenMenu("")} className={`link ${openMenu}`} to="/gallery">
-					<FiImage className="icon" />
-					<p>Gallery</p>
-					</NavLink> */}
 					<NavLink onClick={() => setOpenMenu("")} className={`link ${openMenu}`} to="/resume">
 						<FiFileText className="icon" />
 						<p>Životopis</p>
@@ -75,7 +72,8 @@ const Sidebar = () => {
 					<p>online</p>
 				</div>
 
-				<img className="rainbow" src={rainbow2} alt="" />
+				{/* <img className="rainbow" src={rainbow2} alt="" /> */}
+				<img className="rainbow" src={img} alt="" />
 			</nav>
 		</header>
 	);
