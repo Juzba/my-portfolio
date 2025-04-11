@@ -78,7 +78,7 @@ const SudokuSolver = () => {
 		<div className="sudoku-solver">
 			<h1>Extreme sudoku solver.</h1>
 			<div className="buttons">
-				<button onClick={() => sendArray()}>Send Data</button>
+				<button onClick={() => sendArray()}>Solve</button>
 				<button onClick={() => setSudokuArray(clear)}>Clear</button>
 				<button onClick={() => setSudokuArray(dataArray)}>Memory 1</button>
 				<button onClick={() => setSudokuArray(dataArray2)}>Memory 2</button>
