@@ -64,7 +64,7 @@ const OneProject = () => {
 		setIdNum(parsedId.toString());
 	};
 
-	const { name, description, description2, description3, url1, url2 } = cardsData.find(
+	const { name, description, description2, url1, url2 } = cardsData.find(
 		(_, index) => index == +idNum
 	) as type;
 
@@ -110,7 +110,6 @@ const OneProject = () => {
 				<div className="text-box">
 					<p>{description}</p>
 					<p>{description2}</p>
-					<p>{description3}</p>
 				</div>
 			</div>
 

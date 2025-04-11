@@ -14,15 +14,10 @@
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		// padding: 5px;
-		// justify-content: center;
-		// align-items: center;
 
 		.contact-me {
 			box-sizing: border-box;
 			margin: 10px;
-			// border: red solid 1px;
-			// box-shadow: 0 0 10px white;
 			padding: 5px;
 			border-radius: 5px;
 			font-size: 1.8rem;
@@ -48,10 +43,7 @@
 		}
 
 		.main-box {
-			// overflow: hidden;
 			display: flex;
-			// align-content: space-between;
-			// align-content: space-around;
 			justify-content: space-between;
 
 			.box-inputs {
@@ -61,37 +53,39 @@
 
 				.inp-text {
 					margin: 10px;
-					font-size: 1.2rem;
+					font-size: index.$font-size;
 					max-width: 320px;
-					// min-width: 240px;
-					// width: 250px;
 					height: 30px;
 					padding: 5px 25px;
 					outline: none;
-					border: none;
 					background-color: index.$background-color;
 					color: index.$text-color;
 					border-radius: 5px;
 
+					border: solid 1px rgb(71, 69, 69);
 					box-shadow: 0 0 0 30px index.$background-color inset;
 					-webkit-text-fill-color: index.$text-color;
-					border: solid 1px rgba(255, 255, 255, 0.2);
 				}
+			
 			}
 
 			.email-icon {
-				// color: rgba(247, 86, 86, 0.825);
 				font-size: 9rem;
 				font-weight: 100;
 				padding-right: 35px;
-				// transition: color 3s linear;
 				animation: blink 7s linear infinite;
 			}
 
 			@keyframes blink {
-				0%{color: white}
-				50%{color: index.$third-color}
-				100%{color: white}
+				0% {
+					color: white;
+				}
+				50% {
+					color: index.$third-color;
+				}
+				100% {
+					color: white;
+				}
 			}
 
 			@media (max-width: 700px) {
@@ -105,27 +99,23 @@
 			box-sizing: border-box;
 			border-radius: 5px;
 
-			padding: 5px 10px;
+			padding: 15px 25px;
 			height: 150px;
 			display: block;
 			margin: 10px;
-			font-size: 1.2rem;
+			font-size: index.$font-size;
 			border: none;
 			resize: none;
 			outline: none;
 			border: solid 1px rgba(255, 255, 255, 0.2);
-			// box-shadow: 0 0 3px index.$first-color;
-			// border: 1px solid index.$first-color;
 			background-color: index.$background-color;
 			color: index.$text-color;
-			// background-color: black;
 		}
 
 		.send-button {
 			margin: 10px;
-			font-size: 1.2rem;
+			font-size: index.$font-size;
 			height: 30px;
-			// padding: 5px 25px;
 			outline: none;
 			border: none;
 
@@ -137,9 +127,7 @@
 			border: solid 1px rgba(255, 255, 255, 0.2);
 			cursor: pointer;
 			&:hover {
-				// box-shadow: 0 0 15px white;
 				background-color: index.$second-color;
-				// color: black;
 			}
 
 			&:active {
