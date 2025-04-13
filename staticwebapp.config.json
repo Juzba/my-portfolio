@@ -11,6 +11,21 @@
 			"statusCode": 200
 		},
 		{
+			"route": "/resume",
+			"serve": "/resume.html",
+			"statusCode": 200
+		},
+		{
+			"route": "/github",
+			"serve": "/github.html",
+			"statusCode": 200
+		},
+		{
+			"route": "/oneproject/0",
+			"serve": "/oneproject/0.html",
+			"statusCode": 200
+		},
+		{
 			"route": "/*",
 			"serve": "/index.html",
 			"statusCode": 200
