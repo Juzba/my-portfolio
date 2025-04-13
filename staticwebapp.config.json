@@ -7,22 +7,22 @@
 		},
 		{
 			"route": "/projects",
-			"serve": "/projects.html",
+			"serve": "/index.html",
 			"statusCode": 200
 		},
 		{
 			"route": "/resume",
-			"serve": "/resume.html",
+			"serve": "/index.html",
 			"statusCode": 200
 		},
 		{
 			"route": "/github",
-			"serve": "/github.html",
+			"serve": "/index.html",
 			"statusCode": 200
 		},
 		{
 			"route": "/oneproject/0",
-			"serve": "/oneproject/0.html",
+			"serve": "/index.html",
 			"statusCode": 200
 		},
 		{
