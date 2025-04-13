@@ -5,6 +5,7 @@ const Error = () => {
         <div className="error-page">
             <h1>Zadaná stránka neexistuje!</h1>
             <h2>404</h2>
+            <p>Bla!</p>
         </div>
     );
 };
