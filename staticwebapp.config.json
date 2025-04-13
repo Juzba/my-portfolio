@@ -1,34 +1,39 @@
-{
-	"routes": [
-		{
-			"route": "/",
-			"serve": "/index.html",
-			"statusCode": 200
-		},
-		{
-			"route": "/projects",
-			"serve": "/index.html",
-			"statusCode": 200
-		},
-		{
-			"route": "/resume",
-			"serve": "/index.html",
-			"statusCode": 200
-		},
-		{
-			"route": "/github",
-			"serve": "/index.html",
-			"statusCode": 200
-		},
-		{
-			"route": "/oneproject/0",
-			"serve": "/index.html",
-			"statusCode": 200
-		},
-		{
-			"route": "/*",
-			"serve": "/index.html",
-			"statusCode": 200
-		}
-	]
-}
+{  
+  "routes": [  
+    {  
+      "route": "/",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    },  
+    {  
+      "route": "/projects",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    },  
+    {  
+      "route": "/oneproject/:id",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    },  
+    {  
+      "route": "/gallery",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    },  
+    {  
+      "route": "/resume",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    },  
+    {  
+      "route": "/github",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    },  
+    {  
+      "route": "/*",  
+      "serve": "/index.html",  
+      "statusCode": 200  
+    }  
+  ]  
+}  
