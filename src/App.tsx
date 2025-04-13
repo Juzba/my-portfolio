@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter , Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Gallery from "./pages/Gallery";
@@ -10,7 +10,7 @@ import Error from "./pages/Error";
 
 const App = () => {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				<Route path="/" element={<NavShared />}>
 					<Route index element={<Home />} />
@@ -22,7 +22,7 @@ const App = () => {
 					<Route path="*" element={<Error />} />
 				</Route>
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	);
 };
 
