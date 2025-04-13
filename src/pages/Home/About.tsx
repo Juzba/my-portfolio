@@ -155,9 +155,7 @@ const About = () => {
 
 			<div className="sixth-block">
 				<p className={animation6 ? "text6 active" : "text6"} id="text6">
-					Hledám příležitost, kde bych mohl své dovednosti dále rozvíjet a přispět svým nadšením pro moderní frontendový
-					vývoj. Věřím, že s mojí vášní a odhodláním mohu přinést hodnotu vašemu týmu a zapojit se do zajímavých
-					projektů, které posunou moje schopnosti na novou úroveň.
+				Hledám příležitost, kde bych mohl své dovednosti dále rozvíjet a přispět svým nadšením pro moderní vývoj v oblasti programování. Věřím, že s mojí vášní a odhodláním mohu přinést hodnotu vašemu týmu a zapojit se do zajímavých projektů, které posunou moje schopnosti na novou úroveň.
 				</p>
 			</div>
 
