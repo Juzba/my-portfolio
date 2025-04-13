@@ -1,9 +1,1 @@
-{
-  "routes": [
-    {
-      "route": "/*",
-      "redirect": "/index.html",
-      "statusCode": 200
-    }
-  ]
-}
+{}
