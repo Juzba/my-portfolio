@@ -131,7 +131,7 @@ const OneProject = () => {
 				</button>
 				<Link to={"/projects"}>
 					<PiCoffeeBold className="icon" />
-					<span>Projekty</span>
+					<p>Projekty</p>
 				</Link>
 				<button onClick={() => nextProject(+1)}>
 					<TfiControlForward className="icon" />

@@ -81,7 +81,7 @@
 
 		.text-box {
 			@include index.borderStyle;
-			min-width: 270px;
+			min-width: 350px;
 			padding: 25px;
 			box-sizing: border-box;
 			flex: 1;
@@ -90,7 +90,11 @@
 
 			text-align: justify;
 			hyphens: auto;
-			
+
+			@media (max-width:400px) {
+				min-width: 270px;
+				
+			}
 		}
 	}
 
@@ -146,11 +150,17 @@
 			padding: 5px 10px;
 			margin: 30px 0px;
 			font-size: index.$font-size;
-			text-align: center;
+
 			display: flex;
-			justify-self: center;
+			text-align: center;
+			align-items: center;
 			border-radius: 5px;
 
+			p{
+				margin: 0;
+				padding: 0;
+				font-size: 1.1rem;
+			}
 		
 
 			&:active {
@@ -165,7 +175,7 @@
 			}
 
 			@media (max-width: 400px) {
-				span {
+				p{
 					display: none;
 				}
 			}
