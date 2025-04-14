@@ -5,7 +5,6 @@ import "./About-Third-Box.scss";
 import myPhoto from "../../images/bman.png";
 import robot from "../../images/kuka.png";
 import comp from "../../images/comp.png";
-import lines from "../../images/lines.png"
 import hands from "../../images/hands.png"
 import StackIcon from "tech-stack-icons";
 import { useEffect, useState } from "react";
@@ -96,7 +95,6 @@ const About = () => {
 					</div>
 					<div className="box-myphoto">
 						<img className="me" src={myPhoto} alt="" />
-						{/* <img className="me2" src={lines} alt="" /> */}
 					</div>
 				</div>
 			</div>
