@@ -45,10 +45,12 @@
 			overflow: hidden;
 			border-radius: 15px;
 
+			display: flex;
+			justify-content: center;
+			
+
 			
 			img {
-				display: flex;
-				justify-self: center;
 				height: 100%;
 			}
 		}
