@@ -21,14 +21,14 @@ $border-color: #0d4861;
 		justify-content: center;
 		button {
 			box-sizing: border-box;
-			min-width: 110px;
+			width: 95px;
 			background-color: index.$first-color;
 			color: index.$text-color;
 			font-size: index.$font-size;
 
 			border: none;
 			padding: 5px 10px;
-			margin: 15px;
+			margin: 8px;
 
 			&:active {
 				background-color: black;
