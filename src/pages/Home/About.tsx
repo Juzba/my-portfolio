@@ -96,7 +96,7 @@ const About = () => {
 					</div>
 					<div className="box-myphoto">
 						<img className="me" src={myPhoto} alt="" />
-						<img className="me2" src={lines} alt="" />
+						{/* <img className="me2" src={lines} alt="" /> */}
 					</div>
 				</div>
 			</div>
